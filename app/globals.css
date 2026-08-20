@@ -1,26 +1,280 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-whiskey-sour: #d39858;
+  --color-blue-lux: #284b63;
+  --color-chalk: #f4f4ef;
+  --color-graphite: #202321;
+
+  --font-body: Candara, "Segoe UI", Arial, sans-serif;
+  --text-display: 56px;
+  --text-h1: 80px;
+  --text-h2: 60px;
+  --text-h3: 40px;
+
+  --text-body: 18px;
+  --Body-Large: 24px;
+  --Body-Small: 16px;
+  --text-Caption: 14px;
+  --Navigation: 14px;
+  --text-button: 16px;
+
+  --text-display: clamp(36px, 3.89vw, 56px);
+  --text-display--line-height: 1.1;
+
+  --text-h1: clamp(48px, 5.56vw, 80px);
+  --text-h1--line-height: 1;
+
+  --text-h2: clamp(40px, 4.17vw, 60px);
+  --text-h2--line-height: 1.05;
+
+  --text-h3: clamp(30px, 2.78vw, 40px);
+  --text-h3--line-height: 1.15;
+
+  --text-body-large: clamp(20px, 1.67vw, 24px);
+  --text-body-large--line-height: 1.5;
+
+  --text-body: clamp(16px, 1.25vw, 18px);
+  --text-body--line-height: 1.6;
+
+  --text-body-small: 16px;
+  --text-body-small--line-height: 1.5;
+
+  --text-caption: 14px;
+  --text-caption--line-height: 1.4;
+
+  --text-button: 16px;
+  --text-button--line-height: 1;
+
+  --text-navigation: 14px;
+  --text-navigation--line-height: 1;
+
+  --spacing-1: 8px;
+  --spacing-2: 16px;
+  --spacing-3: 24px;
+  --spacing-4: 32px;
+  --spacing-6: 48px;
+  --spacing-8: 64px;
+  --spacing-12: 96px;
+  --spacing-16: 128px;
+
+
+  --spacing-page-x: clamp(24px, 5vw, 80px);
+  --spacing-section-y: clamp(64px, 8vw, 128px);
+
+
+  --radius-moca: 0px;
+  --radius-moca-soft: 4px;
+
+
+  --border-moca-thin: 1px;
+  --border-moca-medium: 2px;
+
+  --text-form-label: clamp(18px, 1.67vw, 24px);
+  --text-form-label--line-height: 1.2;
+
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-merriweather);
+  --font-heading: var(--font-instrument-sans);
+  --font-button: var(--font-manrope);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@utility type-display {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  line-height: var(--text-display--line-height);
+  font-weight: 300;
+}
+
+@utility type-h1 {
+  font-family: var(--font-heading);
+  font-size: var(--text-h1);
+  line-height: var(--text-h1--line-height);
+  font-weight: 400;
+}
+
+@utility type-h2 {
+  font-family: var(--font-heading);
+  font-size: var(--text-h2);
+  line-height: var(--text-h2--line-height);
+  font-weight: 400;
+}
+
+@utility type-h3 {
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  line-height: var(--text-h3--line-height);
+  font-weight: 400;
+}
+
+@utility type-body-large {
+  font-family: var(--font-body);
+  font-size: var(--text-body-large);
+  line-height: var(--text-body-large--line-height);
+  font-weight: 300;
+}
+
+@utility type-body {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--text-body--line-height);
+  font-weight: 300;
+}
+
+@utility type-body-small {
+  font-family: var(--font-body);
+  font-size: var(--text-body-small);
+  line-height: var(--text-body-small--line-height);
+  font-weight: 300;
+}
+
+@utility type-caption {
+  font-family: var(--font-body);
+  font-size: var(--text-caption);
+  line-height: var(--text-caption--line-height);
+  font-weight: 300;
+}
+
+@utility type-button {
+  font-family: var(--font-button);
+  font-size: var(--text-button);
+  line-height: var(--text-button--line-height);
+  font-weight: 300;
+}
+
+@utility type-navigation {
+  font-family: var(--font-button);
+  font-size: var(--text-navigation);
+  line-height: var(--text-navigation--line-height);
+  font-weight: 300;
+}
+
+@utility site-shell {
+  width: 100%;
+  padding-inline: var(--spacing-page-x);
+}
+
+@utility moca-button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  font-family: var(--font-button);
+  font-size: var(--text-button);
+  line-height: var(--text-button--line-height);
+  font-weight: 300;
+
+  border-radius: var(--radius-moca);
+  cursor: pointer;
+
+  transition:
+    color 200ms ease,
+    background-color 200ms ease,
+    border-color 200ms ease,
+    opacity 200ms ease;
+
+  &:focus-visible {
+    outline: 2px solid var(--color-blue-lux);
+    outline-offset: 3px;
+  }
+
+    &:active {
+    transform: translateY(1px);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
   }
 }
 
-body {
+@utility moca-button-primary {
+  height: 50px;
+  padding-inline: 24px;
+
+  color: var(--color-chalk);
+  background-color: var(--color-whiskey-sour);
+  border: 0;
+
+  &:hover {
+    color: var(--color-chalk);
+    background-color: var(--color-blue-lux);
+  }
+}
+
+@utility moca-text-cta {
+  padding: 0;
+
+  color: var(--color-blue-lux);
+  background: transparent;
+  border: 0;
+
+  &:hover {
+    color: var(--color-whiskey-sour);
+  }
+}
+
+@utility moca-field {
+  width: 100%;
+  height: 50px;
+
+  padding-inline: 0;
+
+  color: var(--color-graphite);
+  background-color: #fbfaf7;
+
+  border: 0;
+  border-bottom: 1px solid var(--color-blue-lux);
+  border-radius: 0;
+
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--text-body--line-height);
+
+  outline: none;
+
+  transition:
+    border-color 200ms ease,
+    color 200ms ease;
+    
+  &:focus {
+    border-bottom-color: var(--color-whiskey-sour);
+  }
+}
+
+@utility moca-textarea {
+  min-height: 160px;
+  height: auto;
+  padding-block: 16px;
+  resize: vertical;
+}
+
+@utility moca-form-label {
+  font-family: var(--font-body);
+  font-size: var(--text-form-label);
+  line-height: var(--text-form-label--line-height);
+  font-weight: 300;
+
+  color: var(--color-graphite);
+  text-transform: uppercase;
+}
+
+:root {
+  --background: var(--color-chalk);
+  --foreground: var(--color-graphite);
+}
+
+html {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
 }
