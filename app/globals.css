@@ -6,7 +6,7 @@
   --color-chalk: #f4f4ef;
   --color-graphite: #202321;
 
-  --font-body: Candara, "Segoe UI", Arial, sans-serif;
+  --font-body: var(--font-lato);
   --text-display: 56px;
   --text-h1: 80px;
   --text-h2: 60px;

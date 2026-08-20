@@ -16,6 +16,14 @@ export const instrumentSans = localFont({
   variable: "--font-instrument-sans",
 });
 
+export const lato = localFont({
+  src: "../public/fonts/lato/Lato-Light.ttf",
+  weight: "300",
+  style: "normal",
+  display: "swap",
+  variable: "--font-lato",
+});
+
 export const manrope = localFont({
   src: "../public/fonts/manrope/Manrope-Light.ttf",
   weight: "300",

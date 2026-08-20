@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import {
   instrumentSans,
+  lato,
   manrope,
   merriweather,
 } from "./fonts";
@@ -15,7 +16,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${merriweather.variable} ${instrumentSans.variable} ${manrope.variable} h-full antialiased`}
+      className={`${merriweather.variable} ${instrumentSans.variable} ${lato.variable} ${manrope.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
