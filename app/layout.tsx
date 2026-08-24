@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Header from "../components/navigation/Header";
+import MobileNavigation from "../components/navigation/MobileNavigation";
 import {
   instrumentSans,
   lato,
@@ -18,7 +20,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${merriweather.variable} ${instrumentSans.variable} ${lato.variable} ${manrope.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Header />
+        <main className="mobile-safe-content flex min-h-full flex-1 flex-col">{children}</main>
+        <MobileNavigation />
+      </body>
     </html>
   );
 }
