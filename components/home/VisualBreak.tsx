@@ -31,19 +31,19 @@ export default function VisualBreak() {
     <section ref={sectionRef} className={styles.section}>
       <div className={`${styles.collage} ${isVisible ? styles.isVisible : ""}`}>
         <div className={`${styles.imageFrame} ${styles.leftSmall}`}>
-          <Image src={images.leftSmall.src} alt={images.leftSmall.alt} fill sizes="200px" className={styles.image} />
+          <Image src={images.leftSmall.src} alt={images.leftSmall.alt} fill sizes="(min-width: 2560px) 310px, (min-width: 1920px) calc(7.8125vw + 110px), (min-width: 1280px) calc(12.5vw + 20px), (min-width: 1024px) 167px, (min-width: 768px) 112px, 76px" className={styles.image} />
         </div>
         <div className={`${styles.imageFrame} ${styles.left}`}>
-          <Image src={images.left.src} alt={images.left.alt} fill sizes="280px" className={styles.image} />
+          <Image src={images.left.src} alt={images.left.alt} fill sizes="(min-width: 2560px) 435px, (min-width: 1920px) calc(10.9375vw + 155px), (min-width: 1280px) calc(17.7083vw + 25px), (min-width: 1024px) 234px, (min-width: 768px) 158px, 166px" className={styles.image} />
         </div>
         <div className={`${styles.imageFrame} ${styles.center}`}>
-          <Image src={images.center.src} alt={images.center.alt} fill sizes="370px" className={styles.image} />
+          <Image src={images.center.src} alt={images.center.alt} fill sizes="(min-width: 2560px) 580px, (min-width: 1920px) calc(14.84375vw + 200px), (min-width: 1280px) calc(23.9583vw + 25px), (min-width: 1024px) 308px, (min-width: 768px) 210px, 180px" className={styles.image} />
         </div>
         <div className={`${styles.imageFrame} ${styles.right}`}>
-          <Image src={images.right.src} alt={images.right.alt} fill sizes="280px" className={styles.image} />
+          <Image src={images.right.src} alt={images.right.alt} fill sizes="(min-width: 2560px) 435px, (min-width: 1920px) calc(10.9375vw + 155px), (min-width: 1280px) calc(17.7083vw + 25px), (min-width: 1024px) 234px, (min-width: 768px) 158px, 166px" className={styles.image} />
         </div>
         <div className={`${styles.imageFrame} ${styles.rightSmall}`}>
-          <Image src={images.rightSmall.src} alt={images.rightSmall.alt} fill sizes="200px" className={styles.image} />
+          <Image src={images.rightSmall.src} alt={images.rightSmall.alt} fill sizes="(min-width: 2560px) 310px, (min-width: 1920px) calc(7.8125vw + 110px), (min-width: 1280px) calc(12.5vw + 20px), (min-width: 1024px) 167px, (min-width: 768px) 112px, 76px" className={styles.image} />
         </div>
       </div>
     </section>

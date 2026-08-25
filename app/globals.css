@@ -205,6 +205,12 @@
   }
 }
 
+@utility moca-button-project {
+  padding-inline: 8px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
 @utility moca-text-cta {
   padding: 0;
 

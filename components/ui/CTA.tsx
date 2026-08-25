@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 
-type CTAVariant = "primary" | "text";
+type CTAVariant = "primary" | "project" | "text";
 
 type CTAProps = {
   children: ReactNode;
@@ -16,10 +16,11 @@ export default function CTA({
   variant = "primary",
   className = "",
 }: CTAProps) {
-  const variantClass =
-    variant === "primary"
-      ? "moca-button-primary"
-      : "moca-text-cta";
+  const variantClass = {
+    primary: "moca-button-primary",
+    project: "moca-button-primary moca-button-project",
+    text: "moca-text-cta",
+  }[variant];
 
   return (
     <Link

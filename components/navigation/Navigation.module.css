@@ -22,7 +22,7 @@
   .menuLinks { display: flex; height: 100%; align-items: center; justify-content: center; flex-direction: column; gap: 20px; padding: 68px 28px 28px; }
   .menuLinks a { width: 100%; color: var(--color-chalk); border-bottom: .67px solid var(--color-chalk); font-family: var(--font-manrope); font-size: 40px; font-weight: 300; line-height: 1.08; text-align: center; text-decoration: none; white-space: nowrap; }
   .menuLinks .compactMenuLink { font-size: 34px; }
-  .menuToggle { position: fixed; z-index: 2; top: 32px; right: 32px; width: 64px; height: 32px; padding: 0; color: var(--color-chalk); background: transparent; border: 0; cursor: pointer; }
+  .menuToggle { position: fixed; z-index: 2; top: 32px; right: 32px; width: 64px; height: 32px; padding: 0; color: var(--color-whiskey-sour); background: transparent; border: 0; cursor: pointer; }
   .menuIcon { position: absolute; top: 50%; left: 50%; display: block; width: 44px; height: 21px; transform: translate(-50%, -50%); }
   .menuIcon span { position: absolute; left: 0; display: block; width: 100%; height: 1px; background: currentColor; transition: top 275ms ease, transform 275ms ease, opacity 275ms ease; }
   .menuIcon span:first-child { top: 0; } .menuIcon span:nth-child(2) { top: 10px; } .menuIcon span:last-child { top: 20px; }
@@ -36,9 +36,14 @@
   .menuToggle { width: 72px; height: 36px; } .menuOpen .menuToggle { top: 50px; right: 50px; width: 38px; height: 38px; }
 }
 @media (min-width: 1280px) {
-  .header { height: 190px; } .logoWrap { top: 40px; left: 40px; width: 252px; } .logo { font-size: 32px; }
-  .menuPanel { top: 40px; right: 40px; width: 500px; height: 500px; } .menuLinks { gap: 24px; padding-top: 76px; } .menuLinks a { font-size: 56px; } .menuLinks .compactMenuLink { font-size: 48px; }
-  .menuToggle { top: 40px; right: 40px; width: 80px; height: 40px; } .menuOpen .menuToggle { top: 60px; right: 60px; width: 40px; height: 40px; }
+  .header { height: 190px; } .logoWrap { top: clamp(40px, calc(3.3333vw - 8px), 56px); left: clamp(40px, calc(3.3333vw - 8px), 56px); width: clamp(252px, calc(5.8333vw + 168px), 280px); } .logo { font-size: clamp(32px, calc(.7292vw + 21.5px), 35.5px); }
+  .menuPanel { top: clamp(40px, calc(3.3333vw - 8px), 56px); right: clamp(40px, calc(3.3333vw - 8px), 56px); width: 500px; height: 500px; } .menuLinks { gap: 24px; padding-top: 76px; } .menuLinks a { font-size: 56px; } .menuLinks .compactMenuLink { font-size: 48px; }
+  .menuToggle { top: clamp(40px, calc(3.3333vw - 8px), 56px); right: clamp(40px, calc(3.3333vw - 8px), 56px); width: clamp(80px, calc(1.6667vw + 56px), 88px); height: clamp(40px, calc(.8333vw + 28px), 44px); } .menuOpen .menuToggle { top: clamp(60px, calc(3.3333vw + 12px), 76px); right: clamp(60px, calc(3.3333vw + 12px), 76px); width: 40px; height: 40px; }
+}
+@media (min-width: 1920px) {
+  .logoWrap { top: clamp(56px, calc(1.25vw + 32px), 64px); left: clamp(56px, calc(1.25vw + 32px), 64px); width: clamp(280px, calc(3.125vw + 220px), 300px); } .logo { font-size: clamp(35.5px, calc(.40625vw + 27.7px), 38.1px); }
+  .menuPanel { top: clamp(56px, calc(1.25vw + 32px), 64px); right: clamp(56px, calc(1.25vw + 32px), 64px); }
+  .menuToggle { top: clamp(56px, calc(1.25vw + 32px), 64px); right: clamp(56px, calc(1.25vw + 32px), 64px); width: clamp(88px, calc(1.25vw + 64px), 96px); height: clamp(44px, calc(.625vw + 32px), 48px); } .menuOpen .menuToggle { top: clamp(76px, calc(1.25vw + 52px), 84px); right: clamp(76px, calc(1.25vw + 52px), 84px); }
 }
 @media (orientation: landscape) and (max-height: 500px) {
   .header { height: 100px; } .logoWrap { top: 20px; left: 24px; width: 130px; } .logo { font-size: 16px; }

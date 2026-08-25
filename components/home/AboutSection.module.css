@@ -59,10 +59,17 @@
 }
 
 @media (min-width: 1280px) {
-  .section { margin-inline: 40px; padding-top: 65px; padding-bottom: 100px; }
-  .title { width: 498px; height: 110px; font-size: 60px; }
-  .text { max-width: 735px; margin-top: 65px; font-size: 24px; line-height: 36px; }
-  .cta { width: 217px; height: 58px; margin-top: 65px; }
+  .section { margin-inline: clamp(40px, calc(3.3333vw - 8px), 56px); padding-top: clamp(65px, calc(1.4583vw + 44px), 72px); padding-bottom: clamp(100px, calc(2.5vw + 64px), 112px); }
+  .title { width: clamp(498px, calc(8.75vw + 372px), 540px); height: clamp(110px, calc(1.6667vw + 86px), 118px); font-size: clamp(60px, calc(.8333vw + 48px), 64px); }
+  .text { max-width: clamp(735px, calc(21.875vw + 420px), 840px); margin-top: clamp(65px, calc(1.4583vw + 44px), 72px); font-size: clamp(24px, calc(.4167vw + 18px), 26px); line-height: clamp(36px, calc(.625vw + 27px), 39px); }
+  .cta { width: clamp(217px, calc(2.7083vw + 178px), 230px); height: clamp(58px, calc(.4167vw + 52px), 60px); margin-top: clamp(65px, calc(1.4583vw + 44px), 72px); font-size: clamp(20px, calc(.4167vw + 14px), 22px); }
+}
+
+@media (min-width: 1920px) {
+  .section { margin-inline: clamp(56px, calc(1.25vw + 32px), 64px); padding-top: clamp(72px, calc(1.25vw + 48px), 80px); padding-bottom: clamp(112px, calc(1.25vw + 88px), 120px); }
+  .title { width: clamp(540px, calc(3.125vw + 480px), 560px); height: clamp(118px, calc(.625vw + 106px), 122px); font-size: clamp(64px, calc(.625vw + 52px), 68px); }
+  .text { max-width: clamp(840px, calc(9.375vw + 660px), 900px); margin-top: clamp(72px, calc(1.25vw + 48px), 80px); font-size: clamp(26px, calc(.15625vw + 23px), 27px); line-height: clamp(39px, calc(.234375vw + 34.5px), 40.5px); }
+  .cta { width: clamp(230px, calc(1.5625vw + 200px), 240px); height: clamp(60px, calc(.3125vw + 54px), 62px); margin-top: clamp(72px, calc(1.25vw + 48px), 80px); font-size: clamp(22px, calc(.3125vw + 16px), 24px); }
 }
 
 @media (orientation: landscape) and (max-height: 500px) {

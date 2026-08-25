@@ -14,7 +14,7 @@
 .imageFrame {
   position: absolute;
   overflow: hidden;
-  border: 1pt solid var(--color-whiskey-sour);
+  border: 1px solid var(--color-whiskey-sour);
   border-radius: 0;
   box-sizing: border-box;
   opacity: 0;
@@ -97,13 +97,23 @@
 }
 
 @media (min-width: 1280px) {
-  .section { padding: 65px 40px 100px; }
-  .collage { width: 1350px; grid-template-columns: 200px 280px 370px 280px 200px; }
-  .leftSmall { width: 200px; height: 300px; margin-top: 88px; }
-  .left { width: 280px; height: 480px; margin-top: 31px; }
-  .center { width: 370px; height: 450px; }
-  .right { width: 280px; height: 400px; margin-top: 111px; }
-  .rightSmall { width: 200px; height: 300px; margin-top: 28px; }
+  .section { padding: clamp(65px, calc(1.4583vw + 44px), 72px) clamp(40px, calc(3.3333vw - 8px), 56px) clamp(100px, calc(2.5vw + 64px), 112px); }
+  .collage { width: max-content; grid-template-columns: clamp(200px, calc(12.5vw + 20px), 260px) clamp(280px, calc(17.7083vw + 25px), 365px) clamp(370px, calc(23.9583vw + 25px), 485px) clamp(280px, calc(17.7083vw + 25px), 365px) clamp(200px, calc(12.5vw + 20px), 260px); gap: clamp(5px, calc(.2083vw + 2px), 6px); }
+  .leftSmall { width: clamp(200px, calc(12.5vw + 20px), 260px); height: clamp(300px, calc(18.75vw + 30px), 390px); margin-top: clamp(88px, calc(5.4167vw + 10px), 114px); }
+  .left { width: clamp(280px, calc(17.7083vw + 25px), 365px); height: clamp(480px, calc(30.4167vw + 42px), 626px); margin-top: clamp(31px, calc(1.875vw + 4px), 40px); }
+  .center { width: clamp(370px, calc(23.9583vw + 25px), 485px); height: clamp(450px, calc(29.1667vw + 30px), 590px); }
+  .right { width: clamp(280px, calc(17.7083vw + 25px), 365px); height: clamp(400px, calc(25.4167vw + 34px), 522px); margin-top: clamp(111px, calc(7.0833vw + 9px), 145px); }
+  .rightSmall { width: clamp(200px, calc(12.5vw + 20px), 260px); height: clamp(300px, calc(18.75vw + 30px), 390px); margin-top: clamp(28px, calc(1.6667vw + 4px), 36px); }
+}
+
+@media (min-width: 1920px) {
+  .section { padding: clamp(72px, calc(1.25vw + 48px), 80px) clamp(56px, calc(1.25vw + 32px), 64px) clamp(112px, calc(1.25vw + 88px), 120px); }
+  .collage { grid-template-columns: clamp(260px, calc(7.8125vw + 110px), 310px) clamp(365px, calc(10.9375vw + 155px), 435px) clamp(485px, calc(14.84375vw + 200px), 580px) clamp(365px, calc(10.9375vw + 155px), 435px) clamp(260px, calc(7.8125vw + 110px), 310px); gap: clamp(6px, .3125vw, 8px); }
+  .leftSmall { width: clamp(260px, calc(7.8125vw + 110px), 310px); height: clamp(390px, calc(11.71875vw + 165px), 465px); margin-top: clamp(114px, calc(3.4375vw + 48px), 136px); }
+  .left { width: clamp(365px, calc(10.9375vw + 155px), 435px); height: clamp(626px, calc(18.75vw + 266px), 746px); margin-top: clamp(40px, calc(1.25vw + 16px), 48px); }
+  .center { width: clamp(485px, calc(14.84375vw + 200px), 580px); height: clamp(590px, calc(17.96875vw + 245px), 705px); }
+  .right { width: clamp(365px, calc(10.9375vw + 155px), 435px); height: clamp(522px, calc(15.625vw + 222px), 622px); margin-top: clamp(145px, calc(4.21875vw + 64px), 172px); }
+  .rightSmall { width: clamp(260px, calc(7.8125vw + 110px), 310px); height: clamp(390px, calc(11.71875vw + 165px), 465px); margin-top: clamp(36px, calc(1.09375vw + 15px), 43px); }
 }
 
 @media (orientation: landscape) and (max-height: 500px) {

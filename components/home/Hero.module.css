@@ -1,7 +1,9 @@
 .hero { position: relative; width: 100%; height: 620px; overflow: hidden; background: var(--color-blue-lux); }
 .media { position: absolute; inset: 0; width: 100%; height: 100%; background: var(--color-blue-lux); }
+.media > img, .media > video { display: block; width: 100%; height: 100%; object-fit: cover; }
 .title { position: absolute; right: 24px; bottom: 32px; left: 24px; max-width: calc(100% - 48px); margin: 0; color: var(--color-chalk); font-size: 36px; line-height: 1.1; text-align: left; }
 @media (min-width: 768px) { .hero { height: 680px; } .title { right: auto; bottom: 32px; left: 32px; max-width: calc(100% - 64px); font-size: 36px; } }
 @media (min-width: 1024px) { .hero { height: 700px; } .title { max-width: 760px; font-size: 44px; } }
-@media (min-width: 1280px) { .hero { height: 770px; } .title { bottom: 40px; left: 40px; max-width: 880px; font-size: 56px; } }
+@media (min-width: 1280px) { .hero { height: clamp(770px, calc(11.4583vw + 605px), 825px); } .title { bottom: clamp(40px, calc(3.3333vw - 8px), 56px); left: clamp(40px, calc(3.3333vw - 8px), 56px); max-width: clamp(880px, calc(33.3333vw + 400px), 1040px); font-size: clamp(56px, calc(1.6667vw + 32px), 64px); } }
+@media (min-width: 1920px) { .hero { height: clamp(825px, calc(11.71875vw + 600px), 900px); } .title { bottom: clamp(56px, calc(1.25vw + 32px), 64px); left: clamp(56px, calc(1.25vw + 32px), 64px); max-width: clamp(1040px, calc(12.5vw + 800px), 1120px); font-size: clamp(64px, calc(.625vw + 52px), 68px); } }
 @media (orientation: landscape) and (max-height: 500px) { .hero { height: 100svh; min-height: 360px; max-height: 500px; } .title { right: auto; bottom: calc(56px + env(safe-area-inset-bottom) + 24px); left: 24px; max-width: 65%; font-size: 32px; } }
