@@ -9,5 +9,29 @@
       "label": "LEARN MORE",
       "href": "/about"
     }
+  },
+  "visualBreak": {
+    "images": {
+      "center": {
+        "src": "/images/home/moca-ventures-luxury-bathrooms.webp",
+        "alt": ""
+      },
+      "right": {
+        "src": "/images/home/moca-ventures-luxury-kitchen.webp",
+        "alt": ""
+      },
+      "left": {
+        "src": "/images/home/moca-ventures-trade-partners.webp",
+        "alt": ""
+      },
+      "rightSmall": {
+        "src": "/images/home/moca-ventures-claudia-ospina.webp",
+        "alt": ""
+      },
+      "leftSmall": {
+        "src": "/images/home/moca-ventures-interior-designers.webp",
+        "alt": ""
+      }
+    }
   }
 }
