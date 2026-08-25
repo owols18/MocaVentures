@@ -1,0 +1,20 @@
+{
+  "slug": "project-04",
+  "status": "published",
+  "publishedAt": "2026-08-10",
+  "location": "NEW YORK",
+  "title": "PROJECT 04",
+  "summary": "A tailored residential project bringing together European design, technical precision, and custom interior solutions for a distinctive living environment.",
+  "description": [],
+  "images": {
+    "home": "/images/portfolio/projects/project-04/moca-ventures-project-04-home.webp",
+    "hero": "",
+    "gallery": []
+  },
+  "materials": [],
+  "client": "",
+  "teamMembers": [],
+  "cta": {
+    "label": "DISCOVER THE PROJECT"
+  }
+}

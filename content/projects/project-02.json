@@ -1,0 +1,20 @@
+{
+  "slug": "project-02",
+  "status": "published",
+  "publishedAt": "2026-08-20",
+  "location": "NEW YORK",
+  "title": "PROJECT 02",
+  "summary": "A refined residential interior combining European craftsmanship, custom millwork, and carefully selected materials within a contemporary urban setting.",
+  "description": [],
+  "images": {
+    "home": "/images/portfolio/projects/project-02/moca-ventures-project-02-home.webp",
+    "hero": "",
+    "gallery": []
+  },
+  "materials": [],
+  "client": "",
+  "teamMembers": [],
+  "cta": {
+    "label": "DISCOVER THE PROJECT"
+  }
+}
