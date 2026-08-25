@@ -1,0 +1,13 @@
+{
+  "hero": {
+    "title": "Italian design, technical precision, and international vision for high-end interiors."
+  },
+  "about": {
+    "title": "ABOUT US",
+    "text": "MOCA Ventures is a specialized firm based in New York and Europe, providing design, engineering, development, and procurement services for European millwork and furniture for multi-unit residential developments, hospitality projects, and hotels.",
+    "cta": {
+      "label": "LEARN MORE",
+      "href": "/about"
+    }
+  }
+}

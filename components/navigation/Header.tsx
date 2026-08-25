@@ -16,10 +16,13 @@ export default function Header() {
     let frame = 0;
     const update = () => {
       frame = 0;
-      logoRef.current?.style.setProperty(
+      const logo = logoRef.current;
+      if (!logo) return;
+      logo.style.setProperty(
         "--logo-opacity",
-        String(Math.max(0, 1 - window.scrollY / 120)),
+        String(Math.max(0, 1 - window.scrollY / 350)),
       );
+      logo.style.pointerEvents = window.scrollY >= 250 ? "none" : "auto";
     };
     const onScroll = () => {
       if (!frame) frame = window.requestAnimationFrame(update);

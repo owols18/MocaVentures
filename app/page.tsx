@@ -1,5 +1,12 @@
+import AboutSection from "../components/home/AboutSection";
 import Hero from "../components/home/Hero";
+import styles from "../components/home/Home.module.css";
 
 export default function Home() {
-  return <Hero />;
+  return (
+    <div className={styles.home}>
+      <Hero />
+      <AboutSection />
+    </div>
+  );
 }
