@@ -49,5 +49,42 @@
       "src": "/images/home/moca-ventures-international-design-team.webp",
       "alt": ""
     }
+  },
+  "whoWeWorkWith": {
+    "title": "WHO WE WORK WITH",
+    "items": [
+      {
+        "id": "developers",
+        "label": "Developers"
+      },
+      {
+        "id": "architects",
+        "label": "Architects"
+      },
+      {
+        "id": "construction-managers",
+        "label": "Construction Managers"
+      },
+      {
+        "id": "interior-designers",
+        "label": "Interior designers"
+      },
+      {
+        "id": "traders",
+        "label": "Traders"
+      },
+      {
+        "id": "building-managers",
+        "label": "Building managers"
+      }
+    ],
+    "cta": {
+      "label": "MEET OUR PARTNERS",
+      "href": "/who-we-work-with"
+    },
+    "image": {
+      "src": "/images/home/moca-ventures-who-we-work-with.webp",
+      "alt": ""
+    }
   }
 }

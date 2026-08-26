@@ -1,0 +1,230 @@
+.section {
+  display: grid;
+  grid-template-areas:
+    "editorial"
+    "photo";
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: 40px;
+  padding: 65px 24px 56px;
+  background: #fff;
+}
+
+.editorial {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  grid-area: editorial;
+  text-align: center;
+}
+
+.title {
+  display: flex;
+  width: fit-content;
+  max-width: 342px;
+  min-height: 88px;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 8px 24px;
+  color: var(--color-blue-lux);
+  border: 1px solid var(--color-blue-lux);
+  border-radius: 0;
+  box-sizing: border-box;
+  font-size: 36px;
+  line-height: 1;
+  text-align: center;
+}
+
+.picker {
+  --picker-line: 48px;
+  --picker-step: 64px;
+
+  position: relative;
+  width: 100%;
+  height: 188px;
+  margin-top: 28px;
+  overflow: hidden;
+  outline: none;
+  touch-action: pan-y;
+}
+
+.picker:focus-visible {
+  outline: 2px solid var(--color-blue-lux);
+  outline-offset: 4px;
+}
+
+.pickerList {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pickerItem {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  color: var(--color-graphite);
+  font-family: var(--font-merriweather);
+  font-size: 32px;
+  font-weight: 300;
+  line-height: var(--picker-line);
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 425ms ease-out, transform 425ms ease-out;
+  white-space: nowrap;
+}
+
+.previous {
+  opacity: .2;
+  transform: translateY(calc(var(--picker-line) * -.5 - var(--picker-step)));
+}
+
+.current {
+  opacity: 1;
+  transform: translateY(calc(var(--picker-line) * -.5));
+}
+
+.next {
+  opacity: .2;
+  transform: translateY(calc(var(--picker-line) * -.5 + var(--picker-step)));
+}
+
+.hiddenAbove,
+.hiddenBelow {
+  pointer-events: none;
+}
+
+.hiddenAbove {
+  transform: translateY(-200%);
+}
+
+.cta {
+  z-index: 1;
+  width: 180px;
+  height: 48px;
+  grid-area: photo;
+  align-self: end;
+  justify-self: center;
+  margin: 0 0 64px;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+.photo {
+  position: relative;
+  width: min(100%, 342px);
+  aspect-ratio: 1600 / 1655;
+  grid-area: photo;
+  justify-self: center;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (min-width: 768px) {
+  .section {
+    grid-template-areas: "editorial photo";
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    gap: 32px;
+    margin-top: -80px;
+    padding: 65px 0 80px 32px;
+  }
+
+  .editorial { align-self: center; }
+  .title { max-width: 100%; min-height: 96px; padding: 20px 32px; font-size: 40px; white-space: nowrap; }
+  .picker { --picker-line: 52px; --picker-step: 66px; height: 180px; margin-top: 36px; }
+  .pickerItem { font-size: 34px; }
+  .cta { width: 170px; height: 48px; grid-area: photo; align-self: end; margin: 0 0 18%; }
+  .photo { width: 100%; justify-self: end; }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    gap: clamp(32px, calc(2.2222vw + 13.47px), 40px);
+    margin-top: -90px;
+    padding-top: 65px;
+  }
+
+  .title { min-height: clamp(96px, calc(1.1111vw + 86.73px), 100px); padding-block: clamp(20px, calc(1.1111vw + 10.73px), 24px); font-size: clamp(40px, calc(2.2222vw + 21.47px), 48px); }
+  .picker { --picker-line: clamp(52px, calc(.5556vw + 47.37px), 54px); --picker-step: clamp(66px, calc(.5556vw + 61.37px), 68px); height: clamp(180px, calc(6.9444vw + 122.08px), 205px); margin-top: clamp(36px, calc(2.2222vw + 17.47px), 44px); }
+  .pickerItem { font-size: clamp(34px, calc(1.1111vw + 24.73px), 38px); }
+  .cta { width: clamp(170px, calc(5.5556vw + 123.67px), 190px); height: clamp(48px, calc(1.1111vw + 38.73px), 52px); margin-bottom: 18%; }
+  .photo { width: 100%; }
+}
+
+@media (min-width: 1280px) {
+  .section {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    gap: clamp(48px, calc(1.6667vw + 24px), 56px);
+    margin-top: calc(0px - clamp(100px, calc(2.5vw + 64px), 112px));
+    padding: 65px 0 clamp(100px, calc(2.5vw + 64px), 112px) 40px;
+  }
+
+  .title { min-height: clamp(110px, calc(1.6667vw + 86px), 118px); padding: clamp(25px, calc(.4167vw + 19px), 27px) clamp(40px, calc(1.6667vw + 16px), 48px); font-size: clamp(60px, calc(.8333vw + 48px), 64px); }
+  .picker { --picker-line: clamp(58px, calc(1.25vw + 40px), 64px); --picker-step: clamp(74px, calc(1.6667vw + 50px), 82px); height: clamp(230px, calc(8.3333vw + 110px), 270px); margin-top: clamp(48px, calc(.4167vw + 42px), 50px); }
+  .pickerItem { font-size: clamp(42px, calc(1.25vw + 24px), 48px); }
+  .cta { width: clamp(217px, calc(2.7083vw + 178px), 230px); height: clamp(58px, calc(.4167vw + 52px), 60px); margin-bottom: 18%; font-size: clamp(20px, calc(.4167vw + 14px), 22px); }
+  .photo { width: 100%; }
+}
+
+@media (min-width: 1920px) {
+  .section {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    gap: clamp(56px, calc(1.25vw + 32px), 64px);
+    margin-top: calc(0px - clamp(112px, calc(1.25vw + 88px), 120px));
+    padding-top: 65px;
+    padding-right: 0;
+    padding-left: clamp(40px, calc(3.75vw - 32px), 64px);
+  }
+
+  .title { min-height: clamp(118px, calc(.625vw + 106px), 122px); padding-block: 27px; font-size: clamp(64px, calc(.625vw + 52px), 68px); }
+  .picker { --picker-line: clamp(64px, calc(.9375vw + 46px), 70px); --picker-step: clamp(82px, calc(1.25vw + 58px), 90px); height: clamp(270px, calc(4.6875vw + 180px), 300px); margin-top: clamp(50px, calc(.9375vw + 32px), 56px); }
+  .pickerItem { font-size: clamp(48px, calc(.625vw + 36px), 52px); }
+  .cta { width: clamp(230px, calc(1.5625vw + 200px), 240px); height: clamp(60px, calc(.3125vw + 54px), 62px); margin-bottom: 18%; font-size: clamp(22px, calc(.3125vw + 16px), 24px); }
+  .photo { width: 100%; }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .section {
+    grid-template-areas: "editorial photo";
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    gap: 24px;
+    margin-top: -56px;
+    padding: 65px 0 56px 24px;
+  }
+
+  .editorial { align-self: center; }
+  .title { max-width: 100%; min-height: 80px; padding: 20px 28px; font-size: 36px; white-space: nowrap; }
+  .picker { --picker-line: 48px; --picker-step: 62px; height: 160px; margin-top: 28px; }
+  .pickerItem { font-size: 32px; }
+  .cta { width: 160px; height: 44px; grid-area: photo; align-self: end; margin: 0 0 18%; }
+  .photo { width: 100%; justify-self: end; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pickerItem {
+    transition-duration: 1ms;
+  }
+}
