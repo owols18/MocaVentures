@@ -37,5 +37,17 @@
   "portfolio": {
     "title": "PORTFOLIO",
     "text": "Our portfolio showcases refined residential, hospitality, and mixed-use projects where European craftsmanship, bespoke millwork, and carefully selected furniture come together to create elegant, functional, and enduring interior environments across international markets worldwide."
+  },
+  "team": {
+    "title": "THE PEOPLE BEHIND MOCA",
+    "text": "Our international team combines design expertise, technical precision, and industry knowledge to deliver exceptional projects from concept through installation.",
+    "cta": {
+      "label": "LEARN MORE",
+      "href": "/team"
+    },
+    "image": {
+      "src": "/images/home/moca-ventures-international-design-team.webp",
+      "alt": ""
+    }
   }
 }
