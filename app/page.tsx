@@ -1,5 +1,6 @@
 import AboutSection from "../components/home/AboutSection";
 import Hero from "../components/home/Hero";
+import HomeLetsTalkSection from "../components/home/HomeLetsTalkSection";
 import HomePortfolioSection from "../components/home/HomePortfolioSection";
 import HomeTeamSection from "../components/home/HomeTeamSection";
 import HomeWhoWeWorkWithSection from "../components/home/HomeWhoWeWorkWithSection";
@@ -15,6 +16,7 @@ export default function Home() {
       <HomePortfolioSection />
       <HomeTeamSection />
       <HomeWhoWeWorkWithSection />
+      <HomeLetsTalkSection />
     </div>
   );
 }

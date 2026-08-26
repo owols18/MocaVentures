@@ -5,7 +5,7 @@
     "photo";
   grid-template-columns: minmax(0, 1fr);
   row-gap: 40px;
-  padding: 65px 24px 56px;
+  padding: 65px 24px 0;
   background: #fff;
 }
 
@@ -148,7 +148,7 @@
     grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
     gap: 32px;
     margin-top: -80px;
-    padding: 65px 0 80px 32px;
+    padding: 65px 0 0 32px;
   }
 
   .editorial { align-self: center; }
@@ -179,7 +179,7 @@
     grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
     gap: clamp(48px, calc(1.6667vw + 24px), 56px);
     margin-top: calc(0px - clamp(100px, calc(2.5vw + 64px), 112px));
-    padding: 65px 0 clamp(100px, calc(2.5vw + 64px), 112px) 40px;
+    padding: 65px 0 0 40px;
   }
 
   .title { min-height: clamp(110px, calc(1.6667vw + 86px), 118px); padding: clamp(25px, calc(.4167vw + 19px), 27px) clamp(40px, calc(1.6667vw + 16px), 48px); font-size: clamp(60px, calc(.8333vw + 48px), 64px); }
@@ -212,7 +212,7 @@
     grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
     gap: 24px;
     margin-top: -56px;
-    padding: 65px 0 56px 24px;
+    padding: 65px 0 0 24px;
   }
 
   .editorial { align-self: center; }

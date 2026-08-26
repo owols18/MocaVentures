@@ -86,5 +86,13 @@
       "src": "/images/home/moca-ventures-who-we-work-with.webp",
       "alt": ""
     }
+  },
+  "letsTalk": {
+    "title": "LET’S TALK",
+    "text": "Let’s talk about your next project and explore how our design expertise, technical precision, and international network can bring your vision to life.",
+    "cta": {
+      "label": "CONTACT US",
+      "href": "/lets-talk"
+    }
   }
 }
