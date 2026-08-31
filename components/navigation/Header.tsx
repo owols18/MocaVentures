@@ -1,16 +1,21 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { primaryNavigation } from "../../data/navigation";
 import BrandMark from "./BrandMark";
 import styles from "./Navigation.module.css";
 
 export default function Header() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const logoRef = useRef<HTMLDivElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
   const firstLinkRef = useRef<HTMLAnchorElement>(null);
+  const logoSrc = pathname === "/"
+    ? "/logos/moca-ventures-header-logo.svg"
+    : "/logos/moca-ventures-header-logo-graphite.svg";
 
   useEffect(() => {
     let frame = 0;
@@ -51,7 +56,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div ref={logoRef} className={styles.logoWrap}>
-        <BrandMark className={styles.logo} />
+        <BrandMark className={styles.logo} src={logoSrc} />
       </div>
       <div className={`${styles.desktopMenu} ${isOpen ? styles.menuOpen : ""}`}>
         <nav className={styles.menuPanel} aria-label="Primary navigation" aria-hidden={!isOpen}>

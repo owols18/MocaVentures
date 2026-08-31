@@ -1,0 +1,77 @@
+{
+  "pageTitle": "ABOUT",
+  "introduction": {
+    "id": "who-we-are",
+    "title": "A Global Design Partner",
+    "body": "MOCA Ventures is an independent, M/WBE-certified firm specializing in the design, engineering, development, and procurement of high-quality Italian kitchen and bathroom cabinetry and home furnishings for the U.S. and international markets. Acting exclusively in its clients’ best interests, MOCA works with a broad network of Italian manufacturers to provide tailored solutions across different styles and budgets. The firm combines creative design with technical expertise, rigorous quality control, and meticulous attention to every stage of the process, from initial development and fabrication oversight to shipping and final delivery.",
+    "image": {
+      "src": "/images/about/moca-ventures-global-design-partner-luxury-bathroom.webp",
+      "alt": "Luxury bathroom interior with city views"
+    }
+  },
+  "featureImage": {
+    "id": "italian-design",
+    "src": "/images/about/moca-ventures-luxury-kitchen-interior-design.webp",
+    "alt": "Luxury Italian kitchen with marble finishes and custom cabinetry"
+  },
+  "expertise": {
+    "id": "our-expertise",
+    "title": "Our Expertise",
+    "body": "MOCA Ventures provides an integrated service spanning concept development, design, technical engineering, sourcing, procurement, production oversight, logistics, and delivery of Italian kitchens, bathrooms, cabinetry, and furnishings. Working as an extension of each client’s team, MOCA identifies the most suitable manufacturers and solutions for the project’s aesthetic, technical, environmental, and financial requirements. Its international network and meticulous project management ensure consistent quality, precision, value, and timely execution from initial planning through final delivery.",
+    "image": {
+      "src": "/images/about/moca-ventures-interior-design-expertise.webp",
+      "alt": "Contemporary residential interior showcasing MOCA Ventures design expertise"
+    }
+  },
+  "process": {
+    "id": "process",
+    "title": "How We Bring Projects to Life",
+    "steps": [
+      {
+        "id": "discovery-and-planning",
+        "number": "01",
+        "title": "Discovery & Planning",
+        "body": "We begin by understanding the project vision, functional requirements, budget, schedule, and architectural context to define a clear strategic direction."
+      },
+      {
+        "id": "design-development",
+        "number": "02",
+        "title": "Design Development",
+        "body": "Our team develops tailored kitchen, bathroom, cabinetry, and furnishing solutions that balance refined aesthetics, functionality, materials, and project requirements."
+      },
+      {
+        "id": "technical-engineering",
+        "number": "03",
+        "title": "Technical Engineering",
+        "body": "Each design is translated into precise technical documentation, ensuring compatibility with architectural plans, construction conditions, manufacturing standards, and installation requirements."
+      },
+      {
+        "id": "sourcing-and-procurement",
+        "number": "04",
+        "title": "Sourcing & Procurement",
+        "body": "We identify and coordinate the most suitable European manufacturers, materials, finishes, and products according to the project’s quality and budget objectives."
+      },
+      {
+        "id": "production-oversight",
+        "number": "05",
+        "title": "Production Oversight",
+        "body": "MOCA closely monitors fabrication, specifications, samples, schedules, and quality standards to ensure every component is produced accurately and consistently."
+      },
+      {
+        "id": "logistics-and-delivery",
+        "number": "06",
+        "title": "Logistics & Delivery",
+        "body": "We coordinate international shipping, documentation, delivery schedules, and on-site requirements to ensure an efficient transition from production to final installation."
+      }
+    ]
+  },
+  "sustainability": {
+    "id": "sustainability",
+    "title": "A More Responsible Approach to Luxury",
+    "body": "MOCA Ventures promotes responsible design by selecting durable materials, efficient solutions, and trusted European manufacturers committed to quality, longevity, and reduced environmental impact. By prioritizing thoughtful sourcing, long-lasting products, and environmentally conscious production processes, MOCA helps create refined spaces that remain functional, relevant, and sustainable over time.",
+    "image": {
+      "src": "/images/about/moca-ventures-sustainable-luxury-design.webp",
+      "alt": "Professionals working in a nature-integrated setting"
+    }
+  }
+}
