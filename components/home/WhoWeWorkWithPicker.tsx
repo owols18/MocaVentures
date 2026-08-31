@@ -1,7 +1,8 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./HomeWhoWeWorkWithSection.module.css";
+
 
 type PickerItem = {
   id: string;
@@ -30,6 +31,7 @@ export default function WhoWeWorkWithPicker({
   const wheelDelta = useRef(0);
   const wheelLockedUntil = useRef(0);
   const touchStartY = useRef<number | null>(null);
+  const pickerRef = useRef<HTMLDivElement>(null);
 
   const move = (direction: 1 | -1) => {
     if (items.length < 2) return;
@@ -39,18 +41,33 @@ export default function WhoWeWorkWithPicker({
     );
   };
 
-  const handleWheel = (event: React.WheelEvent<HTMLDivElement>) => {
-    const now = Date.now();
+  useEffect(() => {
+    const picker = pickerRef.current;
+    if (!picker) return;
 
-    if (now < wheelLockedUntil.current) return;
+    const handleWheel = (event: WheelEvent) => {
+      event.preventDefault();
 
-    wheelDelta.current += event.deltaY;
-    if (Math.abs(wheelDelta.current) < WHEEL_THRESHOLD) return;
+      const now = Date.now();
 
-    move(wheelDelta.current > 0 ? 1 : -1);
-    wheelDelta.current = 0;
-    wheelLockedUntil.current = now + WHEEL_LOCK_MS;
-  };
+      if (now < wheelLockedUntil.current) return;
+
+      wheelDelta.current += event.deltaY;
+
+      if (Math.abs(wheelDelta.current) < WHEEL_THRESHOLD) return;
+
+      move(wheelDelta.current > 0 ? 1 : -1);
+
+      wheelDelta.current = 0;
+      wheelLockedUntil.current = now + WHEEL_LOCK_MS;
+    };
+
+    picker.addEventListener("wheel", handleWheel, { passive: false });
+
+    return () => {
+      picker.removeEventListener("wheel", handleWheel);
+    };
+  });
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
     if (event.key === "ArrowDown") {
@@ -85,7 +102,7 @@ export default function WhoWeWorkWithPicker({
       tabIndex={0}
       role="group"
       aria-label={label}
-      onWheel={handleWheel}
+      ref={pickerRef}
       onKeyDown={handleKeyDown}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}

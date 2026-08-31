@@ -3,7 +3,7 @@
   align-items: center;
   flex-direction: column;
   margin: 0 24px;
-  padding: 48px 0 72px;
+  padding: 48px 0 48px;
   background: linear-gradient(to bottom, var(--color-chalk) 0%, rgb(244 244 239 / 0%) 100%);
   text-align: center;
 }
@@ -74,7 +74,7 @@
 }
 
 @media (orientation: landscape) and (max-height: 500px) {
-  .section { margin: 0 24px; padding: 40px 0; }
+  .section { margin: 0 24px; padding: 40px 0 56px; }
   .title { min-height: 80px; padding: 20px 28px; font-size: 36px; }
   .text { max-width: 700px; margin-top: 32px; font-size: 18px; line-height: 27px; }
   .cta { width: 160px; height: 44px; margin-top: 32px; }

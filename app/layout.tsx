@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Footer from "../components/layout/Footer";
 import Header from "../components/navigation/Header";
 import MobileNavigation from "../components/navigation/MobileNavigation";
 import {
@@ -23,6 +24,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col">
         <Header />
         <main className="mobile-safe-content flex min-h-full flex-1 flex-col">{children}</main>
+        <Footer />
         <MobileNavigation />
       </body>
     </html>

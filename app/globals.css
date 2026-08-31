@@ -285,6 +285,6 @@ body {
   font-family: var(--font-body);
 }
 
-.mobile-safe-content { padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
+.mobile-safe-content { padding-bottom: 0px; }
 @media (min-width: 768px) { .mobile-safe-content { padding-bottom: 0; } }
-@media (orientation: landscape) and (max-height: 500px) { .mobile-safe-content { padding-bottom: calc(56px + env(safe-area-inset-bottom)); } }
+@media (orientation: landscape) and (max-height: 500px) { .mobile-safe-content { padding-bottom: 0; } }

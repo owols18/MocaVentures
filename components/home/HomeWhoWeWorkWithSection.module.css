@@ -183,9 +183,9 @@
   }
 
   .title { min-height: clamp(110px, calc(1.6667vw + 86px), 118px); padding: clamp(25px, calc(.4167vw + 19px), 27px) clamp(40px, calc(1.6667vw + 16px), 48px); font-size: clamp(60px, calc(.8333vw + 48px), 64px); }
-  .picker { --picker-line: clamp(58px, calc(1.25vw + 40px), 64px); --picker-step: clamp(74px, calc(1.6667vw + 50px), 82px); height: clamp(230px, calc(8.3333vw + 110px), 270px); margin-top: clamp(48px, calc(.4167vw + 42px), 50px); }
+  .picker { --picker-line: clamp(58px, calc(1.25vw + 40px), 64px); --picker-step: clamp(74px, calc(1.6667vw + 50px), 82px); height: clamp(300px, calc(8.3333vw + 110px), 270px); margin-top: clamp(48px, calc(.4167vw + 42px), 50px); }
   .pickerItem { font-size: clamp(42px, calc(1.25vw + 24px), 48px); }
-  .cta { width: clamp(217px, calc(2.7083vw + 178px), 230px); height: clamp(58px, calc(.4167vw + 52px), 60px); margin-bottom: 18%; font-size: clamp(20px, calc(.4167vw + 14px), 22px); }
+  .cta { width: clamp(217px, calc(2.7083vw + 178px), 300px); height: clamp(58px, calc(.4167vw + 52px), 60px); margin-bottom: 18%; font-size: clamp(20px, calc(.4167vw + 14px), 22px); }
   .photo { width: 100%; }
 }
 
@@ -202,7 +202,7 @@
   .title { min-height: clamp(118px, calc(.625vw + 106px), 122px); padding-block: 27px; font-size: clamp(64px, calc(.625vw + 52px), 68px); }
   .picker { --picker-line: clamp(64px, calc(.9375vw + 46px), 70px); --picker-step: clamp(82px, calc(1.25vw + 58px), 90px); height: clamp(270px, calc(4.6875vw + 180px), 300px); margin-top: clamp(50px, calc(.9375vw + 32px), 56px); }
   .pickerItem { font-size: clamp(48px, calc(.625vw + 36px), 52px); }
-  .cta { width: clamp(230px, calc(1.5625vw + 200px), 240px); height: clamp(60px, calc(.3125vw + 54px), 62px); margin-bottom: 18%; font-size: clamp(22px, calc(.3125vw + 16px), 24px); }
+  .cta { width: clamp(300px, calc(1.5625vw + 200px), 240px); height: clamp(60px, calc(.3125vw + 54px), 62px); margin-bottom: 18%; font-size: clamp(22px, calc(.3125vw + 16px), 24px); }
   .photo { width: 100%; }
 }
 

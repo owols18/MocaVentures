@@ -4,13 +4,14 @@
 .logo:focus-visible, .menuToggle:focus-visible, .menuLinks a:focus-visible, .mobileNav a:focus-visible, .mobileNav button:focus-visible, .morePanel a:focus-visible { outline: 2px solid var(--color-whiskey-sour); outline-offset: 4px; }
 .desktopMenu { display: none; }
 .mobileNavigationRoot { position: fixed; z-index: 50; inset: auto 0 0; }
-.mobileNav { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(5, 1fr); height: calc(72px + env(safe-area-inset-bottom)); padding-bottom: env(safe-area-inset-bottom); background: var(--color-blue-lux); }
-.mobileNav a, .mobileNav button { display: flex; min-width: 0; align-items: center; justify-content: center; flex-direction: column; gap: 5px; padding: 0; color: var(--color-chalk); background: transparent; border: 0; font-family: var(--font-manrope); font-size: 11px; font-weight: 300; line-height: 1; text-decoration: none; cursor: pointer; }
+.mobileNav { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(5, 1fr); height: calc(72px + env(safe-area-inset-bottom)); padding-bottom: env(safe-area-inset-bottom); background: var(--color-chalk); }
+.mobileNav a, .mobileNav button { display: flex; min-width: 0; align-items: center; justify-content: center; flex-direction: column; gap: 5px; padding: 0; color: var(--color-blue-lux); background: transparent; border: 0; font-family: var(--font-manrope); font-size: 11px; font-weight: 300; line-height: 1; text-decoration: none; cursor: pointer; }
 .mobileNav svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 .mobileNav .activeNavItem { color: var(--color-whiskey-sour); }
-.morePanel { position: absolute; right: 16px; bottom: calc(72px + env(safe-area-inset-bottom)); left: 16px; display: flex; visibility: hidden; flex-direction: column; gap: 20px; padding: 24px; border-radius: 4px; background: var(--color-blue-lux); opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity 225ms ease, transform 225ms ease, visibility 225ms; }
+.morePanel { position: absolute; right: 16px; bottom: calc(72px + env(safe-area-inset-bottom)); left: 16px; display: flex; visibility: hidden; flex-direction: column; gap: 20px; padding: 24px; border-radius: 4px; background: var(--color-chalk); opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity 225ms ease, transform 225ms ease, visibility 225ms; }
 .morePanelOpen { visibility: visible; opacity: 1; transform: translateY(0); pointer-events: auto; }
-.morePanel a { color: var(--color-chalk); font-family: var(--font-manrope); font-size: 16px; font-weight: 300; line-height: 1.25; text-align: center; text-decoration: none; }
+.morePanel a { color: var(--color-blue-lux); font-family: var(--font-manrope); font-size: 16px; font-weight: 300; line-height: 1.25; text-align: center; text-decoration: none; }
+.morePanel a:hover, .morePanel a:focus-visible, .morePanel a:active { color: var(--color-whiskey-sour); }
 @media (min-width: 768px) {
   .header { height: 150px; }
   .logoWrap { top: 32px; left: 32px; width: 190px; }
@@ -19,7 +20,7 @@
   .desktopMenu { display: block; pointer-events: auto; }
   .menuPanel { position: fixed; z-index: 1; top: 32px; right: 32px; width: 420px; height: 460px; visibility: hidden; background: rgb(40 75 99 / 70%); opacity: 0; transform: scale(.96); transform-origin: top right; pointer-events: none; transition: opacity 275ms ease, transform 275ms ease, visibility 275ms; }
   .menuOpen .menuPanel { visibility: visible; opacity: 1; transform: scale(1); pointer-events: auto; }
-  .menuLinks { display: flex; height: 100%; align-items: center; justify-content: center; flex-direction: column; gap: 20px; padding: 68px 28px 28px; }
+  .menuLinks { display: flex; height: 100%; align-items: center; justify-content: center; flex-direction: column; gap: 20px; padding: 76px 28px; }
   .menuLinks a { width: 100%; color: var(--color-chalk); border-bottom: .67px solid var(--color-chalk); font-family: var(--font-manrope); font-size: 40px; font-weight: 300; line-height: 1.08; text-align: center; text-decoration: none; white-space: nowrap; }
   .menuLinks .compactMenuLink { font-size: 34px; }
   .menuToggle { position: fixed; z-index: 2; top: 32px; right: 32px; width: 64px; height: 32px; padding: 0; color: var(--color-whiskey-sour); background: transparent; border: 0; cursor: pointer; }
@@ -37,7 +38,7 @@
 }
 @media (min-width: 1280px) {
   .header { height: 190px; } .logoWrap { top: clamp(40px, calc(3.3333vw - 8px), 56px); left: clamp(40px, calc(3.3333vw - 8px), 56px); width: clamp(252px, calc(5.8333vw + 168px), 280px); } .logo { font-size: clamp(32px, calc(.7292vw + 21.5px), 35.5px); }
-  .menuPanel { top: clamp(40px, calc(3.3333vw - 8px), 56px); right: clamp(40px, calc(3.3333vw - 8px), 56px); width: 500px; height: 500px; } .menuLinks { gap: 24px; padding-top: 76px; } .menuLinks a { font-size: 56px; } .menuLinks .compactMenuLink { font-size: 48px; }
+  .menuPanel { top: clamp(40px, calc(3.3333vw - 8px), 56px); right: clamp(40px, calc(3.3333vw - 8px), 56px); width: 600px; height: 600px; } .menuLinks { gap: 24px; padding: 76px 28px; } .menuLinks a { font-size: 56px; } .menuLinks .compactMenuLink { font-size: 48px; }
   .menuToggle { top: clamp(40px, calc(3.3333vw - 8px), 56px); right: clamp(40px, calc(3.3333vw - 8px), 56px); width: clamp(80px, calc(1.6667vw + 56px), 88px); height: clamp(40px, calc(.8333vw + 28px), 44px); } .menuOpen .menuToggle { top: clamp(60px, calc(3.3333vw + 12px), 76px); right: clamp(60px, calc(3.3333vw + 12px), 76px); width: 40px; height: 40px; }
 }
 @media (min-width: 1920px) {
@@ -45,7 +46,7 @@
   .menuPanel { top: clamp(56px, calc(1.25vw + 32px), 64px); right: clamp(56px, calc(1.25vw + 32px), 64px); }
   .menuToggle { top: clamp(56px, calc(1.25vw + 32px), 64px); right: clamp(56px, calc(1.25vw + 32px), 64px); width: clamp(88px, calc(1.25vw + 64px), 96px); height: clamp(44px, calc(.625vw + 32px), 48px); } .menuOpen .menuToggle { top: clamp(76px, calc(1.25vw + 52px), 84px); right: clamp(76px, calc(1.25vw + 52px), 84px); }
 }
-@media (orientation: landscape) and (max-height: 500px) {
+@media (orientation: landscape) and (max-height: 600px) {
   .header { height: 100px; } .logoWrap { top: 20px; left: 24px; width: 130px; } .logo { font-size: 16px; }
   .desktopMenu { display: none; } .mobileNavigationRoot { display: block; }
   .mobileNav { height: calc(56px + env(safe-area-inset-bottom)); } .mobileNav a, .mobileNav button { gap: 4px; font-size: 10px; } .mobileNav svg { width: 20px; height: 20px; }
