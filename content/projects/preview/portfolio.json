@@ -1,0 +1,90 @@
+[
+  {
+    "id": "80-broad-street",
+    "visible": true,
+    "location": "NEW YORK",
+    "address": "80 Broad Street",
+    "projectName": "",
+    "image": {
+      "src": "/images/portfolio/moca-ventures-80-broad-street-new-york-portfolio.webp",
+      "alt": "Light stone high-rise with stepped upper floors viewed from street level."
+    }
+  },
+  {
+    "id": "139-franklin-street",
+    "visible": true,
+    "location": "NEW YORK",
+    "address": "139-Franklin-st",
+    "projectName": "",
+    "image": {
+      "src": "/images/portfolio/moca-ventures-139-franklin-street-new-york-portfolio.webp",
+      "alt": "Historic pale masonry building with arched windows and ground-floor storefronts."
+    }
+  },
+  {
+    "id": "312-west-43rd-street",
+    "visible": true,
+    "location": "NEW YORK",
+    "address": "312 West 43rd Street",
+    "projectName": "THE ELLERY",
+    "image": {
+      "src": "/images/portfolio/moca-ventures-312-west-43rd-street-new-york-portfolio.webp",
+      "alt": "Contemporary glass tower above a city street."
+    }
+  },
+  {
+    "id": "202-broome-street",
+    "visible": true,
+    "location": "NEW YORK",
+    "address": "202 Broome Street",
+    "projectName": "ESSEX CROSSING",
+    "image": {
+      "src": "/images/portfolio/moca-ventures-202-broome-street-new-york-portfolio.webp",
+      "alt": "Contemporary residential facade with planted terraces overlooking the city at dusk."
+    }
+  },
+  {
+    "id": "275-west-10th-street",
+    "visible": true,
+    "location": "NEW YORK",
+    "address": "275 W 10th Street",
+    "projectName": "THE SHEPHARD",
+    "image": {
+      "src": "/images/portfolio/moca-ventures-275-west-10th-street-new-york-portfolio.webp",
+      "alt": "Brick building entrance framed by dark metalwork and greenery."
+    }
+  },
+  {
+    "id": "265-east-houston-street",
+    "visible": true,
+    "location": "NEW YORK",
+    "address": "265 East Houston Street",
+    "projectName": "MIKE DIFONSO",
+    "image": {
+      "src": "/images/portfolio/moca-ventures-265-east-houston-street-new-york-portfolio.webp",
+      "alt": "Residential building with tall windows beneath a warm evening sky."
+    }
+  },
+  {
+    "id": "150-rivington",
+    "visible": true,
+    "location": "NEW YORK",
+    "address": "150 Rivington",
+    "projectName": "GLUCK +",
+    "image": {
+      "src": "/images/portfolio/moca-ventures-150-rivington-new-york-portfolio.webp",
+      "alt": "Modern facade with vertical panels and illuminated windows at dusk."
+    }
+  },
+  {
+    "id": "204-forsyth-street",
+    "visible": true,
+    "location": "NEW YORK",
+    "address": "204 Forsyth Street",
+    "projectName": "",
+    "image": {
+      "src": "/images/portfolio/moca-ventures-202-broome-street-new-york-portfolio.webp",
+      "alt": "Temporary reference photograph of a residential facade with planted terraces at dusk."
+    }
+  }
+]

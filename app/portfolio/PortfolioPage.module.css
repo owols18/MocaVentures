@@ -1,0 +1,209 @@
+.page {
+  width: 100%;
+  background: #fff;
+}
+
+.pageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 168px 24px 48px;
+  text-align: center;
+}
+
+.title {
+  display: flex;
+  width: 100%;
+  min-height: 88px;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  color: var(--color-blue-lux);
+  box-sizing: border-box;
+  font-size: 36px;
+  line-height: 1;
+  text-align: center;
+}
+
+.grid {
+  --card-caption-size: 14px;
+  --card-address-size: 22px;
+  --card-text-gap: 12px;
+  --card-panel-padding: 20px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 15px;
+  margin: 0 24px;
+  padding: 0 0 48px;
+  list-style: none;
+}
+
+.card {
+  position: relative;
+  min-width: 0;
+  aspect-ratio: 263 / 432;
+  overflow: hidden;
+  border: 1px solid var(--color-whiskey-sour);
+  background: var(--color-chalk);
+}
+
+.cardContent {
+  position: relative;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  color: var(--color-graphite);
+  text-decoration: none;
+}
+
+.card:has(.cardContent:focus-visible) {
+  outline: 2px solid var(--color-blue-lux);
+  outline-offset: 3px;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 400ms ease;
+}
+
+.panel {
+  position: relative;
+  display: grid;
+  z-index: 1;
+  width: max-content;
+  max-width: calc(100% - 24px);
+  gap: var(--card-text-gap);
+  padding: var(--card-panel-padding);
+  border: 1px solid var(--color-whiskey-sour);
+  background: rgb(244 244 239 / 80%);
+  color: var(--color-graphite);
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.caption {
+  margin: 0;
+  font-family: var(--font-lato), sans-serif;
+  font-size: var(--card-caption-size);
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.address {
+  margin: 0;
+  font-family: var(--font-merriweather), serif;
+  font-size: var(--card-address-size);
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .card:hover .image {
+    transform: scale(1.1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image {
+    transition: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-inline: 32px;
+    padding-bottom: 56px;
+  }
+
+  .pageHeader {
+    padding: 206px 32px 56px;
+  }
+
+  .title {
+    min-height: 96px;
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding-bottom: 60px;
+  }
+
+  .pageHeader {
+    padding-top: 220px;
+    padding-bottom: 60px;
+  }
+
+  .title {
+    min-height: 100px;
+    font-size: 48px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid {
+    --card-caption-size: clamp(14px, calc(.357143vw + 8.857143px), 18px);
+    --card-address-size: clamp(22px, calc(.892857vw + 9.142857px), 32px);
+    --card-text-gap: clamp(12px, calc(.357143vw + 6.857143px), 16px);
+    --card-panel-padding: clamp(20px, calc(.714286vw + 9.714286px), 28px);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    width: min(calc(100% - 80px), 2480px);
+    margin-inline: auto;
+    padding-bottom: clamp(65px, calc(1.4583vw + 44px), 72px);
+  }
+
+  .pageHeader {
+    padding-top: calc(190px + clamp(65px, calc(1.4583vw + 44px), 72px));
+    padding-right: 40px;
+    padding-bottom: clamp(65px, calc(1.4583vw + 44px), 72px);
+    padding-left: 40px;
+  }
+
+  .title {
+    min-height: clamp(110px, calc(1.6667vw + 86px), 118px);
+    font-size: clamp(60px, calc(.8333vw + 48px), 64px);
+  }
+}
+
+@media (min-width: 1920px) {
+  .grid {
+    padding-bottom: clamp(72px, calc(1.25vw + 48px), 80px);
+  }
+
+  .pageHeader {
+    padding-top: calc(190px + clamp(72px, calc(1.25vw + 48px), 80px));
+    padding-bottom: clamp(72px, calc(1.25vw + 48px), 80px);
+  }
+
+  .title {
+    min-height: clamp(118px, calc(.625vw + 106px), 122px);
+    font-size: clamp(64px, calc(.625vw + 52px), 68px);
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .grid {
+    --card-caption-size: 14px;
+    --card-address-size: 22px;
+    --card-text-gap: 12px;
+    --card-panel-padding: 20px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: auto;
+    margin-inline: 24px;
+    padding-bottom: 40px;
+  }
+
+  .pageHeader {
+    padding: 140px 24px 32px;
+  }
+
+  .title {
+    min-height: 80px;
+    font-size: 36px;
+  }
+}

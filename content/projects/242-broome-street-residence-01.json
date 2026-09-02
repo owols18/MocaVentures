@@ -1,11 +1,20 @@
 {
   "slug": "242-broome-street-residence-01",
   "status": "published",
+  "visible": true,
   "publishedAt": "2026-08-25",
   "location": "NEW YORK",
   "title": "242 BROOME STREET",
   "summary": "A private commission within Essex Crossing, offering commanding views of the New York skyline.",
   "description": [],
+  "portfolio": {
+    "address": "242 Broome Street",
+    "projectName": "ESSEX CROSSING",
+    "image": {
+      "src": "/images/portfolio/moca-ventures-242-broome-street-new-york-portfolio.webp",
+      "alt": "Angular facade with a geometric window grid against a blue sky."
+    }
+  },
   "images": {
     "home": "/images/portfolio/projects/242-broome-street-residence-01/moca-ventures-242-broome-street-luxury-residence-01-home.webp",
     "hero": "",
