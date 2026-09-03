@@ -13,7 +13,7 @@ export default function Header() {
   const logoRef = useRef<HTMLDivElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
   const firstLinkRef = useRef<HTMLAnchorElement>(null);
-  const logoSrc = pathname === "/"
+  const logoSrc = pathname === "/" || pathname.startsWith("/portfolio/")
     ? "/logos/moca-ventures-header-logo.svg"
     : "/logos/moca-ventures-header-logo-graphite.svg";
 

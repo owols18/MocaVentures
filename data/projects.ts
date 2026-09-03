@@ -21,6 +21,38 @@ export interface PortfolioCard extends PortfolioDetails {
   slug?: string;
 }
 
+interface ProjectImageMetadata {
+  alt: string;
+  width: number;
+  height: number;
+  focalPoint: { x: number; y: number };
+}
+
+interface ProjectImage extends ProjectImageMetadata {
+  src: string;
+}
+
+interface ProjectDetailSection {
+  id: string;
+  title: string;
+  body: string;
+  panelSide: "left" | "right";
+  image: ProjectImage;
+}
+
+export interface ProjectMaterial {
+  id: string;
+  label: string;
+  description: string;
+  image: ProjectImage;
+}
+
+interface ProjectDetail {
+  hero: ProjectImageMetadata;
+  sections?: ProjectDetailSection[];
+  initialMaterialId?: string;
+}
+
 export interface Project {
   slug: string;
   status: "draft" | "published";
@@ -31,12 +63,13 @@ export interface Project {
   summary: string;
   description: string[];
   portfolio?: PortfolioDetails;
+  detail?: ProjectDetail;
   images: {
     home: string;
     hero: string;
     gallery: string[];
   };
-  materials: string[];
+  materials: ProjectMaterial[];
   client: string;
   teamMembers: string[];
   cta: {
@@ -80,6 +113,99 @@ function assertPublishedAt(value: unknown, field: string): asserts value is stri
   }
 }
 
+function assertImageMetadata(value: unknown, field: string): asserts value is ProjectImageMetadata {
+  if (!isRecord(value)) throw new Error(`${field} must be an object.`);
+  assertString(value.alt, `${field}.alt`, true);
+
+  for (const dimension of ["width", "height"] as const) {
+    const size = value[dimension];
+    if (typeof size !== "number" || !Number.isInteger(size) || size <= 0) {
+      throw new Error(`${field}.${dimension} must be a positive integer.`);
+    }
+  }
+
+  if (!isRecord(value.focalPoint)) {
+    throw new Error(`${field}.focalPoint must be an object.`);
+  }
+  for (const axis of ["x", "y"] as const) {
+    const position = value.focalPoint[axis];
+    if (typeof position !== "number" || !Number.isFinite(position) || position < 0 || position > 100) {
+      throw new Error(`${field}.focalPoint.${axis} must be a number between 0 and 100.`);
+    }
+  }
+}
+
+function assertLocalAsset(source: string, field: string): void {
+  const assetPath = resolve(publicDirectory, source.replace(/^\/+/, ""));
+  const relativeAssetPath = relative(publicDirectory, assetPath);
+  if (
+    !source.startsWith("/") ||
+    source.startsWith("//") ||
+    relativeAssetPath === "" ||
+    relativeAssetPath.startsWith("..") ||
+    isAbsolute(relativeAssetPath) ||
+    !existsSync(assetPath)
+  ) {
+    throw new Error(`${field} must reference an existing asset under public/.`);
+  }
+}
+
+function assertProjectImage(value: unknown, field: string, published: boolean): asserts value is ProjectImage {
+  if (!isRecord(value)) throw new Error(`${field} must be an object.`);
+  assertString(value.src, `${field}.src`, true);
+  if (published) assertLocalAsset(value.src, `${field}.src`);
+  assertImageMetadata(value, field);
+}
+
+function assertContentId(value: unknown, field: string): asserts value is string {
+  assertString(value, field, true);
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(value)) {
+    throw new Error(`${field} must use lowercase letters, numbers, and single hyphens.`);
+  }
+}
+
+function assertProjectDetail(value: unknown, field: string, published: boolean): asserts value is ProjectDetail {
+  if (!isRecord(value)) throw new Error(`${field} must be an object.`);
+  assertImageMetadata(value.hero, `${field}.hero`);
+  if (value.initialMaterialId !== undefined) {
+    assertContentId(value.initialMaterialId, `${field}.initialMaterialId`);
+  }
+  if (value.sections !== undefined) {
+    if (!Array.isArray(value.sections)) throw new Error(`${field}.sections must be an array.`);
+    const ids = new Set<string>();
+    value.sections.forEach((section: unknown, index) => {
+      const sectionField = `${field}.sections[${index}]`;
+      if (!isRecord(section)) throw new Error(`${sectionField} must be an object.`);
+      assertContentId(section.id, `${sectionField}.id`);
+      if (ids.has(section.id)) throw new Error(`${sectionField}.id must be unique.`);
+      ids.add(section.id);
+      assertString(section.title, `${sectionField}.title`, true);
+      assertString(section.body, `${sectionField}.body`, true);
+      if (section.panelSide !== "left" && section.panelSide !== "right") {
+        throw new Error(`${sectionField}.panelSide must be left or right.`);
+      }
+      assertProjectImage(section.image, `${sectionField}.image`, published);
+    });
+  }
+}
+
+function assertMaterials(value: unknown, field: string, published: boolean): asserts value is ProjectMaterial[] {
+  if (!Array.isArray(value) || value.length > 5) {
+    throw new Error(`${field} must be an array containing at most five materials.`);
+  }
+  const ids = new Set<string>();
+  value.forEach((material: unknown, index) => {
+    const materialField = `${field}[${index}]`;
+    if (!isRecord(material)) throw new Error(`${materialField} must be an object.`);
+    assertContentId(material.id, `${materialField}.id`);
+    if (ids.has(material.id)) throw new Error(`${materialField}.id must be unique.`);
+    ids.add(material.id);
+    assertString(material.label, `${materialField}.label`, true);
+    assertString(material.description, `${materialField}.description`, true);
+    assertProjectImage(material.image, `${materialField}.image`, published);
+  });
+}
+
 function validateProject(value: unknown, fileName: string): Project {
   const field = (name: string) => `Invalid project data in ${fileName}: ${name}`;
   if (!isRecord(value)) throw new Error(`Invalid project data in ${fileName}: expected an object.`);
@@ -106,6 +232,17 @@ function validateProject(value: unknown, fileName: string): Project {
   assertString(value.images.hero, field("images.hero"));
   assertStringArray(value.images.gallery, field("images.gallery"));
 
+  if (value.detail !== undefined) {
+    assertProjectDetail(value.detail, field("detail"), value.status === "published");
+
+    if (value.status === "published") {
+      assertLocalAsset(value.images.hero, field("images.hero"));
+      if (value.description.length === 0 || value.description.some((paragraph) => !paragraph.trim())) {
+        throw new Error(`${field("description")} must contain non-empty overview paragraphs when detail is provided.`);
+      }
+    }
+  }
+
   if (value.status === "published") {
     const assetPath = resolve(publicDirectory, value.images.home.replace(/^\/+/, ""));
     const relativeAssetPath = relative(publicDirectory, assetPath);
@@ -117,7 +254,14 @@ function validateProject(value: unknown, fileName: string): Project {
     }
   }
 
-  assertStringArray(value.materials, field("materials"));
+  assertMaterials(value.materials, field("materials"), value.status === "published");
+  const initialMaterialId = value.detail?.initialMaterialId;
+  if (
+    initialMaterialId !== undefined &&
+    !value.materials.some((material) => material.id === initialMaterialId)
+  ) {
+    throw new Error(`${field("detail.initialMaterialId")} must reference an existing material.`);
+  }
   assertString(value.client, field("client"));
   assertStringArray(value.teamMembers, field("teamMembers"));
 

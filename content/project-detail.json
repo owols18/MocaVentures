@@ -1,0 +1,11 @@
+{
+  "hero": {
+    "readMoreLabel": "READ MORE"
+  },
+  "overview": {
+    "title": "Project Overview"
+  },
+  "materials": {
+    "titleTemplate": "Specified Materials — {project}"
+  }
+}

@@ -6,7 +6,9 @@
   "location": "NEW YORK",
   "title": "242 BROOME STREET",
   "summary": "A private commission within Essex Crossing, offering commanding views of the New York skyline.",
-  "description": [],
+  "description": [
+    "At 242 Broome Street, MOCA developed kitchens, bathrooms, and common areas that translate the building’s contemporary architecture into refined, functional, and cohesive interiors."
+  ],
   "portfolio": {
     "address": "242 Broome Street",
     "projectName": "ESSEX CROSSING",
@@ -15,12 +17,111 @@
       "alt": "Angular facade with a geometric window grid against a blue sky."
     }
   },
+  "detail": {
+    "hero": {
+      "alt": "The facade of 242 Broome Street in New York, viewed from below against a blue sky.",
+      "width": 3840,
+      "height": 2400,
+      "focalPoint": { "x": 50, "y": 50 }
+    },
+    "sections": [
+      {
+        "id": "kitchens",
+        "title": "Kitchens",
+        "body": "MOCA developed sophisticated kitchens combining custom walnut cabinetry, integrated functionality, and refined materials to create elegant spaces designed for contemporary urban living.",
+        "panelSide": "left",
+        "image": {
+          "src": "/images/portfolio/projects/242-broome-street-residence-01/moca-ventures-242-broome-street-kitchen.webp",
+          "alt": "A kitchen at 242 Broome Street with full-height cabinetry, a central island, and pendant lighting.",
+          "width": 3840,
+          "height": 1867,
+          "focalPoint": { "x": 50, "y": 50 }
+        }
+      },
+      {
+        "id": "bathrooms",
+        "title": "Bathrooms",
+        "body": "The bathrooms feature tailored vanities, thoughtful storage, and carefully selected finishes, creating serene and functional environments with a distinctly sophisticated residential character.",
+        "panelSide": "right",
+        "image": {
+          "src": "/images/portfolio/projects/242-broome-street-residence-01/moca-ventures-242-broome-street-bathroom.webp",
+          "alt": "A bathroom at 242 Broome Street with a freestanding bathtub, double vanity, and views across New York.",
+          "width": 3840,
+          "height": 1867,
+          "focalPoint": { "x": 50, "y": 50 }
+        }
+      },
+      {
+        "id": "common-amenities",
+        "title": "Common amenities",
+        "body": "The property offers a 24-hour doorman, a fitness center, an entertainment lounge with a kitchen and billiards, and a landscaped rooftop terrace for outdoor dining.",
+        "panelSide": "left",
+        "image": {
+          "src": "/images/portfolio/projects/242-broome-street-residence-01/moca-ventures-242-broome-street-rooftop-terrace.webp",
+          "alt": "The landscaped rooftop terrace at 242 Broome Street, with outdoor seating and views of the Manhattan skyline at dusk.",
+          "width": 3840,
+          "height": 1867,
+          "focalPoint": { "x": 50, "y": 50 }
+        }
+      }
+    ],
+    "initialMaterialId": "marble"
+  },
   "images": {
-    "home": "/images/portfolio/projects/242-broome-street-residence-01/moca-ventures-242-broome-street-luxury-residence-01-home.webp",
-    "hero": "",
+    "home": "/images/portfolio/projects/242-broome-street-residence-01/moca-ventures-242-broome-street-new-york-exterior.webp",
+    "hero": "/images/portfolio/projects/242-broome-street-residence-01/moca-ventures-242-broome-street-new-york-exterior.webp",
     "gallery": []
   },
-  "materials": [],
+  "materials": [
+    {
+      "id": "metals",
+      "label": "METALS",
+      "description": "Metal finishes bring precise detailing, subtle sheen, and enduring character, creating elegant accents that complement cabinetry, fixtures, and shared interiors.",
+      "image": {
+        "src": "/images/portfolio/projects/242-broome-street-residence-01/moca-ventures-242-broome-street-material-metals.webp",
+        "alt": "A close view of the selected metal finish.",
+        "width": 2800,
+        "height": 1800,
+        "focalPoint": { "x": 50, "y": 50 }
+      }
+    },
+    {
+      "id": "lacquers",
+      "label": "LACQUERS",
+      "description": "Lacquer finishes bring smooth surfaces, balanced color, and refined definition, creating tailored cabinetry that unifies kitchens, bathrooms, and shared interiors.",
+      "image": {
+        "src": "/images/portfolio/projects/242-broome-street-residence-01/moca-ventures-242-broome-street-material-lacquers.webp",
+        "alt": "A close view of the surface selected to represent lacquer finishes.",
+        "width": 2800,
+        "height": 1800,
+        "focalPoint": { "x": 50, "y": 50 }
+      }
+    },
+    {
+      "id": "wood",
+      "label": "WOOD",
+      "description": "Natural wood brings inviting warmth, expressive grain, and lasting character, creating bespoke cabinetry that enriches kitchens, bathrooms, and shared interiors.",
+      "image": {
+        "src": "/images/portfolio/projects/242-broome-street-residence-01/moca-ventures-242-broome-street-material-wood.webp",
+        "alt": "A close view of the selected wood grain.",
+        "width": 2800,
+        "height": 1800,
+        "focalPoint": { "x": 50, "y": 50 }
+      }
+    },
+    {
+      "id": "marble",
+      "label": "MARBLE",
+      "description": "Natural marble brings timeless elegance, distinctive veining, and refined durability, creating sophisticated surfaces that enrich kitchens, bathrooms, and shared interiors.",
+      "image": {
+        "src": "/images/portfolio/projects/242-broome-street-residence-01/moca-ventures-242-broome-street-material-marble.webp",
+        "alt": "A close view of the selected dark marble surface and its natural variation.",
+        "width": 2800,
+        "height": 1800,
+        "focalPoint": { "x": 50, "y": 50 }
+      }
+    }
+  ],
   "client": "",
   "teamMembers": [],
   "cta": {
