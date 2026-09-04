@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "title": "Team | MOCA Ventures",
+    "description": "Meet the multidisciplinary team behind MOCA Ventures and learn about their international design, business, and project management experience."
+  },
+  "pageTitle": "THE PEOPLE BEHIND MOCA",
+  "introduction": "MOCA’s multidisciplinary team combines creative vision, technical expertise, and international experience to deliver refined, functional, and precisely executed solutions for every project.",
+  "labels": {
+    "teamSection": "MOCA Ventures team members",
+    "openProfile": "Read the profile of",
+    "closeProfile": "Close team member profile"
+  },
+  "members": [
+    {
+      "id": "michael-lerner",
+      "name": "Michael Lerner",
+      "role": "Chief executive",
+      "image": {
+        "src": "/images/team/moca-ventures-michael-lerner-chief-executive.webp",
+        "alt": "Portrait of Michael Lerner"
+      },
+      "biography": [
+        "Michael is a highly accomplished chief executive with more than four decades of experience in the United States, Europe, and Asia. He began his career with TFM Industries, where he eventually rose to the position of President and CEO. He later led the turnaround of Marisa Christina, Inc., building it into an international business with more than $100 million in sales. During his tenure, the company ranked sixth on Forbes’ list of Best Small Companies and was recognized by Fortune as one of its Fastest-Growing Companies.",
+        "Over the years, Michael has been involved in countless building and restoration projects. His experience as a board member and senior adviser is central to his strategic role at MOCA Ventures. He has served on the boards of Waterworks, Apparel Ventures, Grooster Corp., EHS, Sagaponack Partners, a private equity firm, and Jana Partners, a multibillion-dollar activist fund. He has also served as a senior adviser to Mercer Street Capital, a strategic advisory and investment firm, and as president of the board of 515 Broadway Corp."
+      ]
+    },
+    {
+      "id": "claudia-ospina",
+      "name": "Claudia Ospina",
+      "role": "Founder",
+      "image": {
+        "src": "/images/team/moca-ventures-claudia-ospina-founder.webp",
+        "alt": "Portrait of Claudia Ospina"
+      },
+      "biography": [
+        "Claudia is the founder and driving force behind MOCA Ventures. Her passion for excellence, meticulous attention to detail, and commitment to exceeding her clients’ expectations shape the philosophy behind the company’s success.",
+        "With a distinctly international perspective, Claudia was born in Colombia and raised and educated in London, New York, Lugano, Paris, and Tokyo, where she completed an International MBA. Drawing on her global outlook and business acumen, she has worked with U.S., Italian, and Israeli companies for more than fifteen years. Following a five-year hiatus after the birth of her twin daughters, Claudia founded MOCA Ventures to pursue her vision of strengthening international relationships through business and bringing excellence to the lifestyles of her clients and their customers."
+      ]
+    },
+    {
+      "id": "monica-serafini",
+      "name": "Monica Serafini",
+      "role": "Project management",
+      "image": {
+        "src": "/images/team/moca-ventures-monica-serafini-project-management.webp",
+        "alt": "Portrait of Monica Serafini"
+      },
+      "biography": [
+        "Monica has extensive experience in interior design and project management across Europe, the Americas, and the Middle East. She oversees MOCA’s sourcing in Italy with exceptional attention to detail, monitors factory production to ensure quality and on-time delivery, and supervises quality control across all partner factories to ensure precise, consistent results.",
+        "As co-founder of the renowned design firm Arredamenti Serafini, Monica has specialized in the restoration of residential and commercial interiors. She is highly knowledgeable in chromatic studies and illumination engineering, as well as the evolution of modern design trends in response to cultural, social, and environmental influences. She is also a founding member of GBC Italia (Green Building Council Italia) and requires the highest standards of environmental compliance from MOCA’s manufacturing partners."
+      ]
+    }
+  ]
+}
