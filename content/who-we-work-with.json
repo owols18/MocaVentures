@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "title": "Who We Work With | MOCA Ventures",
+    "description": "Discover how MOCA Ventures collaborates with developers, architects, construction managers, interior designers, trade partners, and building managers."
+  },
+  "pageTitle": "WHO WE WORK WITH",
+  "introduction": "We collaborate with professionals across the architecture, construction, design, and property management industries, providing integrated solutions that combine European craftsmanship, technical expertise, reliable procurement, and precise project coordination.",
+  "process": {
+    "id": "partners",
+    "label": "Professionals who work with MOCA Ventures",
+    "steps": [
+      {
+        "id": "developers",
+        "number": "01",
+        "title": "DEVELOPERS",
+        "body": "We support developers with tailored cabinetry and furnishing solutions that balance design quality, project requirements, budgets, and schedules, helping create distinctive residential and hospitality developments with lasting market value.",
+        "image": {
+          "src": "/images/who-we-work-with/moca-ventures-developers-project-planning.webp",
+          "alt": "Developer reviewing architectural plans and project drawings"
+        }
+      },
+      {
+        "id": "architects",
+        "number": "02",
+        "title": "ARCHITECTS",
+        "body": "We collaborate closely with architects to translate their creative vision into technically precise, manufacturable solutions, ensuring that materials, finishes, proportions, and architectural details remain consistent throughout the project.",
+        "image": {
+          "src": "/images/who-we-work-with/moca-ventures-architects-design-collaboration.webp",
+          "alt": "Architects collaborating over plans and technical drawings"
+        }
+      },
+      {
+        "id": "construction-managers",
+        "number": "03",
+        "title": "CONSTRUCTION MANAGERS",
+        "body": "We coordinate with construction managers to align technical documentation, production schedules, logistics, delivery, and installation requirements, helping each project progress efficiently while maintaining quality and minimizing potential on-site challenges.",
+        "image": {
+          "src": "/images/who-we-work-with/moca-ventures-construction-managers-coordination.webp",
+          "alt": "Construction managers coordinating work at a project site"
+        }
+      },
+      {
+        "id": "interior-designers",
+        "number": "04",
+        "title": "INTERIOR DESIGNERS",
+        "body": "We work alongside interior designers to develop refined kitchens, bathrooms, cabinetry, and furnishings that complement their aesthetic direction while meeting the project’s functional, technical, and financial requirements.",
+        "image": {
+          "src": "/images/who-we-work-with/moca-ventures-interior-designers-collaboration.webp",
+          "alt": "Interior designers reviewing colors and material samples"
+        }
+      },
+      {
+        "id": "trade-partners",
+        "number": "05",
+        "title": "TRADE PARTNERS",
+        "body": "We partner with experienced trade professionals, manufacturers, suppliers, and installers to ensure consistent quality, accurate production, efficient coordination, and reliable execution across every stage of the project.",
+        "image": {
+          "src": "/images/who-we-work-with/moca-ventures-trade-partners-manufacturing.webp",
+          "alt": "Trade professional completing precision metalwork"
+        }
+      },
+      {
+        "id": "building-managers",
+        "number": "06",
+        "title": "BUILDING MANAGERS",
+        "body": "We assist building managers with durable, functional, and carefully coordinated interior solutions designed to support daily operations, simplify maintenance, and preserve the quality and appearance of each property over time.",
+        "image": {
+          "src": "/images/who-we-work-with/moca-ventures-building-managers-property-solutions.webp",
+          "alt": "Building manager meeting with a property services professional"
+        }
+      }
+    ]
+  }
+}
