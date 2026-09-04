@@ -1,0 +1,560 @@
+.page {
+  width: 100%;
+  background: #fbfaf7;
+}
+
+.pageHeader {
+  display: flex;
+  width: calc(100% - 48px);
+  max-width: 2020px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-inline: auto;
+  padding-top: 168px;
+  padding-bottom: 65px;
+}
+
+.title {
+  display: flex;
+  width: 100%;
+  min-height: 88px;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  color: var(--color-blue-lux);
+  box-sizing: border-box;
+  font-size: 36px;
+  line-height: 1.05;
+  text-align: left;
+}
+
+.contactLayout {
+  display: grid;
+  width: calc(100% - 48px);
+  max-width: 2020px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 40px;
+  margin-inline: auto;
+  padding-bottom: 65px;
+}
+
+.contactPanel,
+.contactDetailColumn,
+.contactForm,
+.fieldGroup,
+.messageField {
+  min-width: 0;
+}
+
+.contactDetails {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 25px;
+  color: var(--color-graphite);
+  font-family: var(--font-lato);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 27px;
+}
+
+.contactDetailColumn,
+.contactDetailGroup,
+.address {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.contactDetailGroup {
+  margin-top: 25px;
+}
+
+.address {
+  margin: 0;
+  font: inherit;
+}
+
+.contactLabel {
+  text-transform: uppercase;
+}
+
+.contactDetails a,
+.consentControl a {
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: color 180ms ease;
+}
+
+.contactDetails a:hover,
+.consentControl a:hover {
+  color: var(--color-whiskey-sour);
+}
+
+.contactDetails a:focus-visible,
+.consentControl a:focus-visible {
+  border-radius: 1px;
+  outline: 2px solid var(--color-whiskey-sour);
+  outline-offset: 4px;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 65px;
+}
+
+.fieldGroup {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.fieldGroup > label {
+  margin-bottom: 12px;
+  color: var(--color-graphite);
+  font-family: var(--font-lato);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 27px;
+}
+
+.fieldGroup > input,
+.phoneField {
+  width: 100%;
+  min-width: 0;
+  height: 52px;
+  color: var(--color-graphite);
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--color-blue-lux);
+  border-radius: 0;
+  box-sizing: border-box;
+  font-family: var(--font-lato);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 27px;
+  outline: none;
+}
+
+.fieldGroup > input:focus,
+.phoneField:focus-within {
+  border-bottom-color: var(--color-whiskey-sour);
+}
+
+.phoneField {
+  display: flex;
+  align-items: stretch;
+}
+
+.phoneField select,
+.phoneField input {
+  min-width: 0;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  font: inherit;
+  outline: none;
+}
+
+.phoneField select {
+  width: min(48%, 220px);
+  padding: 0 30px 0 0;
+  cursor: pointer;
+  text-overflow: ellipsis;
+}
+
+.phoneField input {
+  flex: 1;
+  padding: 0 0 0 18px;
+  border-left: 1px solid rgb(40 75 99 / 35%);
+}
+
+.messageField textarea {
+  width: 100%;
+  height: 240px;
+  padding: 18px;
+  color: var(--color-graphite);
+  background: transparent;
+  border: 1px solid var(--color-blue-lux);
+  border-radius: 0;
+  box-sizing: border-box;
+  font-family: var(--font-lato);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 27px;
+  outline: none;
+  overflow-y: auto;
+  resize: none;
+}
+
+.messageField textarea:focus {
+  border-color: var(--color-whiskey-sour);
+}
+
+.fieldError,
+.formStatusError,
+.formStatusSuccess {
+  margin: 8px 0 0;
+  font-family: var(--font-lato);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.fieldError,
+.formStatusError {
+  color: #a51d1d;
+}
+
+.formStatusSuccess {
+  color: var(--color-blue-lux);
+  text-align: right;
+}
+
+.consentGroup {
+  margin-bottom: 32px;
+}
+
+.consentControl {
+  display: grid;
+  align-items: start;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 14px;
+}
+
+.consentControl input {
+  width: 28px;
+  height: 28px;
+  margin: 0;
+  appearance: none;
+  background: transparent;
+  border: 1px solid var(--color-blue-lux);
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.consentControl input:checked {
+  background-color: var(--color-whiskey-sour);
+  background-image:
+    linear-gradient(45deg, transparent 43%, #fbfaf7 43% 55%, transparent 55%),
+    linear-gradient(-45deg, transparent 56%, #fbfaf7 56% 68%, transparent 68%);
+  background-position: 2px 2px, 9px -1px;
+  background-repeat: no-repeat;
+  background-size: 11px 18px, 12px 22px;
+  border-color: var(--color-whiskey-sour);
+}
+
+.consentControl input:focus-visible {
+  outline: 2px solid var(--color-whiskey-sour);
+  outline-offset: 3px;
+}
+
+.consentControl label {
+  color: var(--color-graphite);
+  font-family: var(--font-lato);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.formStatusError {
+  margin: -16px 0 24px;
+}
+
+.submitRow {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mediaColumn {
+  display: grid;
+  grid-template-columns: minmax(0, 615px);
+  justify-content: center;
+  gap: 40px;
+  min-width: 0;
+}
+
+.imageFrame {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 615 / 700;
+  border: 1px solid var(--color-whiskey-sour);
+  box-sizing: border-box;
+}
+
+.contactImage {
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .pageHeader,
+  .contactLayout {
+    width: calc(100% - 64px);
+  }
+
+  .pageHeader {
+    padding-top: 206px;
+  }
+
+  .title {
+    min-height: 96px;
+    font-size: 40px;
+  }
+
+  .contactLayout {
+    gap: 65px;
+  }
+
+  .contactDetails {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(48px, 8vw, 80px);
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .contactDetailGroup {
+    margin-top: 25px;
+  }
+
+  .contactForm {
+    margin-top: 80px;
+  }
+
+  .fieldGroup {
+    margin-bottom: 44px;
+  }
+
+  .fieldGroup > label,
+  .fieldGroup > input,
+  .phoneField,
+  .messageField textarea {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .messageField textarea {
+    height: 280px;
+  }
+
+  .consentControl {
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .consentControl input {
+    width: 30px;
+    height: 30px;
+  }
+
+  .consentControl label {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .pageHeader {
+    padding-top: 220px;
+  }
+
+  .title {
+    min-height: 100px;
+    font-size: 48px;
+  }
+
+  .contactLayout {
+    --contact-media-width: clamp(456px, calc(38.22vw + 65px), 615px);
+
+    align-items: stretch;
+    grid-template-columns: minmax(0, 1fr) var(--contact-media-width);
+    gap: clamp(48px, calc(10.1vw - 55px), 90px);
+  }
+
+  .contactDetails,
+  .fieldGroup > label,
+  .fieldGroup > input,
+  .phoneField,
+  .messageField textarea {
+    font-size: clamp(18px, calc(1.4423vw + 3.23px), 24px);
+    line-height: 1.5;
+  }
+
+  .contactForm {
+    margin-top: clamp(80px, calc(2.4038vw + 55.38px), 90px);
+  }
+
+  .fieldGroup {
+    margin-bottom: clamp(44px, calc(2.4038vw + 19.38px), 54px);
+  }
+
+  .messageField textarea {
+    height: clamp(280px, calc(9.6154vw + 181.54px), 320px);
+  }
+
+  .mediaColumn {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    justify-content: stretch;
+    min-height: 0;
+  }
+
+  .imageFrame {
+    min-height: 0;
+    aspect-ratio: auto;
+  }
+}
+
+@media (min-width: 1280px) {
+  .pageHeader,
+  .contactLayout {
+    width: calc(
+      100% - 2 * clamp(40px, calc(3.3333vw - 8px), 56px)
+    );
+  }
+
+  .pageHeader {
+    padding-top: calc(190px + clamp(65px, calc(1.4583vw + 44px), 72px));
+  }
+
+  .title {
+    min-height: clamp(110px, calc(1.6667vw + 86px), 118px);
+    font-size: clamp(60px, calc(.8333vw + 48px), 64px);
+  }
+
+  .contactLayout {
+    --contact-media-width: clamp(554px, calc(12.7083vw + 432px), 615px);
+  }
+
+  .contactDetails,
+  .fieldGroup > label,
+  .fieldGroup > input,
+  .phoneField,
+  .messageField textarea {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .messageField textarea {
+    height: clamp(320px, calc(8.3333vw + 200px), 360px);
+  }
+
+  .consentControl label {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .contactLayout {
+    --contact-media-width: clamp(615px, calc(21.875vw + 300px), 720px);
+  }
+}
+
+@media (min-width: 1920px) {
+  .pageHeader,
+  .contactLayout {
+    width: calc(100% - 2 * clamp(56px, calc(1.25vw + 32px), 64px));
+  }
+
+  .pageHeader {
+    padding-top: calc(190px + clamp(72px, calc(1.25vw + 48px), 80px));
+  }
+
+  .title {
+    min-height: clamp(118px, calc(.625vw + 106px), 122px);
+    font-size: clamp(64px, calc(.625vw + 52px), 68px);
+  }
+
+  .contactLayout {
+    --contact-media-width: clamp(720px, calc(15.625vw + 420px), 820px);
+  }
+
+  .contactDetails,
+  .fieldGroup > label,
+  .fieldGroup > input,
+  .phoneField,
+  .messageField textarea {
+    font-size: clamp(24px, calc(.3125vw + 18px), 26px);
+    line-height: 1.5;
+  }
+
+  .messageField textarea {
+    height: clamp(360px, calc(6.25vw + 240px), 400px);
+  }
+
+  .consentControl label {
+    font-size: clamp(20px, calc(.3125vw + 14px), 22px);
+    line-height: 1.5;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .pageHeader,
+  .contactLayout {
+    width: calc(100% - 48px);
+  }
+
+  .pageHeader {
+    padding-top: 140px;
+    padding-bottom: 48px;
+  }
+
+  .title {
+    min-height: 80px;
+    font-size: 36px;
+  }
+
+  .contactLayout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 48px;
+  }
+
+  .contactDetails {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 48px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .contactForm {
+    margin-top: 48px;
+  }
+
+  .fieldGroup {
+    margin-bottom: 32px;
+  }
+
+  .fieldGroup > label,
+  .fieldGroup > input,
+  .phoneField,
+  .messageField textarea {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .messageField textarea {
+    height: 180px;
+  }
+
+  .mediaColumn {
+    grid-template-columns: minmax(0, 615px);
+    grid-template-rows: none;
+    justify-content: center;
+  }
+
+  .imageFrame {
+    aspect-ratio: 615 / 700;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contactDetails a,
+  .consentControl a {
+    transition: none;
+  }
+}
