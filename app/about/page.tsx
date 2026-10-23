@@ -1,7 +1,7 @@
 import Image from "next/image";
 import aboutContent from "../../content/about.json";
 import Heading from "../../components/ui/Heading";
-import AboutProcess from "./AboutProcess";
+// import AboutProcess from "./AboutProcess";
 import styles from "./AboutPage.module.css";
 
 export default function AboutPage() {
@@ -19,27 +19,79 @@ export default function AboutPage() {
         aria-labelledby="about-introduction-title"
       >
         <div className={styles.introductionCopy}>
-          <h2 id="about-introduction-title" className={styles.introductionTitle}>
-            {aboutContent.introduction.title}
-          </h2>
-          <p className={styles.introductionBody}>
-            {aboutContent.introduction.body}
-          </p>
+          <div className={styles.introductionSection}>
+            <h2 id="about-introduction-title" className={styles.introductionTitle}>
+              {aboutContent.introduction.title}
+            </h2>
+            <div className={styles.introductionBody}>
+              {aboutContent.introduction.body.map((paragraph) => (
+                <p key={paragraph} className={styles.introductionParagraph}>
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </div>
         </div>
 
-        {/*
-        <Image
-          className={styles.introductionImage}
-          src={aboutContent.introduction.image.src}
-          alt={aboutContent.introduction.image.alt}
-          width={2800}
-          height={2800}
-          sizes="(max-width: 767px) calc(100vw - 48px), (max-width: 1023px) calc(100vw - 64px), (max-width: 1919px) calc(55vw - 44px), (max-width: 2559px) calc(55vw - 62px), calc(55vw - 70px)"
-          loading="eager"
-        />
-        */}
+        <div
+          className={styles.introductionMedia}
+          style={{
+            backgroundImage: `url("${aboutContent.introduction.image.src}")`,
+          }}
+        >
+          <Image
+            className={styles.introductionImage}
+            src={aboutContent.introduction.image.src}
+            alt={aboutContent.introduction.image.alt}
+            width={2800}
+            height={2800}
+            sizes="(max-width: 767px) calc(100vw - 48px), (max-width: 1023px) calc(100vw - 64px), (max-width: 1919px) calc(55vw - 44px), (max-width: 2559px) calc(55vw - 62px), calc(55vw - 70px)"
+            loading="eager"
+          />
+        </div>
       </section>
 
+      <section
+        id="who-we-work-with"
+        className={styles.introduction}
+        aria-labelledby="about-who-we-work-with-title"
+      >
+        <div className={styles.introductionCopy}>
+          <div className={styles.introductionSection}>
+            <h2
+              id="about-who-we-work-with-title"
+              className={styles.introductionTitle}
+            >
+              {aboutContent.introduction.whoWeWorkWith.title}
+            </h2>
+            <div className={styles.introductionBody}>
+              {aboutContent.introduction.whoWeWorkWith.body.map((paragraph) => (
+                <p key={paragraph} className={styles.introductionParagraph}>
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div
+          className={styles.introductionMedia}
+          style={{
+            backgroundImage: `url("${aboutContent.introduction.image.src}")`,
+          }}
+        >
+          <Image
+            className={styles.introductionImage}
+            src={aboutContent.introduction.image.src}
+            alt=""
+            width={2800}
+            height={2800}
+            sizes="(max-width: 767px) calc(100vw - 48px), (max-width: 1023px) calc(100vw - 64px), (max-width: 1919px) calc(55vw - 44px), (max-width: 2559px) calc(55vw - 62px), calc(55vw - 70px)"
+          />
+        </div>
+      </section>
+
+      {/*
       <section
         id={aboutContent.featureImage.id}
         className={styles.featureImageSection}
@@ -107,6 +159,7 @@ export default function AboutPage() {
           </p>
         </div>
       </section>
+      */}
     </div>
   );
 }

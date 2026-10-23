@@ -35,7 +35,66 @@
   padding-bottom: 32px;
 }
 
-.introductionCopy,
+.introductionCopy {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px 20px 48px;
+  background: linear-gradient(
+    to bottom,
+    var(--color-chalk) 0%,
+    rgb(244 244 239 / 0%) 100%
+  );
+}
+
+.introduction + .introduction {
+  margin-top: clamp(65px, 5vw, 100px);
+}
+
+.introductionTitle {
+  margin: 0;
+  color: var(--color-blue-lux);
+  font-family: var(--font-merriweather);
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 44px;
+  text-align: left;
+}
+
+.introductionBody {
+  margin: 40px 0 0;
+  color: var(--color-graphite);
+  font-family: var(--font-lato);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 30px;
+  text-align: left;
+}
+
+.introductionBody {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.introductionParagraph {
+  margin: 0;
+}
+
+.introductionMedia {
+  align-self: stretch;
+  background-position: center top;
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+}
+
+.introductionImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Temporarily disabled with the commented About sections in page.tsx.
 .expertiseCopy {
   display: flex;
   justify-content: center;
@@ -48,7 +107,6 @@
   );
 }
 
-.introductionTitle,
 .expertiseTitle {
   margin: 0;
   color: var(--color-blue-lux);
@@ -59,7 +117,6 @@
   text-align: left;
 }
 
-.introductionBody,
 .expertiseBody {
   margin: 40px 0 0;
   color: var(--color-graphite);
@@ -68,12 +125,6 @@
   font-weight: 300;
   line-height: 30px;
   text-align: left;
-}
-
-.introductionImage {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 .featureImageSection {
@@ -98,6 +149,7 @@
 .expertiseCopy {
   padding: 40px 20px 48px;
 }
+*/
 
 @media (min-width: 768px) {
   .pageHeader {
@@ -121,13 +173,23 @@
     padding: 48px 40px 56px;
   }
 
-  .introductionTitle,
+  .introductionTitle {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .introductionBody {
+    margin-top: 48px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  /* Temporarily disabled with the commented About sections in page.tsx.
   .expertiseTitle {
     font-size: 40px;
     line-height: 48px;
   }
 
-  .introductionBody,
   .expertiseBody {
     margin-top: 48px;
     font-size: 20px;
@@ -147,6 +209,7 @@
   .expertiseCopy {
     padding: 48px 40px 56px;
   }
+  */
 }
 
 @media (min-width: 1024px) {
@@ -171,13 +234,23 @@
     padding: 32px;
   }
 
-  .introductionTitle,
+  .introductionTitle {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .introductionBody {
+    margin-top: 50px;
+    font-size: 22px;
+    line-height: 33px;
+  }
+
+  /* Temporarily disabled with the commented About sections in page.tsx.
   .expertiseTitle {
     font-size: 40px;
     line-height: 48px;
   }
 
-  .introductionBody,
   .expertiseBody {
     margin-top: 50px;
     font-size: 22px;
@@ -197,6 +270,7 @@
     margin-top: 74px;
     padding: 16px 24px;
   }
+  */
 }
 
 @media (min-width: 1280px) {
@@ -223,13 +297,23 @@
       clamp(32px, calc(1.6667vw + 8px), 40px);
   }
 
-  .introductionTitle,
+  .introductionTitle {
+    font-size: clamp(44px, 3.3333vw, 52px);
+    line-height: clamp(53px, 4.0278vw, 63px);
+  }
+
+  .introductionBody {
+    margin-top: clamp(62px, calc(1.4583vw + 44px), 72px);
+    font-size: clamp(24px, calc(.4167vw + 18px), 26px);
+    line-height: clamp(36px, calc(.625vw + 27px), 39px);
+  }
+
+  /* Temporarily disabled with the commented About sections in page.tsx.
   .expertiseTitle {
     font-size: clamp(44px, 3.3333vw, 52px);
     line-height: clamp(53px, 4.0278vw, 63px);
   }
 
-  .introductionBody,
   .expertiseBody {
     margin-top: clamp(62px, calc(1.4583vw + 44px), 72px);
     font-size: clamp(24px, calc(.4167vw + 18px), 26px);
@@ -250,6 +334,7 @@
     margin-top: clamp(96px, calc(2.5vw + 64px), 112px);
     padding: 24px clamp(32px, calc(1.6667vw + 8px), 40px);
   }
+  */
 }
 
 @media (min-width: 1920px) {
@@ -276,13 +361,23 @@
       clamp(40px, calc(1.25vw + 16px), 48px);
   }
 
-  .introductionTitle,
+  .introductionTitle {
+    font-size: clamp(52px, calc(.625vw + 40px), 56px);
+    line-height: clamp(63px, calc(.78125vw + 48px), 68px);
+  }
+
+  .introductionBody {
+    margin-top: clamp(72px, calc(1.25vw + 48px), 80px);
+    font-size: clamp(26px, calc(.15625vw + 23px), 27px);
+    line-height: clamp(39px, calc(.234375vw + 34.5px), 40.5px);
+  }
+
+  /* Temporarily disabled with the commented About sections in page.tsx.
   .expertiseTitle {
     font-size: clamp(52px, calc(.625vw + 40px), 56px);
     line-height: clamp(63px, calc(.78125vw + 48px), 68px);
   }
 
-  .introductionBody,
   .expertiseBody {
     margin-top: clamp(72px, calc(1.25vw + 48px), 80px);
     font-size: clamp(26px, calc(.15625vw + 23px), 27px);
@@ -304,6 +399,7 @@
     padding: clamp(32px, calc(1.25vw + 8px), 40px)
       clamp(40px, calc(1.25vw + 16px), 48px);
   }
+  */
 }
 
 @media (orientation: landscape) and (max-height: 500px) {
@@ -330,13 +426,23 @@
     padding: 32px 24px 40px;
   }
 
-  .introductionTitle,
+  .introductionTitle {
+    font-size: 32px;
+    line-height: 39px;
+  }
+
+  .introductionBody {
+    margin-top: 32px;
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  /* Temporarily disabled with the commented About sections in page.tsx.
   .expertiseTitle {
     font-size: 32px;
     line-height: 39px;
   }
 
-  .introductionBody,
   .expertiseBody {
     margin-top: 32px;
     font-size: 18px;
@@ -358,8 +464,10 @@
     margin-top: 0;
     padding: 32px 24px 40px;
   }
+  */
 }
 
+/* Temporarily disabled with the commented About sections in page.tsx.
 .processSection {
   margin-inline: 24px;
   padding-bottom: 48px;
@@ -1030,3 +1138,4 @@
     line-height: 27px;
   }
 }
+*/

@@ -3,7 +3,17 @@
   "introduction": {
     "id": "who-we-are",
     "title": "What we do",
-    "body": "MOCA Ventures is an independent, M/WBE-certified firm specializing in the design, engineering, development, and procurement of high-quality Italian kitchen and bathroom cabinetry and home furnishings for the U.S. and international markets. Acting exclusively in its clients’ best interests, MOCA works with a broad network of Italian manufacturers to provide tailored solutions across different styles and budgets. The firm combines creative design with technical expertise, rigorous quality control, and meticulous attention to every stage of the process, from initial development and fabrication oversight to shipping and final delivery.",
+    "body": [
+      "MOCA Ventures is an independent, international firm specializing in the design, engineering, manufacturing, and procurement of custom architectural interiors for large-scale multi-unit residential developments and hotels.",
+      "Unlike traditional manufacturers, we are not bound by predetermined collections, brands, or product lines. Instead, we work closely with our clients to translate their distinct architectural vision and design identity into reality. Drawing on our international manufacturing network and expertise across wood, stone, metal, and glass, we create tailored solutions that reinforce the individuality of each development, with uncompromising quality, meticulous attention to detail, and exceptional value."
+    ],
+    "whoWeWorkWith": {
+      "title": "Who we work with",
+      "body": [
+        "We partner with real estate developers, architects, and construction managers on large-scale residential and hospitality projects across the United States and international markets.",
+        "Operating as a seamless extension of our clients' teams, we align ourselves exclusively with their interests, bringing together our international manufacturing network, technical expertise, and commercial experience to deliver exceptional quality, value, and execution. Our commitment is to protect our clients' vision, budget, and schedule while delivering an exceptional finished product."
+      ]
+    },
     "image": {
       "src": "/images/about/moca-ventures-global-design-partner-luxury-bathroom.webp",
       "alt": "Luxury bathroom interior with city views"
