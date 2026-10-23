@@ -27,6 +27,7 @@ export default function AboutPage() {
           </p>
         </div>
 
+        {/*
         <Image
           className={styles.introductionImage}
           src={aboutContent.introduction.image.src}
@@ -36,6 +37,7 @@ export default function AboutPage() {
           sizes="(max-width: 767px) calc(100vw - 48px), (max-width: 1023px) calc(100vw - 64px), (max-width: 1919px) calc(55vw - 44px), (max-width: 2559px) calc(55vw - 62px), calc(55vw - 70px)"
           loading="eager"
         />
+        */}
       </section>
 
       <section

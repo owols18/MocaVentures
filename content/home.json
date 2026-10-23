@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Italian design, technical precision, and international vision for high-end interiors.",
-    "image": "/images/home/moca-ventures-home-hero.webp"
+    "video": "/videos/5274_New_York_NYC_1280x720.mp4"
   },
   "about": {
     "title": "ABOUT US",
@@ -63,13 +63,14 @@
         "label": "Architects"
       },
       {
+        "id": "interior-designers",
+        "label": "Designers"
+      },
+      {
         "id": "construction-managers",
         "label": "Construction Managers"
       },
-      {
-        "id": "interior-designers",
-        "label": "Interior designers"
-      },
+
       {
         "id": "traders",
         "label": "Traders"

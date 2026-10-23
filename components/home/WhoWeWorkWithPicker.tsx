@@ -23,7 +23,7 @@ export default function WhoWeWorkWithPicker({
   label,
 }: WhoWeWorkWithPickerProps) {
   const initialIndex = items.findIndex(
-    (item) => item.id === "construction-managers",
+    (item) => item.id === "architects",
   );
   const [activeIndex, setActiveIndex] = useState(
     initialIndex >= 0 ? initialIndex : 0,

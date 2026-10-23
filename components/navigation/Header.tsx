@@ -13,7 +13,8 @@ export default function Header() {
   const logoRef = useRef<HTMLDivElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
   const firstLinkRef = useRef<HTMLAnchorElement>(null);
-  const logoSrc = pathname === "/" || pathname.startsWith("/portfolio/")
+  const usesLightControls = pathname.startsWith("/portfolio/");
+  const logoSrc = usesLightControls
     ? "/logos/moca-ventures-header-logo.svg"
     : "/logos/moca-ventures-header-logo-graphite.svg";
 
@@ -54,7 +55,11 @@ export default function Header() {
   }, [isOpen]);
 
   return (
-    <header className={styles.header}>
+    <header
+      className={`${styles.header} ${
+        usesLightControls ? styles.lightControls : ""
+      }`}
+    >
       <div ref={logoRef} className={styles.logoWrap}>
         <BrandMark className={styles.logo} src={logoSrc} />
       </div>
