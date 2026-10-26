@@ -1,0 +1,10 @@
+{
+  "certifications": {
+    "mwbeNewYork": {
+      "src": "/images/shared/mwbe-new-york-certification.webp",
+      "alt": "New York City Minority and Women-Owned Business Enterprise certification",
+      "width": 550,
+      "height": 550
+    }
+  }
+}

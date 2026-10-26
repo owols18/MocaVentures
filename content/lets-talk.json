@@ -3,37 +3,8 @@
     "title": "Let’s Talk | MOCA Ventures",
     "description": "Contact MOCA Ventures in New York to discuss cabinetry, furnishings, procurement, and project coordination requirements."
   },
-  "pageTitle": "LET’S TALK",
+  "pageTitle": "CONTACT US",
   "sectionLabel": "Contact MOCA Ventures",
-  "contact": {
-    "label": "MOCA Ventures contact information",
-    "address": {
-      "lines": [
-        "MOCA Ventures, Inc.",
-        "84 Mercer Street",
-        "New York, NY 10012"
-      ]
-    },
-    "officeHours": {
-      "label": "Office hours:",
-      "value": "Monday – Friday, 09:00 – 17:30"
-    },
-    "linkedin": {
-      "label": "LINKEDIN",
-      "value": "moca-ventures-inc",
-      "href": "#"
-    },
-    "telephone": {
-      "label": "TELEPHONE",
-      "value": "+1 212-561-5720",
-      "href": "tel:+12125615720"
-    },
-    "email": {
-      "label": "MAIL",
-      "value": "info@mocaventures.com",
-      "href": "mailto:info@mocaventures.com"
-    }
-  },
   "form": {
     "label": "Contact enquiry form",
     "fields": {
@@ -74,12 +45,6 @@
         "maxLength": 2000
       }
     },
-    "consent": {
-      "label": "By joining the mailing list, I agree to the",
-      "linkLabel": "Privacy Policy",
-      "href": "#",
-      "requiredError": "Please agree to the Privacy Policy before submitting."
-    },
     "submitLabel": "SEND ENQUIRY",
     "submittingLabel": "SENDING…",
     "successMessage": "Thank you. Your enquiry has been received in this local simulation.",
@@ -87,15 +52,9 @@
   },
   "media": {
     "label": "MOCA Ventures interiors",
-    "images": [
-      {
-        "src": "/images/lets-talk/moca-ventures-contact-luxury-kitchen-new-york.webp",
-        "alt": "Custom luxury kitchen by MOCA Ventures in New York"
-      },
-      {
-        "src": "/images/lets-talk/moca-ventures-contact-luxury-bathroom-new-york.webp",
-        "alt": "Luxury bathroom interior by MOCA Ventures in New York"
-      }
-    ]
+    "image": {
+      "src": "/images/lets-talk/moca-ventures-contact-luxury-kitchen-new-york.webp",
+      "alt": "Custom luxury kitchen by MOCA Ventures in New York"
+    }
   }
 }

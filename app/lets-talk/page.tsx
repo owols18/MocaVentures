@@ -23,26 +23,21 @@ export default function LetsTalkPage() {
         className={styles.contactLayout}
         aria-label={letsTalkContent.sectionLabel}
       >
-        <ContactPanel
-          contact={letsTalkContent.contact}
-          form={letsTalkContent.form}
-        />
+        <ContactPanel form={letsTalkContent.form} />
 
         <div
           className={styles.mediaColumn}
           aria-label={letsTalkContent.media.label}
         >
-          {letsTalkContent.media.images.map((image) => (
-            <div key={image.src} className={styles.imageFrame}>
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                className={styles.contactImage}
-                sizes="(max-width: 767px) calc(100vw - 48px), (max-width: 1023px) min(calc(100vw - 64px), 615px), (max-width: 1439px) calc(38.22vw + 65px), (max-width: 1919px) calc(21.875vw + 300px), (max-width: 2559px) calc(15.625vw + 420px), 820px"
-              />
-            </div>
-          ))}
+          <div className={styles.imageFrame}>
+            <Image
+              src={letsTalkContent.media.image.src}
+              alt={letsTalkContent.media.image.alt}
+              fill
+              className={styles.contactImage}
+              sizes="(max-width: 767px) calc(100vw - 48px), (max-width: 1023px) min(calc(100vw - 64px), 615px), (max-width: 1439px) calc(38.22vw + 65px), (max-width: 1919px) calc(21.875vw + 300px), (max-width: 2559px) calc(15.625vw + 420px), 820px"
+            />
+          </div>
         </div>
       </section>
     </div>

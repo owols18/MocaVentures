@@ -11,6 +11,7 @@ export default function Header() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const logoRef = useRef<HTMLDivElement>(null);
+  const menuPanelRef = useRef<HTMLElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
   const firstLinkRef = useRef<HTMLAnchorElement>(null);
   const usesLightControls = pathname.startsWith("/portfolio/");
@@ -44,14 +45,30 @@ export default function Header() {
   useEffect(() => {
     if (!isOpen) return;
     firstLinkRef.current?.focus();
+    const onPointerDown = (event: PointerEvent) => {
+      const target = event.target as Node;
+
+      if (
+        menuPanelRef.current?.contains(target) ||
+        toggleRef.current?.contains(target)
+      ) {
+        return;
+      }
+
+      setIsOpen(false);
+    };
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setIsOpen(false);
         toggleRef.current?.focus();
       }
     };
+    document.addEventListener("pointerdown", onPointerDown);
     window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("pointerdown", onPointerDown);
+      window.removeEventListener("keydown", onKeyDown);
+    };
   }, [isOpen]);
 
   return (
@@ -64,7 +81,7 @@ export default function Header() {
         <BrandMark className={styles.logo} src={logoSrc} />
       </div>
       <div className={`${styles.desktopMenu} ${isOpen ? styles.menuOpen : ""}`}>
-        <nav className={styles.menuPanel} aria-label="Primary navigation" aria-hidden={!isOpen}>
+        <nav ref={menuPanelRef} className={styles.menuPanel} aria-label="Primary navigation" aria-hidden={!isOpen}>
           <div className={styles.menuLinks}>
             {primaryNavigation.map((item, index) => (
               <Link key={item.href} ref={index === 0 ? firstLinkRef : undefined} href={item.href} className={item.desktopMenuVariant === "compact" ? styles.compactMenuLink : undefined} tabIndex={isOpen ? 0 : -1} onClick={() => setIsOpen(false)}>

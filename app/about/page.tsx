@@ -1,5 +1,6 @@
 import Image from "next/image";
 import aboutContent from "../../content/about.json";
+import sharedContent from "../../content/shared.json";
 import Heading from "../../components/ui/Heading";
 // import AboutProcess from "./AboutProcess";
 import styles from "./AboutPage.module.css";
@@ -11,6 +12,14 @@ export default function AboutPage() {
         <Heading level="h1" variant="h2" className={styles.title}>
           <span id="about-page-title">{aboutContent.pageTitle}</span>
         </Heading>
+        <Image
+          className={styles.headerCertification}
+          src={sharedContent.certifications.mwbeNewYork.src}
+          alt={sharedContent.certifications.mwbeNewYork.alt}
+          width={sharedContent.certifications.mwbeNewYork.width}
+          height={sharedContent.certifications.mwbeNewYork.height}
+          sizes="(max-width: 767px) 64px, (max-width: 1023px) 76px, (max-width: 1279px) 84px, (max-width: 1919px) 8vw, 112px"
+        />
       </section>
 
       <section
