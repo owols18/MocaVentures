@@ -1,0 +1,22 @@
+{
+  "pageTitle": "IMPACT",
+  "introduction": {
+    "id": "impact-information",
+    "title": "Philosophy",
+    "body": [
+      "MOCA was born out of a passion for integrating divergent international cultures through business, in a sincere desire to have a positive impact on both our clients and their customers. We are serious entrepreneurs and believe that cross-cultural interchange and commerce enhance our lives as well as our homes. We completely align ourselves with the interests of our clients and utilize our people, experience, and resources to find the optimal esthetic, environmental and fiscally responsible solutions.",
+      "Our infrastructure has been constructed to serve all strata of our client’s needs and requirements. MOCA is continually focused on the quality and value its clients deliver to their customers. We respect our environment & our world, and pride ourselves on the ability to meet even the most stringent standards requested by our clients."
+    ],
+    "approachInformation": {
+      "id": "approach-information",
+      "title": "Approach",
+      "body": [
+        "MOCA's goal is to become a partner with our clients, whereby our team becomes a seamless extension of their own and contributes to the overall success of their projects. We constantly strive to strategically fulfill our clients’ expectations. We pride ourselves on our unparalleled work ethic, prompt responsiveness, creative sensibility and cost consciousness. We insist on doing the basics flawlessly. Quality, design, on-time delivery and value are the foundation of our approach. We remove the stress and difficulty of dealing internationally while securing the best terms and conditions for our clients."
+      ]
+    },
+    "image": {
+      "src": "/images/impact/moca-ventures-global-design-partner-luxury-bathroom.webp",
+      "alt": "Luxury bathroom interior with city views"
+    }
+  }
+}
