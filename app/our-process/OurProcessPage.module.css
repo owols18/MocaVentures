@@ -1,0 +1,615 @@
+.page {
+  width: 100%;
+  background: #fbfaf7;
+}
+
+.pageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 168px 24px 48px;
+  text-align: center;
+}
+
+.title {
+  display: flex;
+  width: 100%;
+  max-width: 342px;
+  min-height: 88px;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  color: var(--color-blue-lux);
+  box-sizing: border-box;
+  font-size: 36px;
+  line-height: 1.05;
+  text-align: center;
+}
+
+.processSection {
+  margin-inline: 24px;
+  padding-bottom: 65px;
+}
+
+.processTitle {
+  width: min(100%, 760px);
+  margin: 0 auto;
+  padding-bottom: 65px;
+  color: var(--color-blue-lux);
+  font-family: var(--font-merriweather);
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 44px;
+  text-align: center;
+}
+
+.processRunway {
+  height: 2520px;
+}
+
+.processSticky {
+  position: sticky;
+  top: max(0px, calc((100dvh - 420px) / 2));
+}
+
+.processViewport {
+  --process-axis-x: 22px;
+  --process-marker-size: 44px;
+  --process-row-height: 420px;
+  --process-visible-rows: 1;
+
+  position: relative;
+  height: 420px;
+  overflow: hidden;
+  background: #fbfaf7;
+}
+
+.processTrack {
+  position: relative;
+  will-change: transform;
+}
+
+.processLine {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 10px;
+  left: var(--process-axis-x);
+  width: 1px;
+  background: var(--color-blue-lux);
+  transform: translateX(-50%);
+}
+
+.processLine::after {
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  width: 13px;
+  height: 13px;
+  border-right: 1px solid var(--color-blue-lux);
+  border-bottom: 1px solid var(--color-blue-lux);
+  content: "";
+  transform: translate(-50%, 50%) rotate(45deg);
+}
+
+.processList {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.processStep {
+  height: var(--process-row-height);
+  flex: none;
+}
+
+.processCard {
+  display: flex;
+  width: calc(100% - 62px);
+  height: 100%;
+  min-width: 0;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 62px;
+}
+
+.processNumber {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  color: var(--color-blue-lux);
+  background: #fbfaf7;
+  border: 1px solid var(--color-whiskey-sour);
+  border-radius: 50%;
+  box-sizing: border-box;
+  font-family: var(--font-lato);
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.processCardTitle,
+.processCardBody {
+  font-family: var(--font-lato);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 27px;
+  text-align: left;
+}
+
+.processCardTitle {
+  margin: 18px 0 0;
+  color: var(--color-blue-lux);
+  text-transform: uppercase;
+}
+
+.processCardBody {
+  margin: 16px 0 0;
+  color: var(--color-graphite);
+}
+
+.processMarker {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: var(--process-axis-x);
+  display: flex;
+  width: var(--process-marker-size);
+  height: var(--process-marker-size);
+  align-items: center;
+  justify-content: center;
+  color: var(--color-chalk);
+  background: var(--color-whiskey-sour);
+  border-radius: 50%;
+  transform: translate3d(-50%, 188px, 0);
+  will-change: transform;
+}
+
+.processMarker svg {
+  width: 18px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+  stroke-width: 1.5;
+  transition: transform 180ms ease;
+}
+
+.processMarker[data-direction="up"] svg {
+  transform: rotate(180deg);
+}
+
+@media (min-width: 768px) {
+  .pageHeader {
+    padding: 206px 32px 56px;
+  }
+
+  .title {
+    max-width: 720px;
+    min-height: 96px;
+    font-size: 40px;
+    white-space: nowrap;
+  }
+
+  .processSection {
+    margin-inline: 32px;
+  }
+
+  .processTitle {
+    width: min(100%, 800px);
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .processRunway {
+    height: 1920px;
+  }
+
+  .processSticky {
+    top: max(0px, calc((100dvh - 640px) / 2));
+  }
+
+  .processViewport {
+    --process-axis-x: 50%;
+    --process-axis-gap: clamp(72px, 13.3333vw, 192px);
+    --process-marker-size: 56px;
+    --process-row-height: 320px;
+    --process-visible-rows: 2;
+
+    height: 640px;
+  }
+
+  .processCard {
+    width: calc((100% - var(--process-axis-gap)) / 2);
+    max-width: 550px;
+    margin-left: 0;
+  }
+
+  .processStep:nth-child(odd) .processCard {
+    margin-right: 0;
+    margin-left: calc(50% + var(--process-axis-gap) / 2);
+  }
+
+  .processStep:nth-child(even) .processCard {
+    margin-right: calc(50% + var(--process-axis-gap) / 2);
+    margin-left: auto;
+  }
+
+  .processNumber {
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+  }
+
+  .processMarker {
+    transform: translate3d(-50%, 132px, 0);
+  }
+
+  .processMarker svg {
+    width: 20px;
+    height: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .pageHeader {
+    padding-top: 220px;
+    padding-bottom: 60px;
+  }
+
+  .title {
+    max-width: 960px;
+    min-height: 100px;
+    font-size: 48px;
+  }
+
+  .processTitle {
+    width: min(100%, 840px);
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .processRunway {
+    height: 2160px;
+  }
+
+  .processSticky {
+    top: max(0px, calc((100dvh - 720px) / 2));
+  }
+
+  .processViewport {
+    --process-marker-size: 62px;
+    --process-row-height: 360px;
+
+    height: 720px;
+  }
+
+  .processNumber {
+    width: 64px;
+    height: 64px;
+    font-size: 42px;
+  }
+
+  .processCardTitle,
+  .processCardBody {
+    font-size: 22px;
+    line-height: 33px;
+  }
+
+  .processCardTitle {
+    margin-top: 22px;
+  }
+
+  .processCardBody {
+    margin-top: 20px;
+  }
+
+  .processMarker svg {
+    width: 21px;
+    height: 17px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .pageHeader {
+    padding-top: calc(190px + clamp(65px, calc(1.4583vw + 44px), 72px));
+    padding-bottom: clamp(65px, calc(1.4583vw + 44px), 72px);
+  }
+
+  .title {
+    max-width: calc(100vw - 80px);
+    min-height: clamp(110px, calc(1.6667vw + 86px), 118px);
+    font-size: clamp(60px, calc(.8333vw + 48px), 64px);
+  }
+
+  .processSection {
+    margin-inline: clamp(40px, calc(3.3333vw - 8px), 56px);
+  }
+
+  .processTitle {
+    width: min(100% - 80px, 860px);
+    font-size: clamp(44px, 3.3333vw, 52px);
+    line-height: clamp(53px, 4.0278vw, 63px);
+  }
+
+  .processRunway {
+    height: 2496px;
+  }
+
+  .processSticky {
+    top: max(
+      0px,
+      calc((100dvh - clamp(832px, calc(21.6667vw + 554.67px), 936px)) / 2)
+    );
+  }
+
+  .processViewport {
+    --process-row-height: clamp(416px, calc(10.8333vw + 277.33px), 468px);
+
+    height: clamp(832px, calc(21.6667vw + 554.67px), 936px);
+  }
+
+  .processCard {
+    max-width: clamp(550px, calc(18.75vw + 280px), 640px);
+  }
+
+  .processNumber {
+    width: 70px;
+    height: 70px;
+    font-size: 45px;
+  }
+
+  .processCardTitle,
+  .processCardBody {
+    font-size: clamp(24px, calc(.4167vw + 18px), 26px);
+    line-height: clamp(36px, calc(.625vw + 27px), 39px);
+  }
+
+  .processCardTitle {
+    margin-top: 24px;
+  }
+
+  .processCardBody {
+    margin-top: 25px;
+  }
+
+  .processMarker {
+    --process-marker-size: 65px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .pageHeader {
+    padding-top: calc(190px + clamp(72px, calc(1.25vw + 48px), 80px));
+    padding-bottom: clamp(72px, calc(1.25vw + 48px), 80px);
+  }
+
+  .title {
+    max-width: calc(100vw - 112px);
+    min-height: clamp(118px, calc(.625vw + 106px), 122px);
+    font-size: clamp(64px, calc(.625vw + 52px), 68px);
+  }
+
+  .processSection {
+    margin-inline: clamp(56px, calc(1.25vw + 32px), 64px);
+  }
+
+  .processTitle {
+    width: min(100% - 112px, 980px);
+    font-size: clamp(52px, calc(.625vw + 40px), 56px);
+    line-height: clamp(63px, calc(.78125vw + 48px), 68px);
+  }
+
+  .processRunway {
+    height: 3060px;
+  }
+
+  .processSticky {
+    top: max(
+      0px,
+      calc((100dvh - clamp(936px, calc(10vw + 744px), 1000px)) / 2)
+    );
+  }
+
+  .processViewport {
+    --process-axis-gap: clamp(192px, calc(7.5vw + 48px), 240px);
+    --process-row-height: clamp(468px, calc(5vw + 372px), 500px);
+
+    height: clamp(936px, calc(10vw + 744px), 1000px);
+  }
+
+  .processCard {
+    max-width: clamp(640px, calc(12.5vw + 400px), 720px);
+  }
+
+  .processNumber {
+    width: clamp(74px, calc(1.25vw + 50px), 82px);
+    height: clamp(74px, calc(1.25vw + 50px), 82px);
+    font-size: clamp(48px, calc(.625vw + 36px), 52px);
+  }
+
+  .processCardTitle,
+  .processCardBody {
+    font-size: clamp(26px, calc(.15625vw + 23px), 27px);
+    line-height: clamp(39px, calc(.234375vw + 34.5px), 40.5px);
+  }
+
+  .processMarker {
+    --process-marker-size: clamp(68px, calc(.625vw + 56px), 72px);
+  }
+
+  .processMarker svg {
+    width: clamp(21px, calc(.3125vw + 15px), 23px);
+    height: clamp(17px, calc(.3125vw + 11px), 19px);
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .pageHeader {
+    padding: 140px 24px 32px;
+  }
+
+  .title {
+    width: 520px;
+    max-width: calc(100vw - 48px);
+    min-height: 80px;
+    font-size: 36px;
+    white-space: normal;
+  }
+
+  .processSection {
+    margin-inline: 24px;
+    padding-bottom: 65px;
+  }
+
+  .processTitle {
+    width: min(100% - 48px, 700px);
+    padding-bottom: 48px;
+    font-size: 32px;
+    line-height: 39px;
+  }
+
+  .processRunway {
+    height: 1560px;
+  }
+
+  .processSticky {
+    top: max(0px, calc((100dvh - 260px) / 2));
+  }
+
+  .processViewport {
+    --process-axis-x: 50%;
+    --process-axis-gap: 72px;
+    --process-marker-size: 48px;
+    --process-row-height: 260px;
+    --process-visible-rows: 1;
+
+    height: 260px;
+  }
+
+  .processCard {
+    width: calc((100% - var(--process-axis-gap)) / 2);
+    max-width: 360px;
+    margin-left: 0;
+  }
+
+  .processStep:nth-child(odd) .processCard {
+    margin-right: 0;
+    margin-left: calc(50% + var(--process-axis-gap) / 2);
+  }
+
+  .processStep:nth-child(even) .processCard {
+    margin-right: calc(50% + var(--process-axis-gap) / 2);
+    margin-left: auto;
+  }
+
+  .processNumber {
+    width: 48px;
+    height: 48px;
+    font-size: 32px;
+  }
+
+  .processCardTitle,
+  .processCardBody {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .processCardTitle {
+    margin-top: 12px;
+  }
+
+  .processCardBody {
+    margin-top: 10px;
+  }
+
+  .processMarker {
+    transform: translate3d(-50%, 106px, 0);
+  }
+
+  .processMarker svg {
+    width: 18px;
+    height: 15px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .processRunway {
+    height: auto;
+  }
+
+  .processSticky {
+    position: static;
+    top: auto;
+  }
+
+  .processViewport {
+    height: auto;
+    overflow: visible;
+  }
+
+  .processTrack {
+    transform: none !important;
+    will-change: auto;
+  }
+
+  .processMarker {
+    position: sticky;
+    top: calc(50dvh - var(--process-marker-size) / 2);
+    left: auto;
+    margin-left: var(--process-axis-x);
+    margin-bottom: calc(-1 * var(--process-marker-size));
+    transform: translateX(-50%) !important;
+    will-change: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .processRunway {
+    height: auto !important;
+  }
+
+  .processSticky {
+    position: static;
+  }
+
+  .processViewport {
+    height: auto;
+    overflow: visible;
+  }
+
+  .processTrack {
+    transform: none !important;
+    will-change: auto;
+  }
+
+  .processLine,
+  .processMarker {
+    display: none;
+  }
+
+  .processMarker svg {
+    transition: none;
+  }
+
+  .processList {
+    gap: 32px;
+  }
+
+  .processStep {
+    height: auto;
+  }
+
+  .processCard {
+    min-height: var(--process-row-height);
+  }
+}

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import aboutContent from "../../content/about.json";
 import sharedContent from "../../content/shared.json";
+import CTA from "../../components/ui/CTA";
 import Heading from "../../components/ui/Heading";
-// import AboutProcess from "./AboutProcess";
 import styles from "./AboutPage.module.css";
 
 export default function AboutPage() {
@@ -38,6 +38,13 @@ export default function AboutPage() {
                   {paragraph}
                 </p>
               ))}
+              <CTA
+                href={aboutContent.introduction.cta.href}
+                variant="text"
+                className={styles.introductionCta}
+              >
+                {aboutContent.introduction.cta.label}
+              </CTA>
             </div>
           </div>
         </div>
@@ -79,6 +86,13 @@ export default function AboutPage() {
                   {paragraph}
                 </p>
               ))}
+              <CTA
+                href={aboutContent.introduction.whoWeWorkWith.cta.href}
+                variant="text"
+                className={styles.introductionCta}
+              >
+                {aboutContent.introduction.whoWeWorkWith.cta.label}
+              </CTA>
             </div>
           </div>
         </div>
@@ -139,8 +153,6 @@ export default function AboutPage() {
           </p>
         </div>
       </section>
-
-      <AboutProcess content={aboutContent.process} />
 
       <section
         id={aboutContent.sustainability.id}

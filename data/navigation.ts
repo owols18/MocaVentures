@@ -9,11 +9,6 @@ export const primaryNavigation: NavigationItem[] = [
   { label: "IMPACT", href: "/impact" },
   { label: "PROJECTS", href: "/portfolio" },
   { label: "TEAM", href: "/team" },
-  {
-    label: "WHO WE WORK WITH",
-    href: "/who-we-work-with",
-    desktopMenuVariant: "compact",
-  },
   { label: "CONTACT US", href: "/lets-talk" },
 ];
 
@@ -27,5 +22,4 @@ export const mobilePrimaryNavigation: NavigationItem[] = [
 export const mobileMoreNavigation: NavigationItem[] = [
   { label: "IMPACT", href: "/impact" },
   { label: "TEAM", href: "/team" },
-  { label: "WHO WE WORK WITH", href: "/who-we-work-with" },
 ];

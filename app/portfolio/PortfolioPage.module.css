@@ -28,7 +28,8 @@
 
 .grid {
   --card-caption-size: 14px;
-  --card-address-size: 22px;
+  --card-address-size: 18px;
+  --card-project-name-size: 22px;
   --card-text-gap: 12px;
   --card-panel-padding: 20px;
   display: grid;
@@ -84,18 +85,26 @@
   overflow-wrap: anywhere;
 }
 
-.caption {
+.caption,
+.address {
   margin: 0;
   font-family: var(--font-lato), sans-serif;
-  font-size: var(--card-caption-size);
   font-weight: 300;
   line-height: 1.4;
 }
 
+.caption {
+  font-size: var(--card-caption-size);
+}
+
 .address {
+  font-size: var(--card-address-size);
+}
+
+.projectName {
   margin: 0;
   font-family: var(--font-merriweather), serif;
-  font-size: var(--card-address-size);
+  font-size: var(--card-project-name-size);
   font-weight: 300;
   line-height: 1.25;
 }
@@ -149,7 +158,8 @@
 @media (min-width: 1280px) {
   .grid {
     --card-caption-size: clamp(14px, calc(.357143vw + 8.857143px), 18px);
-    --card-address-size: clamp(22px, calc(.892857vw + 9.142857px), 32px);
+    --card-address-size: clamp(18px, calc(.357143vw + 10.857143px), 22px);
+    --card-project-name-size: clamp(22px, calc(.892857vw + 9.142857px), 32px);
     --card-text-gap: clamp(12px, calc(.357143vw + 6.857143px), 16px);
     --card-panel-padding: clamp(20px, calc(.714286vw + 9.714286px), 28px);
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -190,7 +200,8 @@
 @media (orientation: landscape) and (max-height: 500px) {
   .grid {
     --card-caption-size: 14px;
-    --card-address-size: 22px;
+    --card-address-size: 18px;
+    --card-project-name-size: 22px;
     --card-text-gap: 12px;
     --card-panel-padding: 20px;
     grid-template-columns: repeat(2, minmax(0, 1fr));

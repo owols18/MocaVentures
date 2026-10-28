@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "title": "Our Process | MOCA Ventures",
+    "description": "Discover how MOCA Ventures guides projects from discovery and design development through technical engineering, procurement, production oversight, logistics, and delivery."
+  },
+  "pageTitle": "OUR PROCESS",
+  "process": {
+    "id": "process",
+    "title": "How We Bring Projects to Life",
+    "steps": [
+      {
+        "id": "discovery-and-planning",
+        "number": "01",
+        "title": "Discovery & Planning",
+        "body": "We begin by understanding the project vision, functional requirements, budget, schedule, and architectural context to define a clear strategic direction."
+      },
+      {
+        "id": "design-development",
+        "number": "02",
+        "title": "Design Development",
+        "body": "Our team develops tailored kitchen, bathroom, cabinetry, and furnishing solutions that balance refined aesthetics, functionality, materials, and project requirements."
+      },
+      {
+        "id": "technical-engineering",
+        "number": "03",
+        "title": "Technical Engineering",
+        "body": "Each design is translated into precise technical documentation, ensuring compatibility with architectural plans, construction conditions, manufacturing standards, and installation requirements."
+      },
+      {
+        "id": "sourcing-and-procurement",
+        "number": "04",
+        "title": "Sourcing & Procurement",
+        "body": "We identify and coordinate the most suitable European manufacturers, materials, finishes, and products according to the project’s quality and budget objectives."
+      },
+      {
+        "id": "production-oversight",
+        "number": "05",
+        "title": "Production Oversight",
+        "body": "MOCA closely monitors fabrication, specifications, samples, schedules, and quality standards to ensure every component is produced accurately and consistently."
+      },
+      {
+        "id": "logistics-and-delivery",
+        "number": "06",
+        "title": "Logistics & Delivery",
+        "body": "We coordinate international shipping, documentation, delivery schedules, and on-site requirements to ensure an efficient transition from production to final installation."
+      }
+    ]
+  }
+}

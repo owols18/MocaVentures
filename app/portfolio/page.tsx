@@ -36,9 +36,13 @@ export default function PortfolioPage() {
                 className={styles.image}
               />
               <div className={styles.panel}>
+                {card.projectName && (
+                  <h2 id={titleId} className={styles.projectName}>
+                    {card.projectName}
+                  </h2>
+                )}
+                <p className={styles.address}>{card.address}</p>
                 <p className={styles.caption}>{card.location}</p>
-                <h2 id={titleId} className={styles.address}>{card.address}</h2>
-                {card.projectName && <p className={styles.caption}>{card.projectName}</p>}
               </div>
             </>
           );
