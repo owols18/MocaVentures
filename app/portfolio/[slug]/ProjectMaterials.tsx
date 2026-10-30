@@ -88,9 +88,6 @@ export default function ProjectMaterials({ items, initialId }: ProjectMaterialsP
                 className={styles.image}
                 style={{ objectPosition: `${material.image.focalPoint.x}% ${material.image.focalPoint.y}%` }}
               />
-              <div className={styles.caption}>
-                <p>{material.description}</p>
-              </div>
             </div>
           </div>
         );

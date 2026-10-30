@@ -52,6 +52,10 @@
     "image": {
       "src": "/images/portfolio/moca-ventures-275-west-10th-street-new-york-portfolio.webp",
       "alt": "Brick building entrance framed by dark metalwork and greenery."
+    },
+    "relatedImage": {
+      "src": "/images/portfolio/related-project/moca-ventures-the-shephard-275-west-10th-street-new-york-related-project.webp",
+      "alt": "The Shephard entrance at 275 West 10th Street, framed by red brick, black metalwork, and trees."
     }
   },
   {
@@ -85,6 +89,10 @@
     "image": {
       "src": "/images/portfolio/moca-ventures-202-broome-street-new-york-portfolio.webp",
       "alt": "Temporary reference photograph of a residential facade with planted terraces at dusk."
+    },
+    "relatedImage": {
+      "src": "/images/portfolio/related-project/moca-ventures-the-ellery-204-forsyth-street-new-york-related-project.webp",
+      "alt": "The Ellery at 204 Forsyth Street overlooking the Manhattan skyline at dusk."
     }
   }
 ]

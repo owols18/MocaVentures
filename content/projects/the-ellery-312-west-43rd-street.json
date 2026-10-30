@@ -1,0 +1,112 @@
+{
+    "slug":"the-ellery-312-west-43rd-street",
+    "status":"published",
+    "visible":true,
+    "publishedAt":"2026-10-28",
+    "location":"NEW YORK",
+    "title":"THE ELLERY — 312 WEST 43RD STREET",
+    "summary":"The Ellery offers the perfect blend of sun-filled and vibrant amenities, suited for any lifestyle.",
+    "portfolio":{
+        "address":"312 West 43rd Street",
+        "projectName":"THE ELLERY",
+        "image":{
+            "src":"/images/portfolio/moca-ventures-312-west-43rd-street-new-york-portfolio.webp",
+            "alt":"Life is calmer at the Ellery a modern haven in the heart of the city."
+        }
+
+    },
+    "detail":{
+        "hero":{
+            "alt":"Centrally located at the nexus of two of New York City most iconic neighborhoods",
+            "width":2560,
+            "height":1600,
+            "focalPoint": { "x": 50, "y": 50 }
+        },
+        "overview":[
+            {
+                "label":"Partner:",
+                "value":"TACONIC INVESTMENT PARTNERS"
+            },
+            {
+                "label":"Architect:",
+                "value":"HANDEL ARCHITECTS"
+            },
+            {
+                "label":"Number of Residences:",
+                "value":"330 UNITS"
+            }
+        ],
+        "gallery": [
+            {
+                "id":"kitchen-01",
+                "image":{
+                    "src":"/images/portfolio/projects/01-the-ellery-312-west-43rd-street/moca-ventures-the-ellery-312 west-43rd-street-kitchen-01.webp",
+                    "alt": "A kitchen at 312 west 43rd street with full-height cabinetry, a central island, and pendant lighting.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"kitchen-02",
+                "image":{
+                    "src":"/images/portfolio/projects/01-the-ellery-312-west-43rd-street/moca-ventures-the-ellery-312 west-43rd-street-kitchen-02.webp",
+                    "alt": "A kitchen at 312 west 43rd street with full-height cabinetry",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"kitchen-03",
+                "image":{
+                    "src":"/images/portfolio/projects/01-the-ellery-312-west-43rd-street/moca-ventures-the-ellery-312 west-43rd-street-kitchen-03.webp",
+                    "alt": "A kitchen with full-height cabinetry",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"bathroom-01",
+                "image":{
+                    "src":"/images/portfolio/projects/01-the-ellery-312-west-43rd-street/moca-ventures-the-ellery-312 west-43rd-street-bathroom-01.webp",
+                    "alt": "A bathroom with a freestanding bathtub and views across New York.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"bathroom-02",
+                "image":{
+                    "src":"/images/portfolio/projects/01-the-ellery-312-west-43rd-street/moca-ventures-the-ellery-312 west-43rd-street-bathroom-02.webp",
+                    "alt": "A bathroom with a freestanding bathtub, double vanity, and views across New York.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"courtyard",
+                "image":{
+                    "src":"/images/portfolio/projects/01-the-ellery-312-west-43rd-street/moca-ventures-the-ellery-312 west-43rd-street-Courtyard.webp",
+                    "alt": "A Luxury Courtyard",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            }
+        ]
+    },
+    "images": {
+        "home": "/images/portfolio/projects/01-the-ellery-312-west-43rd-street/moca-ventures-the-ellery-312 west-43rd-street-hero.webp",
+        "hero": "/images/portfolio/projects/01-the-ellery-312-west-43rd-street/moca-ventures-the-ellery-312 west-43rd-street-hero.webp",
+        "gallery": []
+    },
+    "materials": [],
+    "cta": {
+    "label": "DISCOVER THE PROJECT"
+    }   
+
+}

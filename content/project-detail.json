@@ -5,7 +5,22 @@
   "overview": {
     "title": "Project Overview"
   },
+  "gallery": {
+    "ariaLabel": "Project image gallery",
+    "previousLabel": "Previous image",
+    "nextLabel": "Next image",
+    "playLabel": "Play slideshow",
+    "pauseLabel": "Pause slideshow",
+    "slideLabelTemplate": "Show image {index} of {total}",
+    "autoplayIntervalMs": 5000
+  },
   "materials": {
     "titleTemplate": "Specified Materials — {project}"
+  },
+  "otherProjects": {
+    "backToPortfolioLabel": "BACK TO PORTFOLIO",
+    "backToPortfolioHref": "/portfolio",
+    "title": "OTHER PROJECTS",
+    "limit": 2
   }
 }

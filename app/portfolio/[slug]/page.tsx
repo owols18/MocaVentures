@@ -2,8 +2,15 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import Heading from "../../../components/ui/Heading";
+import CTA from "../../../components/ui/CTA";
 import detailContent from "../../../content/project-detail.json";
-import { getProjectBySlug, getPublishedProjects } from "../../../data/projects";
+import portfolioContent from "../../../content/portfolio.json";
+import {
+  getFollowingPortfolioCards,
+  getProjectBySlug,
+  getPublishedProjects,
+} from "../../../data/projects";
+import ProjectGallery from "./ProjectGallery";
 import ProjectMaterials from "./ProjectMaterials";
 import styles from "./ProjectDetail.module.css";
 
@@ -29,7 +36,14 @@ export default async function ProjectPage({ params }: PageProps<"/portfolio/[slu
 
   // Published projects can adopt the detail template as their content becomes ready.
   if (!project.detail) return null;
-  const { hero, sections, initialMaterialId } = project.detail;
+  const { hero, overview, gallery, initialMaterialId } = project.detail;
+  const projectName = project.portfolio?.projectName?.trim() || project.title;
+  const projectAddress = project.portfolio?.address?.trim() || project.title;
+  const otherProjects = getFollowingPortfolioCards(
+    portfolioContent.grid,
+    project.slug,
+    detailContent.otherProjects.limit,
+  );
 
   return (
     <article className={styles.page}>
@@ -45,8 +59,9 @@ export default async function ProjectPage({ params }: PageProps<"/portfolio/[slu
           style={{ objectPosition: `${hero.focalPoint.x}% ${hero.focalPoint.y}%` }}
         />
         <div className={styles.heroCopy}>
-          <p className={styles.location}>{project.location}</p>
-          <h1 id="project-title" className={styles.projectTitle}>{project.title}</h1>
+          <p className={styles.heroMeta}>{projectAddress}</p>
+          <h1 id="project-title" className={styles.projectTitle}>{projectName}</h1>
+          <p className={styles.heroMeta}>{project.location}</p>
           <p className={styles.summary}>{project.summary}</p>
         </div>
         <a className={styles.readMore} href="#project-overview">
@@ -66,46 +81,73 @@ export default async function ProjectPage({ params }: PageProps<"/portfolio/[slu
         <Heading level="h2" variant="h3" className={styles.overviewTitle}>
           <span id="project-overview-title">{detailContent.overview.title}</span>
         </Heading>
-        <div className={styles.overviewBody}>
-          {project.description.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
-        </div>
+        <ul className={styles.overviewBody}>
+          {overview.map((item) => (
+            <li key={item.label}>
+              <span className={styles.overviewLabel}>{item.label}</span>{" "}
+              <span>{item.value}</span>
+            </li>
+          ))}
+        </ul>
       </section>
 
-      {sections?.map((section) => (
-        <section
-          key={section.id}
-          className={styles.feature}
-          data-panel-side={section.panelSide}
-          aria-labelledby={`project-section-${section.id}`}
-        >
-          <Image
-            className={styles.featureImage}
-            src={section.image.src}
-            alt={section.image.alt}
-            width={section.image.width}
-            height={section.image.height}
-            sizes="100vw"
-            style={{ objectPosition: `${section.image.focalPoint.x}% ${section.image.focalPoint.y}%` }}
-          />
-          <div className={styles.featurePanel}>
-            <h2 id={`project-section-${section.id}`} className={styles.featureTitle}>
-              {section.title}
-            </h2>
-            <p className={styles.featureBody}>{section.body}</p>
-          </div>
-        </section>
-      ))}
+      <ProjectGallery
+        key={project.slug}
+        items={gallery}
+        content={detailContent.gallery}
+      />
 
       {project.materials.length > 0 && (
         <section className={styles.materials} aria-labelledby="project-materials-title">
           <h2 id="project-materials-title" className={styles.overviewTitle}>
-            {detailContent.materials.titleTemplate.replace("{project}", project.portfolio?.address ?? project.title)}
+            {detailContent.materials.titleTemplate.replace("{project}", projectName)}
           </h2>
           <ProjectMaterials
             key={project.slug}
             items={project.materials}
             initialId={initialMaterialId ?? project.materials[0].id}
           />
+        </section>
+      )}
+
+      {otherProjects.length > 0 && (
+        <section className={styles.otherProjects} aria-labelledby="other-projects-title">
+          <CTA
+            href={detailContent.otherProjects.backToPortfolioHref}
+            className={styles.backToPortfolio}
+          >
+            {detailContent.otherProjects.backToPortfolioLabel}
+          </CTA>
+
+          <h2 id="other-projects-title" className={styles.otherProjectsTitle}>
+            {detailContent.otherProjects.title}
+          </h2>
+
+          <ul className={styles.otherProjectsGrid} role="list">
+            {otherProjects.map((otherProject) => {
+              const image = otherProject.relatedImage ?? otherProject.image;
+
+              return (
+                <li key={otherProject.id} className={styles.otherProjectCard}>
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    sizes="(min-width: 768px) calc((100vw - 96px) / 2), calc(100vw - 48px)"
+                    className={styles.otherProjectImage}
+                  />
+                  <div className={styles.otherProjectOverlay} aria-hidden="true" />
+                  <div className={styles.otherProjectCopy}>
+                    {otherProject.projectName && (
+                      <h3 className={styles.otherProjectName}>{otherProject.projectName}</h3>
+                    )}
+                    <p className={styles.otherProjectAddress}>{otherProject.address}</p>
+                    <p className={styles.otherProjectLocation}>{otherProject.location}</p>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
         </section>
       )}
     </article>

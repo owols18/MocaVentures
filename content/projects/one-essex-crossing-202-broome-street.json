@@ -1,0 +1,132 @@
+{
+    "slug":"one-essex-crossing-202-broome-street",
+    "status":"published",
+    "visible":true,
+    "publishedAt":"2026-10-30",
+    "location":"NEW YORK",
+    "title":"ONE ESSEX CROSSING 202 BROOME STREET",
+    "summary":"Essex Crossing is an experience unlike any other—in the heart of New York City.",
+    "portfolio":{
+        "address":"202 Broome Street",
+        "projectName":"ONE ESSEX CROSSING",
+        "image":{
+            "src":"/images/portfolio/moca-ventures-202-broome-street-new-york-portfolio.webp",
+            "alt":"Discover the quintessential downtown condominium at One Essex Crossing"
+        }
+
+    },
+    "detail":{
+        "hero":{
+            "alt":"Centrally located at the nexus of two of New York City’s most iconic neighborhoods",
+            "width":3840,
+            "height":2400,
+            "focalPoint": { "x": 50, "y": 50 }
+        },
+        "overview":[
+            {
+                "label":"Partner:",
+                "value":"TACONIC INVESTMENT PARTNERS"
+            },
+            {
+                "label":"Architect:",
+                "value":"CETRA RUDY ARCHITECTS"
+            },
+            {
+                "label":"Number of Residences:",
+                "value":"83 UNITS"
+            }
+        ],
+        "gallery": [
+            {
+                "id":"kitchen-01",
+                "image":{
+                    "src":"/images/portfolio/projects/02-one-essex-crossing-202-broome-street/moca-ventures-one-essex-crossing-202-broome-street-typical-kitchen-01.webp",
+                    "alt": "A kitchen at one essex crossing with full-height cabinetry.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"kitchen-02",
+                "image":{
+                    "src":"/images/portfolio/projects/02-one-essex-crossing-202-broome-street/moca-ventures-one-essex-crossing-202-broome-street-typical-kitchen-02.webp",
+                    "alt": "Luxury kitchen",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"kitchen-03",
+                "image":{
+                    "src":"/images/portfolio/projects/02-one-essex-crossing-202-broome-street/moca-ventures-one-essex-crossing-202-broome-street-typical-kitchen-03.webp",
+                    "alt": "A luxury kitchen",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"kitchen-04",
+                "image":{
+                    "src":"/images/portfolio/projects/02-one-essex-crossing-202-broome-street/moca-ventures-one-essex-crossing-202-broome-street-typical-kitchen-04.webp",
+                    "alt": "A luxury kitchen at one essex crossing ",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"bathroom-01",
+                "image":{
+                    "src":"/images/portfolio/projects/02-one-essex-crossing-202-broome-street/moca-ventures-one-essex-crossing-202-broome-street-master-bathroom-01.webp",
+                    "alt": "A master bathroom with a freestanding bathtub, at one essex crossing.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"bathroom-02",
+                "image":{
+                    "src":"/images/portfolio/projects/02-one-essex-crossing-202-broome-street/moca-ventures-one-essex-crossing-202-broome-street-secondary-bathroom-01.webp",
+                    "alt": "Secondary bathroom at one essex crossing.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"bathroom-03",
+                "image":{
+                    "src":"/images/portfolio/projects/02-one-essex-crossing-202-broome-street/moca-ventures-one-essex-crossing-202-broome-street-typical-bathroom-01.webp",
+                    "alt": "Typical bathroom at one essex crossing.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"kitchen-mesh",
+                "image":{
+                    "src":"/images/portfolio/projects/02-one-essex-crossing-202-broome-street/moca-ventures-one-essex-crossing-202-broome-street-Kitchenmesh.webp",
+                    "alt": "luxury apartment at one essex crossing.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            }
+        ]
+    },
+    "images": {
+        "home": "/images/portfolio/projects/02-one-essex-crossing-202-broome-street/moca-ventures-one-essex-crossing-202-broome-street-external-residences.webp",
+        "hero": "/images/portfolio/projects/02-one-essex-crossing-202-broome-street/moca-ventures-one-essex-crossing-202-broome-street-external-residences.webp",
+        "gallery": []
+    },
+    "materials": [],
+    "cta": {
+    "label": "DISCOVER THE PROJECT"
+    }   
+
+}

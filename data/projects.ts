@@ -3,10 +3,16 @@ import "server-only";
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { isAbsolute, join, relative, resolve } from "node:path";
 
+interface PortfolioImage {
+  src: string;
+  alt: string;
+}
+
 interface PortfolioDetails {
   address: string;
   projectName?: string;
-  image: { src: string; alt: string };
+  image: PortfolioImage;
+  relatedImage?: PortfolioImage;
 }
 
 interface PreviewProject extends PortfolioDetails {
@@ -32,24 +38,26 @@ interface ProjectImage extends ProjectImageMetadata {
   src: string;
 }
 
-interface ProjectDetailSection {
+interface ProjectOverviewItem {
+  label: string;
+  value: string;
+}
+
+export interface ProjectGalleryItem {
   id: string;
-  title: string;
-  body: string;
-  panelSide: "left" | "right";
   image: ProjectImage;
 }
 
 export interface ProjectMaterial {
   id: string;
   label: string;
-  description: string;
   image: ProjectImage;
 }
 
 interface ProjectDetail {
   hero: ProjectImageMetadata;
-  sections?: ProjectDetailSection[];
+  overview: ProjectOverviewItem[];
+  gallery: ProjectGalleryItem[];
   initialMaterialId?: string;
 }
 
@@ -61,7 +69,6 @@ export interface Project {
   location: string;
   title: string;
   summary: string;
-  description: string[];
   portfolio?: PortfolioDetails;
   detail?: ProjectDetail;
   images: {
@@ -70,8 +77,6 @@ export interface Project {
     gallery: string[];
   };
   materials: ProjectMaterial[];
-  client: string;
-  teamMembers: string[];
   cta: {
     label: string;
   };
@@ -167,25 +172,32 @@ function assertContentId(value: unknown, field: string): asserts value is string
 function assertProjectDetail(value: unknown, field: string, published: boolean): asserts value is ProjectDetail {
   if (!isRecord(value)) throw new Error(`${field} must be an object.`);
   assertImageMetadata(value.hero, `${field}.hero`);
+
+  if (!Array.isArray(value.overview) || value.overview.length === 0) {
+    throw new Error(`${field}.overview must be a non-empty array.`);
+  }
+  value.overview.forEach((item: unknown, index) => {
+    const itemField = `${field}.overview[${index}]`;
+    if (!isRecord(item)) throw new Error(`${itemField} must be an object.`);
+    assertString(item.label, `${itemField}.label`, true);
+    assertString(item.value, `${itemField}.value`, true);
+  });
+
+  if (!Array.isArray(value.gallery) || value.gallery.length === 0) {
+    throw new Error(`${field}.gallery must be a non-empty array.`);
+  }
+  const galleryIds = new Set<string>();
+  value.gallery.forEach((item: unknown, index) => {
+    const itemField = `${field}.gallery[${index}]`;
+    if (!isRecord(item)) throw new Error(`${itemField} must be an object.`);
+    assertContentId(item.id, `${itemField}.id`);
+    if (galleryIds.has(item.id)) throw new Error(`${itemField}.id must be unique.`);
+    galleryIds.add(item.id);
+    assertProjectImage(item.image, `${itemField}.image`, published);
+  });
+
   if (value.initialMaterialId !== undefined) {
     assertContentId(value.initialMaterialId, `${field}.initialMaterialId`);
-  }
-  if (value.sections !== undefined) {
-    if (!Array.isArray(value.sections)) throw new Error(`${field}.sections must be an array.`);
-    const ids = new Set<string>();
-    value.sections.forEach((section: unknown, index) => {
-      const sectionField = `${field}.sections[${index}]`;
-      if (!isRecord(section)) throw new Error(`${sectionField} must be an object.`);
-      assertContentId(section.id, `${sectionField}.id`);
-      if (ids.has(section.id)) throw new Error(`${sectionField}.id must be unique.`);
-      ids.add(section.id);
-      assertString(section.title, `${sectionField}.title`, true);
-      assertString(section.body, `${sectionField}.body`, true);
-      if (section.panelSide !== "left" && section.panelSide !== "right") {
-        throw new Error(`${sectionField}.panelSide must be left or right.`);
-      }
-      assertProjectImage(section.image, `${sectionField}.image`, published);
-    });
   }
 }
 
@@ -201,7 +213,6 @@ function assertMaterials(value: unknown, field: string, published: boolean): ass
     if (ids.has(material.id)) throw new Error(`${materialField}.id must be unique.`);
     ids.add(material.id);
     assertString(material.label, `${materialField}.label`, true);
-    assertString(material.description, `${materialField}.description`, true);
     assertProjectImage(material.image, `${materialField}.image`, published);
   });
 }
@@ -222,7 +233,6 @@ function validateProject(value: unknown, fileName: string): Project {
   assertString(value.location, field("location"));
   assertString(value.title, field("title"), true);
   assertString(value.summary, field("summary"));
-  assertStringArray(value.description, field("description"));
   if (value.portfolio !== undefined) {
     assertPortfolioDetails(value.portfolio, field("portfolio"));
   }
@@ -237,9 +247,6 @@ function validateProject(value: unknown, fileName: string): Project {
 
     if (value.status === "published") {
       assertLocalAsset(value.images.hero, field("images.hero"));
-      if (value.description.length === 0 || value.description.some((paragraph) => !paragraph.trim())) {
-        throw new Error(`${field("description")} must contain non-empty overview paragraphs when detail is provided.`);
-      }
     }
   }
 
@@ -262,9 +269,6 @@ function validateProject(value: unknown, fileName: string): Project {
   ) {
     throw new Error(`${field("detail.initialMaterialId")} must reference an existing material.`);
   }
-  assertString(value.client, field("client"));
-  assertStringArray(value.teamMembers, field("teamMembers"));
-
   if (!isRecord(value.cta)) throw new Error(`${field("cta")} must be an object.`);
   assertString(value.cta.label, field("cta.label"), true);
 
@@ -312,21 +316,28 @@ function assertPortfolioDetails(value: unknown, field: string): asserts value is
   if (!isRecord(value)) throw new Error(`${field} must be an object.`);
   assertString(value.address, `${field}.address`, true);
   if (value.projectName !== undefined) assertString(value.projectName, `${field}.projectName`);
-  if (!isRecord(value.image)) throw new Error(`${field}.image must be an object.`);
-  assertString(value.image.src, `${field}.image.src`, true);
-  assertString(value.image.alt, `${field}.image.alt`, true);
+  assertPortfolioImage(value.image, `${field}.image`);
+  if (value.relatedImage !== undefined) {
+    assertPortfolioImage(value.relatedImage, `${field}.relatedImage`);
+  }
+}
 
-  const assetPath = resolve(publicDirectory, value.image.src.replace(/^\/+/, ""));
+function assertPortfolioImage(value: unknown, field: string): asserts value is PortfolioImage {
+  if (!isRecord(value)) throw new Error(`${field} must be an object.`);
+  assertString(value.src, `${field}.src`, true);
+  assertString(value.alt, `${field}.alt`, true);
+
+  const assetPath = resolve(publicDirectory, value.src.replace(/^\/+/, ""));
   const relativeAssetPath = relative(publicDirectory, assetPath);
   if (
-    !value.image.src.startsWith("/") ||
-    value.image.src.startsWith("//") ||
+    !value.src.startsWith("/") ||
+    value.src.startsWith("//") ||
     relativeAssetPath === "" ||
     relativeAssetPath.startsWith("..") ||
     isAbsolute(relativeAssetPath) ||
     !existsSync(assetPath)
   ) {
-    throw new Error(`${field}.image.src "${value.image.src}" must reference an existing asset under public/.`);
+    throw new Error(`${field}.src "${value.src}" must reference an existing asset under public/.`);
   }
 }
 
@@ -403,6 +414,7 @@ export function getPortfolioCards(config: unknown): PortfolioCard[] {
         address: preview.address,
         projectName: preview.projectName,
         image: preview.image,
+        relatedImage: preview.relatedImage,
       }];
     }
 
@@ -430,6 +442,28 @@ export function getLatestProjects(limit: number): Project[] {
 export function getVisiblePublishedProjects(): Project[] {
   // Visibility controls listings only; published detail routes remain available.
   return getPublishedProjects().filter((project) => project.visible !== false);
+}
+
+export function getFollowingPortfolioCards(
+  config: unknown,
+  currentSlug: string,
+  limit: number,
+): PortfolioCard[] {
+  if (!Number.isInteger(limit) || limit < 0) {
+    throw new RangeError("Following project limit must be a non-negative integer.");
+  }
+
+  const cards = getPortfolioCards(config);
+  const currentIndex = cards.findIndex((card) => card.slug === currentSlug);
+  if (currentIndex === -1 || cards.length < 2 || limit === 0) return [];
+
+  const followingCards: PortfolioCard[] = [];
+  for (let offset = 1; offset < cards.length && followingCards.length < limit; offset += 1) {
+    const card = cards[(currentIndex + offset) % cards.length];
+    if (card.slug !== currentSlug) followingCards.push(card);
+  }
+
+  return followingCards;
 }
 
 export function getProjectBySlug(slug: string): Project | undefined {

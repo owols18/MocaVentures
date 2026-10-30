@@ -35,7 +35,7 @@
   position: absolute;
   z-index: -1;
   inset: 0;
-  background: rgb(32 35 33 / 65%);
+  background: rgb(32 35 33 / 55%);
   content: "";
 }
 
@@ -50,19 +50,19 @@
   text-align: center;
 }
 
-.location,
+.heroMeta,
 .projectTitle,
 .summary {
   margin: 0;
 }
 
-.location,
+.heroMeta,
 .projectTitle {
   font-family: var(--font-instrument-sans);
   font-weight: 400;
 }
 
-.location {
+.heroMeta {
   font-size: 16px;
   line-height: 1.2;
 }
@@ -132,70 +132,32 @@
 
 /* Keep the paragraph typography aligned with About's introduction at each breakpoint. */
 .overviewBody {
-  margin-top: 40px;
+  margin: 40px 0 0;
+  padding: 0;
   color: var(--color-graphite);
   font-family: var(--font-lato);
   font-size: 20px;
   font-weight: 300;
   line-height: 30px;
+  list-style: none;
 }
 
-.overviewBody p {
+.overviewBody li {
   margin: 0;
 }
 
-.overviewBody p + p {
+.overviewBody li::before {
+  margin-right: .5em;
+  color: var(--color-blue-lux);
+  content: "•";
+}
+
+.overviewBody li + li {
   margin-top: 1em;
 }
 
-.feature {
-  position: relative;
-  display: grid;
-  min-height: 620px;
-  align-items: center;
-  padding-block: 48px;
-  color: var(--color-chalk);
-}
-
-.featureImage {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.featurePanel {
-  position: relative;
-  display: flex;
-  width: 100%;
-  min-height: 400px;
-  justify-content: center;
-  flex-direction: column;
-  padding: 40px var(--detail-side);
-  background: rgb(40 75 99 / 45%);
-  text-align: left;
-}
-
-.feature[data-panel-side="right"] .featurePanel {
-  justify-self: end;
-}
-
-/* Typography follows About's sustainability section; alignment stays local. */
-.featureTitle {
-  margin: 0;
-  font-family: var(--font-merriweather);
-  font-size: 36px;
-  font-weight: 300;
-  line-height: 44px;
-}
-
-.featureBody {
-  margin: 40px 0 0;
-  font-family: var(--font-lato);
-  font-size: 20px;
-  font-weight: 300;
-  line-height: 30px;
+.overviewLabel {
+  color: var(--color-blue-lux);
 }
 
 .materials {
@@ -205,6 +167,105 @@
   gap: 40px;
   margin-inline: auto;
   text-align: center;
+}
+
+.otherProjects {
+  display: grid;
+  width: calc(100% - 2 * var(--detail-side));
+  justify-items: center;
+  gap: 40px;
+  margin-inline: auto;
+}
+
+.backToPortfolio {
+  min-width: 220px;
+  text-decoration: none;
+}
+
+.otherProjectsTitle {
+  margin: 0;
+  color: var(--color-blue-lux);
+  font-family: var(--font-instrument-sans);
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: .16em;
+  text-align: center;
+}
+
+.otherProjectsGrid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.otherProjectCard {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  min-width: 0;
+  aspect-ratio: 8 / 5;
+  place-items: center;
+  overflow: hidden;
+  background: var(--color-graphite);
+  border: 1px solid var(--color-whiskey-sour);
+}
+
+.otherProjectImage {
+  z-index: 0;
+  object-fit: cover;
+}
+
+.otherProjectOverlay {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: rgb(32 35 33 / 35%);
+}
+
+.otherProjectCopy {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  max-width: min(80%, 520px);
+  gap: 8px;
+  padding: 18px;
+  color: var(--color-chalk);
+  background: rgb(40 75 99 / 65%);
+  text-align: center;
+}
+
+.otherProjectName,
+.otherProjectAddress,
+.otherProjectLocation {
+  margin: 0;
+}
+
+.otherProjectName {
+  font-family: var(--font-merriweather);
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+.otherProjectAddress,
+.otherProjectLocation {
+  font-family: var(--font-lato);
+  font-weight: 300;
+  line-height: 1.35;
+}
+
+.otherProjectAddress {
+  font-size: 18px;
+}
+
+.otherProjectLocation {
+  font-size: 14px;
+  letter-spacing: .12em;
 }
 
 @media (min-width: 768px) {
@@ -222,7 +283,7 @@
     gap: 24px;
   }
 
-  .location {
+  .heroMeta {
     font-size: 22px;
   }
 
@@ -244,26 +305,37 @@
     margin-top: 48px;
   }
 
-  .feature {
-    min-height: 560px;
-  }
-
-  .featurePanel {
-    width: 60%;
-    min-height: 450px;
-  }
-
-  .featureTitle {
-    font-size: 40px;
-    line-height: 48px;
-  }
-
-  .featureBody {
-    margin-top: 48px;
-  }
-
   .materials {
     gap: 48px;
+  }
+
+  .otherProjects {
+    gap: 48px;
+  }
+
+  .otherProjectsTitle {
+    font-size: 34px;
+  }
+
+  .otherProjectsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .otherProjectCopy {
+    gap: 10px;
+  }
+
+  .otherProjectName {
+    font-size: 26px;
+  }
+
+  .otherProjectAddress {
+    font-size: 20px;
+  }
+
+  .otherProjectLocation {
+    font-size: 16px;
   }
 }
 
@@ -272,7 +344,7 @@
     font-size: 68px;
   }
 
-  .location,
+  .heroMeta,
   .summary {
     font-size: 24px;
   }
@@ -287,20 +359,10 @@
     line-height: 33px;
   }
 
-  .feature {
-    min-height: 600px;
+  .otherProjectsTitle {
+    font-size: 38px;
   }
 
-  .featurePanel {
-    width: 50%;
-    min-height: 490px;
-  }
-
-  .featureBody {
-    margin-top: 50px;
-    font-size: 22px;
-    line-height: 33px;
-  }
 }
 
 @media (min-width: 1280px) {
@@ -317,7 +379,7 @@
     gap: 27px;
   }
 
-  .location,
+  .heroMeta,
   .summary {
     font-size: clamp(26.6667px, calc(.2778vw + 22.6667px), 28px);
   }
@@ -335,7 +397,7 @@
   }
 
   .overview {
-    max-width: clamp(880px, calc(16.6667vw + 640px), 960px);
+    max-width: clamp(950px, calc(16.6667vw + 640px), 1000px);
   }
 
   .overviewBody {
@@ -344,29 +406,24 @@
     line-height: clamp(36px, calc(.625vw + 27px), 39px);
   }
 
-  .feature {
-    min-height: clamp(650px, calc(31.25vw + 250px), 850px);
-    padding-block: 55px;
-  }
-
-  .featurePanel {
-    width: min(43.75%, 1000px);
-    min-height: clamp(553px, calc(22.9167vw + 260px), 700px);
-  }
-
-  .featureTitle {
-    font-size: clamp(44px, 3.3333vw, 52px);
-    line-height: clamp(53px, 4.0278vw, 63px);
-  }
-
-  .featureBody {
-    margin-top: clamp(62px, calc(1.4583vw + 44px), 72px);
-    font-size: clamp(24px, calc(.4167vw + 18px), 26px);
-    line-height: clamp(36px, calc(.625vw + 27px), 39px);
-  }
-
   .materials {
     gap: 65px;
+  }
+
+  .otherProjects {
+    gap: 65px;
+  }
+
+  .otherProjectsGrid {
+    gap: clamp(24px, calc(1.1111vw + 8px), 32px);
+  }
+
+  .otherProjectName {
+    font-size: clamp(28px, calc(.8333vw + 16px), 32px);
+  }
+
+  .otherProjectAddress {
+    font-size: clamp(20px, calc(.4167vw + 14px), 22px);
   }
 }
 
@@ -384,7 +441,7 @@
   }
 
   .overview {
-    max-width: clamp(960px, calc(6.25vw + 840px), 1000px);
+    max-width: clamp(1200px, calc(6.25vw + 840px), 1320px);
   }
 
   .overviewBody {
@@ -393,24 +450,10 @@
     line-height: clamp(39px, calc(.234375vw + 34.5px), 40.5px);
   }
 
-  .feature {
-    min-height: clamp(850px, calc(23.4375vw + 400px), 1000px);
+  .otherProjectsTitle {
+    font-size: clamp(38px, calc(.625vw + 26px), 42px);
   }
 
-  .featurePanel {
-    min-height: clamp(700px, calc(12.5vw + 460px), 780px);
-  }
-
-  .featureTitle {
-    font-size: clamp(52px, calc(.625vw + 40px), 56px);
-    line-height: clamp(63px, calc(.78125vw + 48px), 68px);
-  }
-
-  .featureBody {
-    margin-top: clamp(72px, calc(1.25vw + 48px), 80px);
-    font-size: clamp(26px, calc(.15625vw + 23px), 27px);
-    line-height: clamp(39px, calc(.234375vw + 34.5px), 40.5px);
-  }
 }
 
 /* Match the shared navigation's safe area before applying the compact landscape layout. */
@@ -434,7 +477,7 @@
     gap: 12px;
   }
 
-  .location {
+  .heroMeta {
     font-size: 16px;
   }
 
@@ -459,29 +502,36 @@
     line-height: 27px;
   }
 
-  .feature {
-    min-height: 360px;
-    padding-block: 32px;
-  }
-
-  .featurePanel {
-    width: min(75%, 680px);
-    min-height: 0;
-    padding-block: 28px;
-  }
-
-  .featureTitle {
-    font-size: 32px;
-    line-height: 39px;
-  }
-
-  .featureBody {
-    margin-top: 32px;
-    font-size: 18px;
-    line-height: 27px;
-  }
-
   .materials {
     gap: 32px;
+  }
+
+  .otherProjects {
+    gap: 32px;
+  }
+
+  .otherProjectsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .otherProjectsTitle {
+    font-size: 28px;
+  }
+
+  .otherProjectCopy {
+    gap: 6px;
+  }
+
+  .otherProjectName {
+    font-size: 20px;
+  }
+
+  .otherProjectAddress {
+    font-size: 16px;
+  }
+
+  .otherProjectLocation {
+    font-size: 12px;
   }
 }

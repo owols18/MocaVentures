@@ -6,8 +6,8 @@
   "grid": {
     "mode": "preview",
     "previewOrder": [
-      { "id": "slot-01", "source": "preview", "ref": "312-west-43rd-street" },
-      { "id": "slot-05", "source": "preview", "ref": "202-broome-street" },
+      { "id": "slot-01", "source": "project", "ref": "the-ellery-312-west-43rd-street" },
+      { "id": "slot-02", "source": "project", "ref": "one-essex-crossing-202-broome-street" },
       { "id": "slot-04", "source": "project", "ref": "242-broome-street-residence-01" },
       { "id": "slot-06", "source": "preview", "ref": "275-west-10th-street" },
       { "id": "slot-09", "source": "preview", "ref": "204-forsyth-street" },
@@ -15,7 +15,7 @@
       { "id": "slot-07", "source": "preview", "ref": "265-east-houston-street" },
 
       { "id": "slot-03", "source": "preview", "ref": "80-broad-street" },
-      { "id": "slot-02", "source": "preview", "ref": "139-franklin-street" },
+      { "id": "slot-13", "source": "preview", "ref": "139-franklin-street" },
       { "id": "slot-10", "source": "preview", "ref": "80-broad-street" },
       { "id": "slot-11", "source": "preview", "ref": "139-franklin-street" },
       { "id": "slot-12", "source": "project", "ref": "242-broome-street-residence-01" }
