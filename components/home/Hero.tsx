@@ -2,7 +2,11 @@ import homeContent from "../../content/home.json";
 import Heading from "../ui/Heading";
 import styles from "./Hero.module.css";
 
+const pagesBasePath = process.env.NEXT_PUBLIC_PAGES_BASE_PATH ?? "";
+
 export default function Hero() {
+  const videoSrc = `${pagesBasePath}${homeContent.hero.video}`;
+
   return (
     <section
       className={styles.hero}
@@ -18,7 +22,7 @@ export default function Hero() {
           className={styles.video}
         >
           <source
-            src={homeContent.hero.video}
+            src={videoSrc}
             type="video/mp4"
           />
         </video>
