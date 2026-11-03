@@ -1,0 +1,103 @@
+{
+    "slug":"40-bleecker-at-40-bleecker-street",
+    "status":"published",
+    "visible":true,
+    "publishedAt":"2026-09-30",
+    "location":"NEW YORK",
+    "title":"40 BLEECKER",
+    "summary":"40 Bleecker is a striking modern addition to NoHo's historic architectural landscape, blending refined design with a boutique level of privacy and exclusivity.",
+    "portfolio":{
+        "address":"40 Bleecker Street",
+        "projectName":"40 BLEECKER",
+        "image":{
+            "src":"/images/portfolio/moca-ventures-40-bleecker-street-portfolio.webp",
+            "alt":"The building's clean, minimalist exterior of white limestone and blackened steel hints at the tailored opulence inside"
+        }
+
+    },
+    "detail":{
+        "hero":{
+            "alt":"40 Bleecker Street Condominium in Nolita, Manhattan",
+            "width":3840,
+            "height":2400,
+            "focalPoint": { "x": 50, "y": 50 }
+        },
+        "overview":[
+            {
+                "label":"Partner:",
+                "value":"BRAOD STREET DEVELOPMENT"
+            },
+            {
+                "label":"Architect:",
+                "value":"RAWLINGS ARCHITECTS"
+            },
+            {
+                "label":"Number of Residences:",
+                "value":"61 UNITS"
+            }
+        ],
+        "gallery": [
+            {
+                "id":"kitchen-01",
+                "image":{
+                    "src":"/images/portfolio/projects/04-40-bleecker-street/moca-ventures-40-bleecker-street-kitchen-01.webp",
+                    "alt": "A kitchen at 40 Bleckeer with full-height cabinetry.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"kitchen-02",
+                "image":{
+                    "src":"/images/portfolio/projects/04-40-bleecker-street/moca-ventures-40-bleecker-street-kitchen-02.webp",
+                    "alt": "Luxury kitchen",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"kitchen-03",
+                "image":{
+                    "src":"/images/portfolio/projects/04-40-bleecker-street/moca-ventures-40-bleecker-street-kitchen-03.webp",
+                    "alt": "A luxury kitchen at 40 Bleckeer",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+
+            {
+                "id":"bathroom-01",
+                "image":{
+                    "src":"/images/portfolio/projects/04-40-bleecker-street/moca-ventures-40-bleecker-street-bathroom-01.webp",
+                    "alt": "A master bathroom with a freestanding bathtub, at 40 Bleckeer.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"bathroom-02",
+                "image":{
+                    "src":"/images/portfolio/projects/04-40-bleecker-street/moca-ventures-40-bleecker-street-bathroom-02.webp",
+                    "alt": "Secondary bathroom at 40 Bleckeer.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            }
+        ]
+    },
+    "images": {
+        "home": "/images/portfolio/projects/04-40-bleecker-street/moca-ventures-40-bleecker-street-hero.webp",
+        "hero": "/images/portfolio/projects/04-40-bleecker-street/moca-ventures-40-bleecker-street-hero.webp",
+        "gallery": []
+    },
+    "materials": [],
+    "cta": {
+    "label": "DISCOVER THE PROJECT"
+    }
+
+}

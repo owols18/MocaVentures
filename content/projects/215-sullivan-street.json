@@ -1,0 +1,102 @@
+{
+    "slug":"215-sullivan-street",
+    "status":"published",
+    "visible":true,
+    "publishedAt":"2026-11-02",
+    "location":"NEW YORK",
+    "title":"215 SULLIVAN STREET",
+    "summary":"A thoroughly modern take on Greenwich Village’s historic architecture.",
+    "portfolio":{
+        "address":"215 Sullivan Street",
+        "projectName":"215 SULLIVAN",
+        "image":{
+            "src":"/images/portfolio/moca-ventures-215-sullivan-street-portfolio.webp",
+            "alt":"Located just blocks from Washington Square Park."
+        }
+
+    },
+    "detail":{
+        "hero":{
+            "alt":"Located just blocks from Washington Square Park.",
+            "width":3840,
+            "height":2400,
+            "focalPoint": { "x": 50, "y": 50 }
+        },
+        "overview":[
+            {
+                "label":"Partner:",
+                "value":"BROAD STREET DEVELOPMENT"
+            },
+            {
+                "label":"Architect:",
+                "value":"RAWLINGS ARCHITECTS"
+            },
+            {
+                "label":"Number of Residences:",
+                "value":"25 UNITS"
+            }
+        ],
+        "gallery": [
+            {
+                "id":"kitchen-01",
+                "image":{
+                    "src":"/images/portfolio/projects/09-215-sullivan-street/moca-ventures-kitchen-01-at-215-sullivan-street.webp",
+                    "alt": "A kitchen at 215 Sullivan Street with full-height cabinetry.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"kitchen-02",
+                "image":{
+                    "src":"/images/portfolio/projects/09-215-sullivan-street/moca-ventures-kitchen-02-at-215-sullivan-street.webp",
+                    "alt": "A kitchen at 215 Sullivan Street with full-height cabinetry.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"kitchen-03",
+                "image":{
+                    "src":"/images/portfolio/projects/09-215-sullivan-street/moca-ventures-kitchen-03-at-215-sullivan-street.webp",
+                    "alt": "A kitchen at 215 Sullivan Street with full-height cabinetry.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"kitchen-04",
+                "image":{
+                    "src":"/images/portfolio/projects/09-215-sullivan-street/moca-ventures-kitchen-04-at-215-sullivan-street.webp",
+                    "alt": "A kitchen at 215 Sullivan Street with full-height cabinetry.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"kitchen-05",
+                "image":{
+                    "src":"/images/portfolio/projects/09-215-sullivan-street/moca-ventures-kitchen-05-at-215-sullivan-street.webp",
+                    "alt": "A kitchen at 215 Sullivan Street with full-height cabinetry.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            }
+        ]
+    },
+    "images": {
+        "home": "/images/portfolio/projects/09-215-sullivan-street/moca-ventures-215-sullivan-street-hero.webp",
+        "hero": "/images/portfolio/projects/09-215-sullivan-street/moca-ventures-215-sullivan-street-hero.webp",
+        "gallery": []
+    },
+    "materials": [],
+    "cta": {
+    "label": "DISCOVER THE PROJECT"
+    }
+
+}

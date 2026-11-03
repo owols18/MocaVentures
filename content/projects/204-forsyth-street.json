@@ -1,0 +1,102 @@
+{
+    "slug":"204-forsyth-street",
+    "status":"published",
+    "visible":true,
+    "publishedAt":"2026-11-02",
+    "location":"NEW YORK",
+    "title":"FORSYTH",
+    "summary":"Forsyth amenities include a doorman, fitness center featuring Peloton bicycles, and private storage available.",
+    "portfolio":{
+        "address":"204 Forsyth Street",
+        "projectName":"204 FORSYTH",
+        "image":{
+            "src":"/images/portfolio/moca-ventures-204-forsyth-street-portfolio.webp",
+            "alt":"204 Forsyth Street is a pet-friendly boutique condominium"
+        }
+
+    },
+    "detail":{
+        "hero":{
+            "alt":"comprised of only 11 exclusive residences that seamlessly integrates the rich history of the Lower East Side with timeless design and thoughtful artisan details.",
+            "width":3840,
+            "height":2400,
+            "focalPoint": { "x": 50, "y": 50 }
+        },
+        "overview":[
+            {
+                "label":"Partner:",
+                "value":"CHARLES SAULSON"
+            },
+            {
+                "label":"Architect:",
+                "value":"PARIS INTERIOR"
+            },
+            {
+                "label":"Number of Residences:",
+                "value":"11 UNITS"
+            }
+        ],
+        "gallery": [
+            {
+                "id":"kitchen-01",
+                "image":{
+                    "src":"/images/portfolio/projects/06-204-forsyth street/moca-ventures-204-forsyth-street-american-kitchen.webp",
+                    "alt": "A kitchen at 204 Forsyth Street with full-height cabinetry.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"kitchen-02",
+                "image":{
+                    "src":"/images/portfolio/projects/06-204-forsyth street/moca-ventures-204-forsyth-street-american-kitchen-2.webp",
+                    "alt": "A kitchen at 204 Forsyth Street with full-height cabinetry.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"kitchen-03",
+                "image":{
+                    "src":"/images/portfolio/projects/06-204-forsyth street/moca-ventures-204-forsyth-street-american-kitchen-3.webp",
+                    "alt": "A luxury kitchen",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"kitchen-04",
+                "image":{
+                    "src":"/images/portfolio/projects/06-204-forsyth street/moca-ventures-204-forsyth-street-american-kitchen-4.webp",
+                    "alt": "A luxury kitchen at 204 Forsyth Street ",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"dining-room",
+                "image":{
+                    "src":"/images/portfolio/projects/06-204-forsyth street/moca-ventures-204-forsyth-street-dining-room.webp",
+                    "alt": "A master dining room",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            }
+        ]
+    },
+    "images": {
+        "home": "/images/portfolio/projects/06-204-forsyth street/moca-ventures-204-forsyth-street-hero.webp",
+        "hero": "/images/portfolio/projects/06-204-forsyth street/moca-ventures-204-forsyth-street-hero.webp",
+        "gallery": []
+    },
+    "materials": [],
+    "cta": {
+    "label": "DISCOVER THE PROJECT"
+    }
+
+}

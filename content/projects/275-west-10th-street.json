@@ -1,0 +1,122 @@
+{
+    "slug":"275-west-10th-street",
+    "status":"published",
+    "visible":true,
+    "publishedAt":"2026-11-02",
+    "location":"NEW YORK",
+    "title":"THE SHEPHARD ",
+    "summary":"The Shephard takes its place in a community with strong roots.",
+    "portfolio":{
+        "address":"275 west 10th street",
+        "projectName":"THE SHEPHARD",
+        "image":{
+            "src":"/images/portfolio/moca-ventures-275-west-10th-street-new-york-portfolio.webp",
+            "alt":"Keeping the original facade of the building"
+        }
+
+    },
+    "detail":{
+        "hero":{
+            "alt":"Keeping the original facade of the building",
+            "width":3840,
+            "height":2400,
+            "focalPoint": { "x": 50, "y": 50 }
+        },
+        "overview":[
+            {
+                "label":"Partner:",
+                "value":" THE NAFTALI GROUP"
+            },
+            {
+                "label":"Architect:",
+                "value":"BEYER BLINDER BELL + GACHOT INTERIORS"
+            },
+            {
+                "label":"Number of Residences:",
+                "value":"38 UNITS"
+            }
+        ],
+        "gallery": [
+            {
+                "id":"kitchen-01",
+                "image":{
+                    "src":"/images/portfolio/projects/05-275-west-10th-street/moca-ventures-275-west-10-street-kitchen-01.webp",
+                    "alt": "A kitchen at one essex crossing with full-height cabinetry.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"kitchen-02",
+                "image":{
+                    "src":"/images/portfolio/projects/05-275-west-10th-street/moca-ventures-275-west-10-street-kitchen-02.webp",
+                    "alt": "Luxury kitchen",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"kitchen-03",
+                "image":{
+                    "src":"/images/portfolio/projects/05-275-west-10th-street/moca-ventures-275-west-10-street-kitchen-03.webp",
+                    "alt": "A luxury kitchen",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"bathroom-01",
+                "image":{
+                    "src":"/images/portfolio/projects/05-275-west-10th-street/moca-ventures-275-west-10-street-bathroom-01.webp",
+                    "alt": "A master bathroom with a freestanding bathtub, at 275 west 10th street.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"bathroom-02",
+                "image":{
+                    "src":"/images/portfolio/projects/05-275-west-10th-street/moca-ventures-275-west-10-street-bathroom-02.webp",
+                    "alt": "Exclusive bathroom with a freestanding bathtub, at 275 west 10th street.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"bathroom-03",
+                "image":{
+                    "src":"/images/portfolio/projects/05-275-west-10th-street/moca-ventures-275-west-10-street-bathroom-03.webp",
+                    "alt": "Typical bathroom at 275 west 10th street.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"bathroom-04",
+                "image":{
+                    "src":"/images/portfolio/projects/05-275-west-10th-street/moca-ventures-275-west-10-street-bathroom-04.webp",
+                    "alt": "Secondary bathroom at 275 west 10th street.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            }
+        ]
+    },
+    "images": {
+        "home": "/images/portfolio/projects/05-275-west-10th-street/moca-ventures-275-west-10-street-hero.webp",
+        "hero": "/images/portfolio/projects/05-275-west-10th-street/moca-ventures-275-west-10-street-hero.webp",
+        "gallery": []
+    },
+    "materials": [],
+    "cta": {
+    "label": "DISCOVER THE PROJECT"
+    }
+
+}

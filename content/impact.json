@@ -15,7 +15,11 @@
       ]
     },
     "image": {
-      "src": "/images/impact/moca-ventures-global-design-partner-luxury-bathroom.webp",
+      "src": "/images/impact/moca-ventures-global-design-luxury-kitches-dory.webp",
+      "alt": "Luxury bathroom interior with city views"
+    },
+    "imageApproach": {
+      "src": "/images/impact/moca-ventures-global-design-luxury-bathroom.webp",
       "alt": "Luxury bathroom interior with city views"
     }
   }

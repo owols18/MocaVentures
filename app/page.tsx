@@ -1,9 +1,9 @@
 import AboutSection from "../components/home/AboutSection";
 import Hero from "../components/home/Hero";
+import HomeImpactSection from "../components/home/HomeImpactSection";
 import HomeLetsTalkSection from "../components/home/HomeLetsTalkSection";
 import HomePortfolioSection from "../components/home/HomePortfolioSection";
 import HomeTeamSection from "../components/home/HomeTeamSection";
-import HomeWhoWeWorkWithSection from "../components/home/HomeWhoWeWorkWithSection";
 import styles from "../components/home/Home.module.css";
 import VisualBreak from "../components/home/VisualBreak";
 
@@ -15,7 +15,7 @@ export default function Home() {
       <VisualBreak />
       <HomePortfolioSection />
       <HomeTeamSection />
-      <HomeWhoWeWorkWithSection />
+      <HomeImpactSection />
       <HomeLetsTalkSection />
     </div>
   );

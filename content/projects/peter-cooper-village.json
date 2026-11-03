@@ -1,0 +1,75 @@
+{
+    "slug":"peter-cooper-village",
+    "status":"published",
+    "visible":true,
+    "publishedAt":"2026-11-02",
+    "location":"NEW YORK",
+    "title":"PETER COOPER VILLAGE",
+    "summary":"The perfect intersection of price, space, and location with modern, spacious apartments and beautifully landscaped grounds.",
+    "portfolio":{
+        "address":"360 1st avenue",
+        "projectName":"PETER COOPER VILLAGE",
+        "image":{
+            "src":"/images/portfolio/moca-ventures-peter-cooper-village-portfolio.webp",
+            "alt":"Located near the East Village, Union Square, & Gramercy, dining, entertainment, and shopping are among the best in the city"
+        }
+
+    },
+    "detail":{
+        "hero":{
+            "alt":"Located near the East Village, Union Square, & Gramercy, dining, entertainment, and shopping are among the best in the city",
+            "width":3840,
+            "height":2400,
+            "focalPoint": { "x": 50, "y": 50 }
+        },
+        "overview":[
+            {
+                "label":"Partner:",
+                "value":"EMPRE CORE GROUP + HIGHLYANN KROSNOW"
+            }
+        ],
+        "gallery": [
+            {
+                "id":"kitchen-01",
+                "image":{
+                    "src":"/images/portfolio/projects/11-peter-cooper-village/moca-ventures-peter-cooper-village-kitchen.webp",
+                    "alt": "A kitchen at 360 1st avenue.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"kitchen-02",
+                "image":{
+                    "src":"/images/portfolio/projects/11-peter-cooper-village/moca-ventures-peter-cooper-village-kitchen-02.webp",
+                    "alt": "A kitchen at 360 1st avenue.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+
+            {
+                "id":"bathroom-01",
+                "image":{
+                    "src":"/images/portfolio/projects/11-peter-cooper-village/moca-ventures-peter-cooper-village-bathroom.webp",
+                    "alt": "Good bathroom at 360 1st avenue.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            }
+        ]
+    },
+    "images": {
+        "home": "/images/portfolio/projects/11-peter-cooper-village/moca-ventures-peter-cooper-village-hero.webp",
+        "hero": "/images/portfolio/projects/11-peter-cooper-village/moca-ventures-peter-cooper-village-hero.webp",
+        "gallery": []
+    },
+    "materials": [],
+    "cta": {
+    "label": "DISCOVER THE PROJECT"
+    }
+
+}

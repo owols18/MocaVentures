@@ -27,6 +27,11 @@ export interface PortfolioCard extends PortfolioDetails {
   slug?: string;
 }
 
+export interface AdjacentPortfolioCard {
+  direction: "previous" | "next";
+  card: PortfolioCard & { slug: string };
+}
+
 interface ProjectImageMetadata {
   alt: string;
   width: number;
@@ -444,26 +449,44 @@ export function getVisiblePublishedProjects(): Project[] {
   return getPublishedProjects().filter((project) => project.visible !== false);
 }
 
-export function getFollowingPortfolioCards(
+function hasProjectSlug(card: PortfolioCard): card is PortfolioCard & { slug: string } {
+  return typeof card.slug === "string" && card.slug.length > 0;
+}
+
+export function getAdjacentPortfolioCards(
   config: unknown,
   currentSlug: string,
-  limit: number,
-): PortfolioCard[] {
-  if (!Number.isInteger(limit) || limit < 0) {
-    throw new RangeError("Following project limit must be a non-negative integer.");
+): AdjacentPortfolioCard[] {
+  const cards: Array<PortfolioCard & { slug: string }> = [];
+  const includedSlugs = new Set<string>();
+
+  for (const card of getPortfolioCards(config).filter(hasProjectSlug)) {
+    if (includedSlugs.has(card.slug)) continue;
+    cards.push(card);
+    includedSlugs.add(card.slug);
   }
 
-  const cards = getPortfolioCards(config);
+  for (const project of getVisiblePublishedProjects()) {
+    if (!project.portfolio || includedSlugs.has(project.slug)) continue;
+    const card = toPortfolioCard(project, project.slug);
+    if (!hasProjectSlug(card)) continue;
+    cards.push(card);
+    includedSlugs.add(card.slug);
+  }
+
   const currentIndex = cards.findIndex((card) => card.slug === currentSlug);
-  if (currentIndex === -1 || cards.length < 2 || limit === 0) return [];
+  if (currentIndex === -1 || cards.length < 2) return [];
 
-  const followingCards: PortfolioCard[] = [];
-  for (let offset = 1; offset < cards.length && followingCards.length < limit; offset += 1) {
-    const card = cards[(currentIndex + offset) % cards.length];
-    if (card.slug !== currentSlug) followingCards.push(card);
-  }
-
-  return followingCards;
+  return [
+    {
+      direction: "previous",
+      card: cards[(currentIndex - 1 + cards.length) % cards.length],
+    },
+    {
+      direction: "next",
+      card: cards[(currentIndex + 1) % cards.length],
+    },
+  ];
 }
 
 export function getProjectBySlug(slug: string): Project | undefined {

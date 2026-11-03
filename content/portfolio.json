@@ -8,17 +8,17 @@
     "previewOrder": [
       { "id": "slot-01", "source": "project", "ref": "the-ellery-312-west-43rd-street" },
       { "id": "slot-02", "source": "project", "ref": "one-essex-crossing-202-broome-street" },
-      { "id": "slot-04", "source": "project", "ref": "242-broome-street-residence-01" },
-      { "id": "slot-06", "source": "preview", "ref": "275-west-10th-street" },
-      { "id": "slot-09", "source": "preview", "ref": "204-forsyth-street" },
-      { "id": "slot-08", "source": "preview", "ref": "150-rivington" },
-      { "id": "slot-07", "source": "preview", "ref": "265-east-houston-street" },
+      { "id": "slot-03", "source": "project", "ref": "242-broome-street-residence-01" },
+      { "id": "slot-04", "source": "project", "ref": "40-bleecker-at-40-bleecker-street" },
+      { "id": "slot-05", "source": "project", "ref": "275-west-10th-street" },
+      { "id": "slot-06", "source": "project", "ref": "204-forsyth-street" },
+      { "id": "slot-07", "source": "project", "ref": "109-east-79th-street" },
 
-      { "id": "slot-03", "source": "preview", "ref": "80-broad-street" },
-      { "id": "slot-13", "source": "preview", "ref": "139-franklin-street" },
-      { "id": "slot-10", "source": "preview", "ref": "80-broad-street" },
-      { "id": "slot-11", "source": "preview", "ref": "139-franklin-street" },
-      { "id": "slot-12", "source": "project", "ref": "242-broome-street-residence-01" }
+      { "id": "slot-08", "source": "project", "ref": "150-rivington-street" },
+      { "id": "slot-09", "source": "project", "ref": "215-sullivan-street" },
+      { "id": "slot-10", "source": "project", "ref": "265-east-houston" },
+      { "id": "slot-11", "source": "project", "ref": "peter-cooper-village" }
+
     ]
   }
 }

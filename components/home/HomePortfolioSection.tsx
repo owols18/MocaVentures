@@ -19,31 +19,36 @@ export default function HomePortfolioSection() {
       </div>
 
       <div className={styles.stack}>
-        {projects.map((project) => (
-          <PortfolioCardReveal key={project.slug}>
-            <Image
-              src={project.images.home}
-              alt={`${project.title} project in ${project.location}`}
-              fill
-              sizes="(orientation: landscape) and (max-height: 500px) calc(100vw - 48px), (min-width: 1280px) calc(100vw - 30px), (min-width: 768px) calc(100vw - 64px), calc(100vw - 48px)"
-              className={styles.image}
-            />
-            <div className={styles.overlay}>
-              <div className={styles.overlayContent}>
-                <div className={styles.projectInfo}>
-                  <p className={styles.location}>{project.location}</p>
-                  <h3 className={styles.projectTitle}>{project.title}</h3>
-                </div>
-                <p className={styles.summary}>{project.summary}</p>
-                <div className={styles.action}>
-                  <CTA variant="project" href={`/portfolio/${project.slug}`} className={styles.cta}>
-                    {project.cta.label}
-                  </CTA>
+        {projects.map((project) => {
+          const projectName = project.portfolio?.projectName?.trim() || project.title;
+          const projectAddress = project.portfolio?.address?.trim() || project.location;
+
+          return (
+            <PortfolioCardReveal key={project.slug}>
+              <Image
+                src={project.images.home}
+                alt={`${projectName} project at ${projectAddress}`}
+                fill
+                sizes="(orientation: landscape) and (max-height: 500px) calc(100vw - 48px), (min-width: 1280px) calc(100vw - 30px), (min-width: 768px) calc(100vw - 64px), calc(100vw - 48px)"
+                className={styles.image}
+              />
+              <div className={styles.overlay}>
+                <div className={styles.overlayContent}>
+                  <div className={styles.projectInfo}>
+                    <p className={styles.address}>{projectAddress}</p>
+                    <h3 className={styles.projectTitle}>{projectName}</h3>
+                  </div>
+                  <p className={styles.summary}>{project.summary}</p>
+                  <div className={styles.action}>
+                    <CTA variant="project" href={`/portfolio/${project.slug}`} className={styles.cta}>
+                      {project.cta.label}
+                    </CTA>
+                  </div>
                 </div>
               </div>
-            </div>
-          </PortfolioCardReveal>
-        ))}
+            </PortfolioCardReveal>
+          );
+        })}
       </div>
     </section>
   );

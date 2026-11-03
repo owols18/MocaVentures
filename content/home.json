@@ -89,6 +89,19 @@
       "alt": ""
     }
   },
+  "impact": {
+    "id": "impact",
+    "title": "IMPACT",
+    "body": "MOCA Ventures promotes responsible design by selecting durable materials, efficient solutions, and trusted European manufacturers committed to quality, longevity, and reduced environmental impact. By prioritizing thoughtful sourcing, long-lasting products, and environmentally conscious production processes, MOCA helps create refined spaces that remain functional, relevant, and sustainable over time.",
+    "image": {
+      "src": "/images/about/moca-ventures-sustainable-luxury-design.webp",
+      "alt": "Professionals working in a nature-integrated setting"
+    },
+    "cta": {
+      "label": "DISCOVER OUR IMPACT",
+      "href": "/impact"
+    }
+  },
   "letsTalk": {
     "title": "LET’S TALK",
     "text": "Let’s talk about your next project and explore how our design expertise, technical precision, and international network can bring your vision to life.",

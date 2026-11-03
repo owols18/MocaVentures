@@ -1,0 +1,99 @@
+{
+    "slug":"150-rivington-street",
+    "status":"published",
+    "visible":true,
+    "publishedAt":"2026-11-01",
+    "location":"NEW YORK",
+    "title":"150 RIVINGTON STREET",
+    "summary":"Boutique condominium completed in 2018 on the former site of Streit's Matzo Factory.",
+    "portfolio":{
+        "address":"150 Rivington Street",
+        "projectName":"150 RIVINGTON",
+        "image":{
+            "src":"/images/portfolio/moca-ventures-150-rivington-new-york-portfolio.webp",
+            "alt":"On a prominent corner in the heart of the Lower East Side"
+        }
+
+    },
+    "detail":{
+        "hero":{
+            "alt":"On a prominent corner in the heart of the Lower East Side",
+            "width":3840,
+            "height":2400,
+            "focalPoint": { "x": 50, "y": 50 }
+        },
+        "overview":[
+            {
+                "label":"Partner:",
+                "value":"COGSWELL LEE DEVELOPMENT + GLUCK PLUS"
+            },
+
+            {
+                "label":"Number of Residences:",
+                "value":"45 UNITS"
+            }
+        ],
+        "gallery": [
+            {
+                "id":"bathroom-01",
+                "image":{
+                    "src":"/images/portfolio/projects/08-150-rivington-street/moca-ventures-150-rivington-street-luxury-bathroom-01.webp",
+                    "alt": "A master bathroom with a freestanding bathtub, at 150 rivington street.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"bathroom-02",
+                "image":{
+                    "src":"/images/portfolio/projects/08-150-rivington-street/moca-ventures-150-rivington-street-luxury-bathroom-02.webp",
+                    "alt": "Bathroom with a freestanding bathtub, at 150 rivington street.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"kitchen-01",
+                "image":{
+                    "src":"/images/portfolio/projects/08-150-rivington-street/moca-ventures-150-rivington-street-delux-kitchen-01.webp",
+                    "alt": "A kitchen at at 150 rivington street.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"kitchen-02",
+                "image":{
+                    "src":"/images/portfolio/projects/08-150-rivington-street/moca-ventures-150-rivington-street-delux-kitchen-02.webp",
+                    "alt": "A kitchen at at 150 rivington street.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"kitchen-03",
+                "image":{
+                    "src":"/images/portfolio/projects/08-150-rivington-street/moca-ventures-150-rivington-street-delux-kitchen-03.webp",
+                    "alt": "A kitchen at at 150 rivington street.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            }
+        ]
+    },
+    "images": {
+        "home": "/images/portfolio/projects/08-150-rivington-street/moca-ventures-150-rivington-street-hero.webp",
+        "hero": "/images/portfolio/projects/08-150-rivington-street/moca-ventures-150-rivington-street-hero.webp",
+        "gallery": []
+    },
+    "materials": [],
+    "cta": {
+    "label": "DISCOVER THE PROJECT"
+    }
+
+}

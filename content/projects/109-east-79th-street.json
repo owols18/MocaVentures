@@ -1,0 +1,78 @@
+{
+    "slug":"109-east-79th-street",
+    "status":"published",
+    "visible":true,
+    "publishedAt":"2026-10-30",
+    "location":"NEW YORK",
+    "title":"109 EAST 79TH STREET",
+    "summary":"Located just off Park Avenue on one of the premier residential streets on the Upper East Side",
+    "portfolio":{
+        "address":"109 East 79th Street",
+        "projectName":"109 EAST 79",
+        "image":{
+            "src":"/images/portfolio/moca-ventures-109-east-79th-street-portfolio.webp",
+            "alt":"With refined design and rigorous attention to detail, we have created elevated residences worthy of this important site"
+        }
+
+    },
+    "detail":{
+        "hero":{
+            "alt":"the best apartments of the early twentieth century are known.",
+            "width":3840,
+            "height":2400,
+            "focalPoint": { "x": 50, "y": 50 }
+        },
+        "overview":[
+            {
+                "label":"Partner:",
+                "value":"LEGION INVESTMENT GROUP "
+            },
+            {
+                "label":"Number of Residences:",
+                "value":"31 UNITS"
+            }
+        ],
+        "gallery": [
+            {
+                "id":"kitchen-01",
+                "image":{
+                    "src":"/images/portfolio/projects/07-109-east-79th-street/moca-ventures-109-east-79th-street-ktichen-01.webp",
+                    "alt": "A kitchen at 109 east 79th with full-height cabinetry.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"kitchen-02",
+                "image":{
+                    "src":"/images/portfolio/projects/07-109-east-79th-street/moca-ventures-109-east-79th-street-ktichen-02.webp",
+                    "alt": "Luxury kitchen at 109 east 79th",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"kitchen-03",
+                "image":{
+                    "src":"/images/portfolio/projects/07-109-east-79th-street/moca-ventures-109-east-79th-street-ktichen-03.webp",
+                    "alt": "A luxury kitchen",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            }
+        ]
+    },
+    "images": {
+        "home": "/images/portfolio/projects/07-109-east-79th-street/moca-ventures-109-east-79th-street-hero.webp",
+        "hero": "/images/portfolio/projects/07-109-east-79th-street/moca-ventures-109-east-79th-street-hero.webp",
+        "gallery": []
+    },
+    "materials": [],
+    "cta": {
+    "label": "DISCOVER THE PROJECT"
+    }
+
+}

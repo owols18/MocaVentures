@@ -25,6 +25,10 @@
     "image": {
       "src": "/images/about/moca-ventures-global-design-partner-luxury-bathroom.webp",
       "alt": "Luxury bathroom interior with city views"
+    },
+    "imagewhoWeWorkWith": {
+      "src": "/images/about/moca-ventures-global-design-luxury-kitchens.webp",
+      "alt": "Luxury bathroom interior with city views"
     }
   },
   "featureImage": {
@@ -39,15 +43,6 @@
     "image": {
       "src": "/images/about/moca-ventures-interior-design-expertise.webp",
       "alt": "Contemporary residential interior showcasing MOCA Ventures design expertise"
-    }
-  },
-  "sustainability": {
-    "id": "sustainability",
-    "title": "A More Responsible Approach to Luxury",
-    "body": "MOCA Ventures promotes responsible design by selecting durable materials, efficient solutions, and trusted European manufacturers committed to quality, longevity, and reduced environmental impact. By prioritizing thoughtful sourcing, long-lasting products, and environmentally conscious production processes, MOCA helps create refined spaces that remain functional, relevant, and sustainable over time.",
-    "image": {
-      "src": "/images/about/moca-ventures-sustainable-luxury-design.webp",
-      "alt": "Professionals working in a nature-integrated setting"
     }
   }
 }

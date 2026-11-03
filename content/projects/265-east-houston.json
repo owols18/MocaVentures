@@ -1,0 +1,92 @@
+{
+    "slug":"265-east-houston",
+    "status":"published",
+    "visible":true,
+    "publishedAt":"2026-11-01",
+    "location":"NEW YORK",
+    "title":"265 E HOUSTON",
+    "summary":"Is conveniently located near some of the best dining, shopping and entertainment venues in New York City",
+    "portfolio":{
+        "address":"265 East Houston Street",
+        "projectName":"265 E HOUSTON ",
+        "image":{
+            "src":"/images/portfolio/moca-ventures-265-east-houston-portfolio.webp",
+            "alt":"the residences at 265 East Houston are now available for immediate occupancy"
+        }
+
+    },
+    "detail":{
+        "hero":{
+            "alt":"the residences at 265 East Houston are now available for immediate occupancy",
+            "width":3840,
+            "height":2400,
+            "focalPoint": { "x": 50, "y": 50 }
+        },
+        "overview":[
+            {
+                "label":"Partner:",
+                "value":"CENTRAL CONSTRUCTION MANAGEMENT"
+            },
+            {
+                "label":"Architect:",
+                "value":"DEFONSECA ARCHITECTS + THE DESIGN HIGH INTERIORS."
+            },
+            {
+                "label":"Number of Residences:",
+                "value":"7 UNITS"
+            }
+        ],
+        "gallery": [
+            {
+                "id":"bathroom-01",
+                "image":{
+                    "src":"/images/portfolio/projects/10-265-east-houston/moca-ventures-265-east-houston-bathroom-01.webp",
+                    "alt": "A master bathroom with a freestanding bathtub, at 265 east houston.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"kitchen-01",
+                "image":{
+                    "src":"/images/portfolio/projects/10-265-east-houston/moca-ventures-265-east-houston-kitchen.webp",
+                    "alt": "A kitchen at 265 east houston with full-height cabinetry.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"kitchen-02",
+                "image":{
+                    "src":"/images/portfolio/projects/10-265-east-houston/moca-ventures-265-east-houston-kitchen-02.webp",
+                    "alt": "A kitchen at 265 east houston with full-height cabinetry.",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            },
+            {
+                "id":"living-room",
+                "image":{
+                    "src":"/images/portfolio/projects/10-265-east-houston/moca-ventures-265-east-houston-livingroom.webp",
+                    "alt": "A luxury living room",
+                    "width": 3840,
+                    "height": 1867,
+                    "focalPoint": { "x": 50, "y": 50 }
+                }
+            }
+        ]
+    },
+    "images": {
+        "home": "/images/portfolio/projects/10-265-east-houston/moca-ventures-265-east-houston-hero.webp",
+        "hero": "/images/portfolio/projects/10-265-east-houston/moca-ventures-265-east-houston-hero.webp",
+        "gallery": []
+    },
+    "materials": [],
+    "cta": {
+    "label": "DISCOVER THE PROJECT"
+    }
+
+}

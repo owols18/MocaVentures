@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import Heading from "../../../components/ui/Heading";
 import CTA from "../../../components/ui/CTA";
 import detailContent from "../../../content/project-detail.json";
 import portfolioContent from "../../../content/portfolio.json";
 import {
-  getFollowingPortfolioCards,
+  getAdjacentPortfolioCards,
   getProjectBySlug,
   getPublishedProjects,
 } from "../../../data/projects";
@@ -39,10 +40,9 @@ export default async function ProjectPage({ params }: PageProps<"/portfolio/[slu
   const { hero, overview, gallery, initialMaterialId } = project.detail;
   const projectName = project.portfolio?.projectName?.trim() || project.title;
   const projectAddress = project.portfolio?.address?.trim() || project.title;
-  const otherProjects = getFollowingPortfolioCards(
+  const adjacentProjects = getAdjacentPortfolioCards(
     portfolioContent.grid,
     project.slug,
-    detailContent.otherProjects.limit,
   );
 
   return (
@@ -110,7 +110,7 @@ export default async function ProjectPage({ params }: PageProps<"/portfolio/[slu
         </section>
       )}
 
-      {otherProjects.length > 0 && (
+      {adjacentProjects.length > 0 && (
         <section className={styles.otherProjects} aria-labelledby="other-projects-title">
           <CTA
             href={detailContent.otherProjects.backToPortfolioHref}
@@ -124,26 +124,36 @@ export default async function ProjectPage({ params }: PageProps<"/portfolio/[slu
           </h2>
 
           <ul className={styles.otherProjectsGrid} role="list">
-            {otherProjects.map((otherProject) => {
+            {adjacentProjects.map(({ direction, card: otherProject }) => {
               const image = otherProject.relatedImage ?? otherProject.image;
+              const projectLabel = otherProject.projectName || otherProject.address;
+              const directionLabel = direction === "previous"
+                ? detailContent.otherProjects.previousProjectLabel
+                : detailContent.otherProjects.nextProjectLabel;
 
               return (
-                <li key={otherProject.id} className={styles.otherProjectCard}>
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    sizes="(min-width: 768px) calc((100vw - 96px) / 2), calc(100vw - 48px)"
-                    className={styles.otherProjectImage}
-                  />
-                  <div className={styles.otherProjectOverlay} aria-hidden="true" />
-                  <div className={styles.otherProjectCopy}>
-                    {otherProject.projectName && (
-                      <h3 className={styles.otherProjectName}>{otherProject.projectName}</h3>
-                    )}
-                    <p className={styles.otherProjectAddress}>{otherProject.address}</p>
-                    <p className={styles.otherProjectLocation}>{otherProject.location}</p>
-                  </div>
+                <li key={`${direction}-${otherProject.slug}`} className={styles.otherProjectCard}>
+                  <Link
+                    href={`/portfolio/${encodeURIComponent(otherProject.slug)}`}
+                    className={styles.otherProjectLink}
+                    aria-label={`${directionLabel}: ${projectLabel}`}
+                  >
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      sizes="(min-width: 768px) calc((100vw - 96px) / 2), calc(100vw - 48px)"
+                      className={styles.otherProjectImage}
+                    />
+                    <div className={styles.otherProjectOverlay} aria-hidden="true" />
+                    <div className={styles.otherProjectCopy}>
+                      {otherProject.projectName && (
+                        <h3 className={styles.otherProjectName}>{otherProject.projectName}</h3>
+                      )}
+                      <p className={styles.otherProjectAddress}>{otherProject.address}</p>
+                      <p className={styles.otherProjectLocation}>{otherProject.location}</p>
+                    </div>
+                  </Link>
                 </li>
               );
             })}

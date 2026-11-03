@@ -81,12 +81,12 @@ export default function ImpactPage() {
         <div
           className={styles.introductionMedia}
           style={{
-            backgroundImage: `url("${impactContent.introduction.image.src}")`,
+            backgroundImage: `url("${impactContent.introduction.imageApproach.src}")`,
           }}
         >
           <Image
             className={styles.introductionImage}
-            src={impactContent.introduction.image.src}
+            src={impactContent.introduction.imageApproach.src}
             alt=""
             width={2800}
             height={2800}

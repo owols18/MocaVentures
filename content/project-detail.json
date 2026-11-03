@@ -21,6 +21,7 @@
     "backToPortfolioLabel": "BACK TO PORTFOLIO",
     "backToPortfolioHref": "/portfolio",
     "title": "OTHER PROJECTS",
-    "limit": 2
+    "previousProjectLabel": "Previous project",
+    "nextProjectLabel": "Next project"
   }
 }

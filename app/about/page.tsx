@@ -100,12 +100,12 @@ export default function AboutPage() {
         <div
           className={styles.introductionMedia}
           style={{
-            backgroundImage: `url("${aboutContent.introduction.image.src}")`,
+            backgroundImage: `url("${aboutContent.introduction.imagewhoWeWorkWith.src}")`,
           }}
         >
           <Image
             className={styles.introductionImage}
-            src={aboutContent.introduction.image.src}
+            src={aboutContent.introduction.imagewhoWeWorkWith.src}
             alt=""
             width={2800}
             height={2800}
@@ -150,33 +150,6 @@ export default function AboutPage() {
           </h2>
           <p className={styles.expertiseBody}>
             {aboutContent.expertise.body}
-          </p>
-        </div>
-      </section>
-
-      <section
-        id={aboutContent.sustainability.id}
-        className={styles.sustainability}
-        aria-labelledby="about-sustainability-title"
-      >
-        <Image
-          className={styles.sustainabilityImage}
-          src={aboutContent.sustainability.image.src}
-          alt={aboutContent.sustainability.image.alt}
-          width={4200}
-          height={1741}
-          sizes="(max-width: 767px) calc(100vw - 48px), (max-width: 1279px) calc(100vw - 64px), (max-width: 1919px) calc(100vw - 80px), (max-width: 2559px) calc(100vw - 112px), calc(100vw - 128px)"
-        />
-
-        <div className={styles.sustainabilityCopy}>
-          <h2
-            id="about-sustainability-title"
-            className={styles.sustainabilityTitle}
-          >
-            {aboutContent.sustainability.title}
-          </h2>
-          <p className={styles.sustainabilityBody}>
-            {aboutContent.sustainability.body}
           </p>
         </div>
       </section>
